@@ -90,3 +90,9 @@ def test_voiceover_reads_every_line_and_stretches_timing(cfg, monkeypatch):
         assert seg.start <= start and start + length < seg.end <= new.duration
     for (_, a, la), (_, b, _) in zip(spoken, spoken[1:]):
         assert b >= a + la
+
+
+def test_pictures_rotate_without_repeats():
+    picks = [render._rotating_index(f"{i:04d}", 28, "bg") for i in range(1, 57)]
+    assert sorted(picks[:28]) == list(range(28)) and sorted(picks[28:]) == list(range(28))
+    assert all(a != b for a, b in zip(picks, picks[1:28]))

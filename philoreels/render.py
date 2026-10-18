@@ -36,6 +36,17 @@ def _stable_index(key: str, n: int) -> int:
     return int(hashlib.sha1(key.encode()).hexdigest(), 16) % n
 
 
+def _rotating_index(recipe_id: str, n: int, salt: str = "") -> int:
+    """Spread files over reels: consecutive reels never share a picture or
+    track until every one has been used, in a fixed shuffled order."""
+    if not recipe_id.isdigit():
+        return _stable_index(recipe_id + salt, n)
+    k = int(recipe_id) - 1
+    rounds, pos = divmod(k, n)
+    order = sorted(range(n), key=lambda i: hashlib.sha1(f"{salt}{rounds}:{i}".encode()).hexdigest())
+    return order[pos]
+
+
 def _files(folder: Path, exts: set[str]) -> list[Path]:
     if not folder.exists():
         return []
@@ -289,7 +300,7 @@ def ffmpeg_command(cfg: Config, recipe: Recipe, layers, out: Path,
 
     backgrounds = _files(cfg.resolve("assets/backgrounds"), VIDEO_EXT | IMAGE_EXT)
     if backgrounds:
-        bg = backgrounds[_stable_index(recipe.id, len(backgrounds))]
+        bg = backgrounds[_rotating_index(recipe.id, len(backgrounds), "bg")]
         if bg.suffix.lower() in VIDEO_EXT:
             args += ["-stream_loop", "-1", "-t", f"{dur}", "-i", str(bg)]
             filters.append(
@@ -333,7 +344,7 @@ def ffmpeg_command(cfg: Config, recipe: Recipe, layers, out: Path,
     audio_labels = []
     music = _files(cfg.resolve("assets/music"), AUDIO_EXT)
     if music:
-        track = music[_stable_index(recipe.id + "m", len(music))]
+        track = music[_rotating_index(recipe.id, len(music), "m")]
         # Start somewhere inside the track so reels sharing a track sound different.
         length = _duration(track)
         offset = _stable_index(recipe.id + "o", max(1, int(length - dur - 1))) if length > dur + 2 else 0
