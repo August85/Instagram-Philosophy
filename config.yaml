@@ -103,7 +103,7 @@ render:
     stability: 0.5
     similarity_boost: 0.8
     style: 0.0
-    speed: 0.95
+    speed: 0.9   # 0.7 to 1.2; lower is slower
   music_volume: 0.35
   # How much background pictures are darkened behind the text (0 = not at all, 1 = black).
   picture_dim: 0.25

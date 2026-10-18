@@ -80,3 +80,18 @@ def test_list_voices(monkeypatch):
     monkeypatch.setenv("ELEVENLABS_API_KEY", "sk-test")
     monkeypatch.setattr(voice, "requests", FakeHTTP())
     assert voice.list_elevenlabs_voices()[0] == {"voice_id": "v123", "name": "AK clone", "category": "cloned"}
+
+
+def test_short_voice_shortens_the_pause():
+    """A quick reader no longer leaves the verse up for seconds of silence."""
+    from philoreels.content import load_recipes
+    from conftest import ROOT
+    recipe = load_recipes(ROOT)[0]  # quote, reference, reflection
+    clips = [(None, 0.0) if s.role == "author" else ("clip", 2.0) for s in recipe.segments]
+    new, placed = render.retime(recipe, clips)
+    quote = next(s for s in new.segments if s.role == "quote")
+    author = next(s for s in new.segments if s.role == "author")
+    q_voice = next(t for (c, t), s in zip(placed, new.segments) if s.role == "quote")
+    assert abs(quote.end - (q_voice + 2.0 + 1.5)) < 1e-6
+    assert quote.start < author.start < quote.end and author.end == quote.end
+    assert new.duration < recipe.duration

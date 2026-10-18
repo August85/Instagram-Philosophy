@@ -84,7 +84,7 @@ def _eleven_settings(cfg: Config) -> dict:
             "similarity_boost": s.get("similarity_boost", 0.8),
             "style": s.get("style", 0.0),
             "use_speaker_boost": True,
-            "speed": s.get("speed", 0.95),
+            "speed": s.get("speed", 0.9),
         },
     }
     if s.get("language_code"):

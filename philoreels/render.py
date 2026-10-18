@@ -247,21 +247,31 @@ def _voiceover(cfg: Config, recipe: Recipe, workdir: Path) -> tuple[Recipe, list
     return recipe, [(c, t) for c, t in placed if c is not None]
 
 
-def retime(recipe: Recipe, clips: list[tuple[Path, float]], lead: float = 0.3, tail: float = 0.7
-           ) -> tuple[Recipe, list[tuple[Path, float]]]:
-    """Shift and stretch segments to fit their spoken length.
+def retime(recipe: Recipe, clips: list[tuple[Path | None, float]], lead: float = 0.3, tail: float = 0.7,
+           quote_hold: float = 1.5) -> tuple[Recipe, list[tuple[Path | None, float]]]:
+    """Fit each line's time on screen to its spoken length.
 
-    Lines follow each other with the same gaps as before. The author line is
-    spoken right after the quote, and both stay up until it has been read.
+    Lines follow each other with the same gaps as before. A spoken line stays
+    up `tail` seconds after the voice ends (`quote_hold` for the verse, so it
+    can be read once more), whether that makes it longer or shorter than the
+    reading-time default. The verse reference appears with the verse and
+    leaves with it.
     """
     segs = [Segment(s.role, s.text, s.start, s.end) for s in recipe.segments]
-    placed: list[tuple[Path, float]] = []
+    orig = recipe.segments
+    placed: list[tuple[Path | None, float]] = []
     shift = 0.0
     voice_end = 0.0
     quote = None
-    for seg, (clip, length) in zip(segs, clips):
-        seg.start += shift
-        seg.end += shift
+    for k, (seg, (clip, length)) in enumerate(zip(segs, clips)):
+        if seg.role == "author" and quote is not None:
+            # Keep its place relative to the verse it belongs to.
+            q0 = next(o for o in orig if o.role == "quote")
+            seg.start = quote.start + (orig[k].start - q0.start)
+            seg.end = quote.end
+        else:
+            seg.start += shift
+            seg.end += shift
         if clip is None and length == 0:
             placed.append((None, seg.start))
             if seg.role == "quote":
@@ -273,19 +283,21 @@ def retime(recipe: Recipe, clips: list[tuple[Path, float]], lead: float = 0.3, t
             v_start = max(seg.start + lead, voice_end + 0.25)
         voice_end = v_start + length
         placed.append((clip, v_start))
-        need = voice_end + tail
-        if need > seg.end:
-            extra = need - seg.end
-            seg.end = need
-            if seg.role == "author" and quote is not None:
-                quote.end = max(quote.end, need)
-            shift += extra
+        need = voice_end + (quote_hold if seg.role in ("quote", "author") else tail)
+        change = need - seg.end
+        seg.end = need
+        if seg.role == "author" and quote is not None:
+            quote.end = need
+        shift += change
         if seg.role == "quote":
             quote = seg
-    duration = round(max(recipe.duration + shift, voice_end + 0.8), 2)
     for seg in segs:
-        if seg.end >= recipe.duration + shift - 1e-6 or seg.end > duration:
-            seg.end = duration
+        if seg.role == "author" and quote is not None:
+            seg.end = quote.end
+    duration = round(max(segs[-1].end, voice_end + 0.8), 2)
+    segs[-1].end = duration
+    if segs[-1].role == "author" and quote is not None:
+        quote.end = duration
     return dataclasses.replace(recipe, segments=segs, duration=duration), placed
 
 
