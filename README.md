@@ -116,7 +116,11 @@ Check reach every Monday. If views per reel fall for two weeks after a step up, 
   your Mac, so there is no copyright claim on them. You can add or swap in royalty-free tracks (for example
   from Pixabay Music). Reels posted through the API cannot use Instagram's music library, so music is part of
   the video. Volume is `render.music_volume` in `config.yaml`.
-- **Voiceover:** set `render.voiceover: true` in `config.yaml` to have the Mac read each quote aloud (`say`, voice `Daniel`).
+- **Voiceover:** on by default. The Mac reads every line on screen aloud with its built-in `say` voices, and each
+  line stays up until it has been read. The first voice in `render.voice` that the Mac has is used (Rishi, an
+  Indian English voice, then Daniel). For a more natural sound, download an "Enhanced" or "Premium" voice in
+  System Settings > Accessibility > Spoken Content > System voice > Manage Voices. Speed is `render.voice_rate`;
+  music drops to `render.music_volume_with_voice` under the voice. Set `render.voiceover: false` to turn it off.
 - **Quotes:** edit `content/quotes.yaml`, set `checked: true` once a quote's wording is verified, then run
   `philoreels generate` and `philoreels quotes --markdown`. Reels already posted are tracked by id in
   `~/PhiloReels/posted.jsonl`, so regenerate only before going live or add new reels after the last id.

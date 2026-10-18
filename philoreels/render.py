@@ -3,12 +3,15 @@
 Text is drawn with Pillow into transparent PNGs (one per segment) and faded
 in and out over a background with FFmpeg. The background is one of your own
 clips or images from assets/backgrounds, or a slowly moving gradient when that
-folder is empty. Music comes from assets/music; voiceover (optional) uses the
-macOS `say` command.
+folder is empty. Music comes from assets/music. The voiceover reads every line aloud with
+the macOS `say` command, and the timing stretches to fit the voice.
 """
 from __future__ import annotations
 
+import dataclasses
 import hashlib
+import json
+import re
 import shutil
 import subprocess
 import tempfile
@@ -17,7 +20,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from .config import Config
-from .content import THEMES, Recipe
+from .content import THEMES, Recipe, Segment
 
 VIDEO_EXT = {".mp4", ".mov", ".m4v", ".webm"}
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
@@ -169,17 +172,97 @@ def build_layers(cfg: Config, recipe: Recipe, workdir: Path) -> list[tuple[Path,
     return layers
 
 
-def _voiceover(cfg: Config, recipe: Recipe, workdir: Path) -> Path | None:
-    if not cfg.get("render.voiceover") or not recipe.voiceover_text:
-        return None
-    if not shutil.which("say"):
-        return None
-    out = workdir / "voice.aiff"
-    subprocess.run(["say", "-v", cfg.get("render.voice", "Daniel"), "-o", str(out), recipe.voiceover_text], check=True)
+def spoken_text(seg) -> str:
+    """What the voice says for one on-screen line."""
+    text = seg.text.strip().strip("“”\"").strip()
+    if seg.role == "author":
+        text = text.lstrip("—–- ").strip()
+        # "Bhagavad Gita 2.47" -> "Bhagavad Gita, chapter 2, verse 47"
+        text = re.sub(r"\s*\b(\d+)\.(\d+)-(\d+)\b", r", chapter \1, verses \2 to \3", text)
+        text = re.sub(r"\s*\b(\d+)\.(\d+)\b", r", chapter \1, verse \2", text)
+    return text
+
+
+_VOICE_CACHE: dict[str, str] = {}
+
+
+def pick_voice(cfg: Config) -> str:
+    """First voice from render.voice (a name or a list) that this Mac has."""
+    wanted = cfg.get("render.voice", "Daniel")
+    wanted = [wanted] if isinstance(wanted, str) else list(wanted)
+    key = "|".join(wanted)
+    if key not in _VOICE_CACHE:
+        try:
+            out = subprocess.run(["say", "-v", "?"], capture_output=True, text=True, check=True).stdout
+            have = {re.split(r"\s{2,}", line.strip())[0] for line in out.splitlines() if line.strip()}
+        except (OSError, subprocess.CalledProcessError):
+            have = set()
+        _VOICE_CACHE[key] = next((v for v in wanted if v in have), wanted[-1])
+    return _VOICE_CACHE[key]
+
+
+def speak(cfg: Config, text: str, out: Path) -> Path:
+    """Turn text into speech with the macOS `say` command."""
+    rate = str(cfg.get("render.voice_rate", 160))
+    subprocess.run(["say", "-v", pick_voice(cfg), "-r", rate, "-o", str(out), text], check=True)
     return out
 
 
-def ffmpeg_command(cfg: Config, recipe: Recipe, layers, out: Path, voice: Path | None = None) -> list[str]:
+def voiceover_enabled(cfg: Config) -> bool:
+    return bool(cfg.get("render.voiceover")) and shutil.which("say") is not None
+
+
+def _voiceover(cfg: Config, recipe: Recipe, workdir: Path) -> tuple[Recipe, list[tuple[Path, float]]]:
+    """Record each line and stretch the timing so every line stays on screen
+    until it has been read. Returns the retimed recipe and (clip, start) pairs."""
+    if not voiceover_enabled(cfg):
+        return recipe, []
+    lengths = []
+    for n, seg in enumerate(recipe.segments):
+        clip = speak(cfg, spoken_text(seg), workdir / f"voice-{n}.aiff")
+        lengths.append((clip, _duration(clip)))
+    return retime(recipe, lengths)
+
+
+def retime(recipe: Recipe, clips: list[tuple[Path, float]], lead: float = 0.3, tail: float = 0.7
+           ) -> tuple[Recipe, list[tuple[Path, float]]]:
+    """Shift and stretch segments to fit their spoken length.
+
+    Lines follow each other with the same gaps as before. The author line is
+    spoken right after the quote, and both stay up until it has been read.
+    """
+    segs = [Segment(s.role, s.text, s.start, s.end) for s in recipe.segments]
+    placed: list[tuple[Path, float]] = []
+    shift = 0.0
+    voice_end = 0.0
+    quote = None
+    for seg, (clip, length) in zip(segs, clips):
+        seg.start += shift
+        seg.end += shift
+        if seg.role == "author" and quote is not None:
+            v_start = max(seg.start, voice_end + 0.25)
+        else:
+            v_start = max(seg.start + lead, voice_end + 0.25)
+        voice_end = v_start + length
+        placed.append((clip, v_start))
+        need = voice_end + tail
+        if need > seg.end:
+            extra = need - seg.end
+            seg.end = need
+            if seg.role == "author" and quote is not None:
+                quote.end = max(quote.end, need)
+            shift += extra
+        if seg.role == "quote":
+            quote = seg
+    duration = round(max(recipe.duration + shift, voice_end + 0.8), 2)
+    for seg in segs:
+        if seg.end >= recipe.duration + shift - 1e-6 or seg.end > duration:
+            seg.end = duration
+    return dataclasses.replace(recipe, segments=segs, duration=duration), placed
+
+
+def ffmpeg_command(cfg: Config, recipe: Recipe, layers, out: Path,
+                   voice: list[tuple[Path, float]] | None = None) -> list[str]:
     w, h = cfg.get("render.width", 1080), cfg.get("render.height", 1920)
     fps = cfg.get("render.fps", 30)
     dur = recipe.duration
@@ -238,17 +321,19 @@ def ffmpeg_command(cfg: Config, recipe: Recipe, layers, out: Path, voice: Path |
         offset = _stable_index(recipe.id + "o", max(1, int(length - dur - 1))) if length > dur + 2 else 0
         args += ["-stream_loop", "-1", "-ss", f"{offset}", "-t", f"{dur}", "-i", str(track)]
         vol = cfg.get("render.music_volume", 0.35)
+        if voice:
+            vol = cfg.get("render.music_volume_with_voice", 0.15)
         filters.append(
             f"[{idx}:a]atrim=0:{dur},asetpts=N/SR/TB,volume={vol},afade=t=in:d=1,"
             f"afade=t=out:st={max(0, dur - 1.5)}:d=1.5,aresample=44100[am]"
         )
         audio_labels.append("[am]")
         idx += 1
-    if voice:
-        args += ["-i", str(voice)]
-        ms = int(recipe.voiceover_start * 1000)
-        filters.append(f"[{idx}:a]adelay={ms}|{ms},aresample=44100,apad[av]")
-        audio_labels.append("[av]")
+    for k, (clip, start) in enumerate(voice or []):
+        args += ["-i", str(clip)]
+        ms = int(start * 1000)
+        filters.append(f"[{idx}:a]aresample=44100,aformat=channel_layouts=stereo,adelay={ms}|{ms},apad[av{k}]")
+        audio_labels.append(f"[av{k}]")
         idx += 1
     if not audio_labels:
         args += ["-f", "lavfi", "-t", f"{dur}", "-i", "anullsrc=r=44100:cl=stereo"]
@@ -284,15 +369,32 @@ def render(cfg: Config, recipe: Recipe, force: bool = False) -> Path:
         raise RenderError("ffmpeg is not installed. On a Mac: brew install ffmpeg")
     with tempfile.TemporaryDirectory(prefix="philoreels-") as tmp:
         workdir = Path(tmp)
+        recipe, voice = _voiceover(cfg, recipe, workdir)
         layers = build_layers(cfg, recipe, workdir)
-        voice = _voiceover(cfg, recipe, workdir)
         tmp_out = workdir / "out.mp4"
         cmd = ffmpeg_command(cfg, recipe, layers, tmp_out, voice)
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode != 0:
             raise RenderError(f"ffmpeg failed for reel {recipe.id}: {result.stderr.strip()[-2000:]}")
         shutil.move(str(tmp_out), out)
+    quote = next((x for x in recipe.segments if x.role == "quote"), None)
+    timing_path(out).write_text(json.dumps({"duration": recipe.duration,
+                                            "quote_start": quote.start if quote else 0.0,
+                                            "voiceover": bool(voice)}))
     return out
+
+
+def timing_path(video: Path) -> Path:
+    return video.with_suffix(".json")
+
+
+def cover_time(video: Path, recipe: Recipe) -> float:
+    """A moment in the video where the quote is fully on screen."""
+    try:
+        return json.loads(timing_path(video).read_text())["quote_start"] + 1.5
+    except (OSError, ValueError, KeyError):
+        quote = next((x for x in recipe.segments if x.role == "quote"), None)
+        return quote.start + 1.5 if quote else 1.0
 
 
 def cover_frame(cfg: Config, video: Path, at: float, out: Path) -> Path:

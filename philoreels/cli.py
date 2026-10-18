@@ -94,8 +94,7 @@ def cmd_preview(cfg, args):
         sys.exit("No reel found.")
     r = recipes[0]
     video = render_mod.render(cfg, r, force=True)
-    quote = next(s for s in r.segments if s.role == "quote")
-    still = render_mod.cover_frame(cfg, video, quote.start + 1.5, video.with_suffix(".jpg"))
+    still = render_mod.cover_frame(cfg, video, render_mod.cover_time(video, r), video.with_suffix(".jpg"))
     print(f"Video: {video}\nStill: {still}\n\nCaption:\n{r.caption}")
     if args.open and sys.platform == "darwin":
         subprocess.run(["open", str(video)])

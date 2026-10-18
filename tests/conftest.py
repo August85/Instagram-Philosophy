@@ -16,5 +16,5 @@ def cfg(tmp_path, monkeypatch):
         monkeypatch.delenv(var, raising=False)
     base = load_config(ROOT)
     raw = copy.deepcopy(base.raw)
-    raw["render"].update(width=270, height=480, fps=15, preset="ultrafast", render_ahead=2)
+    raw["render"].update(width=270, height=480, fps=15, preset="ultrafast", render_ahead=2, voiceover=False)
     return Config(raw=raw, root=ROOT)

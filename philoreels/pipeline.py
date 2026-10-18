@@ -93,8 +93,7 @@ def post_one(cfg: Config, store: Store, recipe: Recipe, client: InstagramClient,
         if not base:
             raise InstagramError("upload_mode is 'url' but instagram.public_base_url is not set")
         video_url = f"{base.rstrip('/')}/{video.name}"
-    quote_seg = next((s for s in recipe.segments if s.role == "quote"), None)
-    thumb_ms = int(((quote_seg.start + 1.5) if quote_seg else 1.0) * 1000)
+    thumb_ms = int(render_mod.cover_time(video, recipe) * 1000)
     result = client.post_reel(video, recipe.caption, video_url=video_url,
                               share_to_feed=cfg.get("instagram.share_to_feed", True),
                               thumb_offset_ms=thumb_ms)

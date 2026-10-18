@@ -57,3 +57,35 @@ def test_prepare_background_shows_whole_picture(cfg, tmp_path):
     assert img.getpixel((cx, cy))[0] > 200
     assert img.getpixel((cx, 2))[0] < 200
     assert render.prepare_background(cfg, src) == out  # cached
+
+
+def test_spoken_text_reads_the_reference():
+    from philoreels.content import Segment
+    assert render.spoken_text(Segment("author", "— Bhagavad Gita 2.47", 0, 1)) == "Bhagavad Gita, chapter 2, verse 47"
+    assert render.spoken_text(Segment("author", "— Bhagavad Gita 4.7-8", 0, 1)) == "Bhagavad Gita, chapter 4, verses 7 to 8"
+    assert render.spoken_text(Segment("quote", "“Act, and let go.”", 0, 1)) == "Act, and let go."
+
+
+def test_voiceover_reads_every_line_and_stretches_timing(cfg, monkeypatch):
+    """Fake `say`: a tone two-thirds of a second per word, so every line is longer than its slot."""
+    def fake_speak(cfg, text, out):
+        out = out.with_suffix(".wav")
+        secs = 0.66 * len(text.split())
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", f"sine=f=300:d={secs}",
+                        str(out)], check=True)
+        return out
+    monkeypatch.setattr(render, "speak", fake_speak)
+    monkeypatch.setattr(render, "voiceover_enabled", lambda cfg: True)
+    recipe = next(r for r in load_recipes(ROOT) if r.format == "hook_quote_cta")
+    out = render.render(cfg, recipe, force=True)
+    timing = json.loads(render.timing_path(out).read_text())
+    assert timing["voiceover"] and timing["duration"] > recipe.duration
+    assert abs(float(probe(out)["format"]["duration"]) - timing["duration"]) < 0.3
+    # Retiming keeps lines in order, each on screen until its words are read.
+    clips = [(None, 0.66 * len(render.spoken_text(s).split())) for s in recipe.segments]
+    new, placed = render.retime(recipe, clips)
+    for seg, (_, start), (_, length) in zip(new.segments, placed, clips):
+        assert seg.start <= start and start + length < seg.end <= new.duration
+    starts = [s for _, s in placed]
+    assert starts == sorted(starts)
+    assert all(b >= a + l for (_, a), (_, l), b in zip(placed, clips, starts[1:]))
