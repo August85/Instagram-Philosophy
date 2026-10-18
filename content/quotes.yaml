@@ -1,0 +1,156 @@
+# Active quote bank: the Bhagavad Gita.
+#
+# The wording is a plain modern English rendering of each verse, written for
+# this account (not copied from a copyrighted translation). Verse numbers
+# follow the common 700-verse numbering; a few editions number chapter 13
+# one verse differently.
+#
+# checked: false means nobody has compared the rendering to a translation
+# yet. Run `philoreels quotes --unchecked`, compare, then set checked: true.
+#
+# The previous mixed bank (Stoics, Laozi, Buddha, etc.) is kept in
+# content/archive/quotes-general.yaml. To use it again, copy its entries here.
+
+defaults:
+  author: Bhagavad Gita
+  header: "A lesson from the Bhagavad Gita"
+  checked: false
+  hashtags: ["#bhagavadgita", "#gita", "#krishna", "#spirituality", "#dharma", "#karma", "#wisdom", "#hinduism", "#sanatandharma"]
+
+quotes:
+  # Chapter 2
+  - {id: g2-03, ref: "2.3", topic: courage, text: "Do not yield to weakness. It does not suit you. Shake off this small faintness of heart and stand up."}
+  - {id: g2-07, ref: "2.7", topic: adversity, speaker: Arjuna, text: "My heart is overcome by weakness and I am confused about my duty. Tell me what is truly best for me."}
+  - {id: g2-11, ref: "2.11", topic: mortality, text: "The wise grieve neither for the living nor for the dead."}
+  - {id: g2-12, ref: "2.12", topic: mortality, text: "There was never a time when I did not exist, nor you, nor these kings. Nor will any of us ever cease to be."}
+  - {id: g2-13, ref: "2.13", topic: change, text: "As the soul passes through childhood, youth and old age in this body, so it passes into another body. The wise are not shaken by this."}
+  - {id: g2-14, ref: "2.14", topic: patience, text: "Pleasure and pain come and go like winter and summer. They do not last. Learn to bear them patiently."}
+  - {id: g2-15, ref: "2.15", topic: patience, text: "The one who stays steady in pleasure and in pain, undisturbed by either, is ready for freedom."}
+  - {id: g2-20, ref: "2.20", topic: mortality, text: "The soul is never born and never dies. It is not killed when the body is killed."}
+  - {id: g2-22, ref: "2.22", topic: change, text: "As a person throws off worn-out clothes and puts on new ones, the soul leaves worn-out bodies and enters new ones."}
+  - {id: g2-23, ref: "2.23", topic: self, text: "Weapons cannot cut the soul. Fire cannot burn it. Water cannot wet it. Wind cannot dry it."}
+  - {id: g2-27, ref: "2.27", topic: mortality, text: "Death is certain for one who is born, and birth is certain for one who dies. Do not grieve over what cannot be avoided."}
+  - {id: g2-31, ref: "2.31", topic: purpose, text: "Think of your own duty, and do not waver."}
+  - {id: g2-38, ref: "2.38", topic: patience, text: "Treat pleasure and pain, gain and loss, victory and defeat alike. Then rise to the battle."}
+  - {id: g2-40, ref: "2.40", topic: action, text: "On this path no effort is ever lost and no harm is done. Even a little of it protects you from great fear."}
+  - {id: g2-41, ref: "2.41", topic: purpose, text: "The resolute mind is focused and one-pointed. The thoughts of the irresolute branch out without end."}
+  - {id: g2-47, ref: "2.47", topic: action, text: "You have a right to your actions, but never to their fruits. Do not act for the reward, and do not give up action either."}
+  - {id: g2-48, ref: "2.48", topic: mind, text: "Do your work with a steady mind, free from attachment, the same in success and failure. This evenness of mind is yoga."}
+  - {id: g2-50, ref: "2.50", topic: action, text: "Yoga is skill in action."}
+  - {id: g2-56, ref: "2.56", topic: mind, text: "One whose mind is not shaken by sorrow, who does not crave pleasure, and who is free from fear and anger, is called wise."}
+  - {id: g2-58, ref: "2.58", topic: control, text: "As a tortoise draws in its limbs, the wise draw their senses back from the objects of the senses."}
+  - {id: g2-60, ref: "2.60", topic: control, text: "The restless senses can carry away the mind of even a wise person who is striving."}
+  - {id: g2-62, ref: "2.62", topic: anger, text: "Thinking about the objects of the senses creates attachment. Attachment creates desire, and from desire comes anger."}
+  - {id: g2-63, ref: "2.63", topic: anger, text: "From anger comes confusion. From confusion, memory fails. When memory fails, reason is lost, and when reason is lost, one is ruined."}
+  - {id: g2-64, ref: "2.64", topic: control, text: "One who moves through the world with the senses under control, free from craving and dislike, finds peace."}
+  - {id: g2-66, ref: "2.66", topic: happiness, text: "Without peace, how can there be happiness?"}
+  - {id: g2-67, ref: "2.67", topic: control, text: "When the mind follows the wandering senses, it carries wisdom away, as the wind carries a boat across the water."}
+  - {id: g2-69, ref: "2.69", topic: perspective, text: "What is night for all beings is the time of waking for the disciplined. What others call day is night for the sage."}
+  - {id: g2-70, ref: "2.70", topic: wealth, text: "The ocean stays still while rivers pour into it. The one who stays still while desires pour in finds peace, not the one who chases them."}
+  - {id: g2-71, ref: "2.71", topic: simplicity, text: "One who lets go of all desires and lives free from longing, without 'I' and 'mine', finds peace."}
+
+  # Chapter 3
+  - {id: g3-05, ref: "3.5", topic: action, text: "No one can remain without action, even for a moment."}
+  - {id: g3-08, ref: "3.8", topic: action, text: "Do your duty. Action is better than inaction."}
+  - {id: g3-09, ref: "3.9", topic: purpose, text: "Work done as an offering does not bind you."}
+  - {id: g3-19, ref: "3.19", topic: action, text: "Do the work that must be done, without attachment. By working without attachment, one reaches the highest."}
+  - {id: g3-21, ref: "3.21", topic: integrity, text: "Whatever a great person does, others follow. Whatever standard they set, the world pursues."}
+  - {id: g3-25, ref: "3.25", topic: kindness, text: "As the unwise act out of attachment, let the wise act without attachment, for the good of the world."}
+  - {id: g3-27, ref: "3.27", topic: self, text: "All actions are done by the forces of nature, but one confused by ego thinks, 'I am the doer.'"}
+  - {id: g3-30, ref: "3.30", topic: anxiety, text: "Offer all your actions to me. Free from desire and from 'mine', fight without anxiety."}
+  - {id: g3-35, ref: "3.35", topic: purpose, text: "Better your own duty done imperfectly than another's duty done perfectly."}
+  - {id: g3-37, ref: "3.37", topic: anger, text: "It is desire, it is anger, born of restless passion and never satisfied. Know it as the enemy."}
+  - {id: g3-42, ref: "3.42", topic: self, text: "The senses are higher than the body, the mind higher than the senses, the intellect higher than the mind. Higher still is the Self."}
+  - {id: g3-43, ref: "3.43", topic: control, text: "Know the Self as higher than the intellect. Steady the mind with the Self, and conquer the enemy called desire."}
+
+  # Chapter 4
+  - {id: g4-07, ref: "4.7-8", topic: purpose, text: "Whenever goodness declines and wrong rises, I come. To protect the good and end evil, I appear in every age."}
+  - {id: g4-10, ref: "4.10", topic: anxiety, text: "Free from attachment, fear and anger, many have been purified by the fire of knowledge."}
+  - {id: g4-11, ref: "4.11", topic: love, text: "In whatever way people come to me, I receive them. Every path leads to me."}
+  - {id: g4-18, ref: "4.18", topic: learning, text: "One who sees inaction in action, and action in inaction, is wise among people."}
+  - {id: g4-20, ref: "4.20", topic: action, text: "Letting go of attachment to results, always content and depending on nothing, such a person acts, yet is untouched by action."}
+  - {id: g4-22, ref: "4.22", topic: happiness, text: "Content with whatever comes, beyond the pairs of opposites, free from envy and the same in success and failure, one is never bound."}
+  - {id: g4-33, ref: "4.33", topic: learning, text: "The offering of knowledge is greater than any offering of wealth."}
+  - {id: g4-34, ref: "4.34", topic: learning, text: "Learn the truth by going humbly to the wise, asking them questions and serving them."}
+  - {id: g4-36, ref: "4.36", topic: learning, text: "Even if you were the worst of wrongdoers, you would cross over every wrong on the raft of knowledge."}
+  - {id: g4-38, ref: "4.38", topic: learning, text: "There is nothing in this world as purifying as knowledge."}
+  - {id: g4-39, ref: "4.39", topic: learning, text: "One who has faith and masters the senses gains knowledge, and with knowledge comes supreme peace."}
+  - {id: g4-40, ref: "4.40", topic: courage, text: "The one who doubts finds happiness neither in this world nor the next."}
+  - {id: g4-42, ref: "4.42", topic: courage, text: "Cut the doubt in your heart with the sword of knowledge. Stand up and act."}
+
+  # Chapter 5
+  - {id: g5-10, ref: "5.10", topic: integrity, text: "One who acts without attachment, offering every action to the divine, is untouched by wrong, as a lotus leaf is untouched by water."}
+  - {id: g5-12, ref: "5.12", topic: present, text: "Giving up the fruit of action, the disciplined person finds lasting peace."}
+  - {id: g5-18, ref: "5.18", topic: kindness, text: "The wise see with an equal eye a learned scholar, a cow, an elephant, a dog and an outcast."}
+  - {id: g5-20, ref: "5.20", topic: patience, text: "Do not rejoice too much at what pleases you, nor be troubled by what does not."}
+  - {id: g5-22, ref: "5.22", topic: wealth, text: "Pleasures born of the senses are sources of pain. They begin and they end. The wise do not delight in them."}
+  - {id: g5-23, ref: "5.23", topic: control, text: "One who can withstand the force of desire and anger, here in this life, is disciplined and happy."}
+  - {id: g5-24, ref: "5.24", topic: happiness, text: "One whose happiness is within, whose joy is within and whose light is within, becomes free."}
+
+  # Chapter 6
+  - {id: g6-01, ref: "6.1", topic: action, text: "One who does the work that should be done, without depending on its fruit, is the true renunciate."}
+  - {id: g6-05, ref: "6.5", topic: self, text: "Lift yourself up by your own self. Do not let yourself fall. You are your own friend, and you are your own enemy."}
+  - {id: g6-06, ref: "6.6", topic: mind, text: "For one who has conquered the mind, the mind is the best friend. For one who has not, it is the worst enemy."}
+  - {id: g6-07, ref: "6.7", topic: patience, text: "One who has conquered the self stays calm in heat and cold, pleasure and pain, honour and dishonour."}
+  - {id: g6-09, ref: "6.9", topic: people, text: "One who looks with an equal mind on friends and enemies, strangers and family, the good and the bad, rises above the rest."}
+  - {id: g6-16, ref: "6.16", topic: simplicity, text: "Yoga is not for one who eats too much or too little, nor for one who sleeps too much or too little."}
+  - {id: g6-17, ref: "6.17", topic: simplicity, text: "For one who is balanced in food and rest, in work and in sleep, yoga ends all sorrow."}
+  - {id: g6-19, ref: "6.19", topic: mind, text: "As a lamp in a windless place does not flicker, so is the disciplined mind."}
+  - {id: g6-23, ref: "6.23", topic: happiness, text: "Yoga is freedom from the grip of sorrow."}
+  - {id: g6-26, ref: "6.26", topic: mind, text: "Wherever the restless mind wanders, gently bring it back and rest it in the Self."}
+  - {id: g6-30, ref: "6.30", topic: love, text: "One who sees me everywhere and sees everything in me is never lost to me, and I am never lost to them."}
+  - {id: g6-32, ref: "6.32", topic: kindness, text: "The highest yogi feels the joy and sorrow of others as their own."}
+  - {id: g6-34, ref: "6.34", topic: mind, speaker: Arjuna, text: "The mind is restless, turbulent, strong and stubborn. Taming it seems as hard as taming the wind."}
+  - {id: g6-35, ref: "6.35", topic: mind, text: "The mind is restless and hard to control, but it can be trained by practice and by letting go."}
+  - {id: g6-40, ref: "6.40", topic: integrity, text: "One who does good never comes to a bad end."}
+
+  # Chapters 7 to 11
+  - {id: g7-03, ref: "7.3", topic: purpose, text: "Among thousands of people, hardly one strives for perfection."}
+  - {id: g7-08, ref: "7.8", topic: perspective, text: "I am the taste in water, the light of the sun and the moon."}
+  - {id: g7-11, ref: "7.11", topic: control, text: "I am strength that is free from desire and attachment."}
+  - {id: g8-06, ref: "8.6", topic: mind, text: "Whatever a person keeps in mind at the end of life, that they become."}
+  - {id: g8-07, ref: "8.7", topic: courage, text: "Remember me at all times, and fight."}
+  - {id: g9-22, ref: "9.22", topic: love, text: "To those who worship me with single-minded devotion, I bring what they lack and protect what they have."}
+  - {id: g9-26, ref: "9.26", topic: love, text: "If you offer me with love a leaf, a flower, a fruit or a little water, I accept that offering of love."}
+  - {id: g9-27, ref: "9.27", topic: purpose, text: "Whatever you do, whatever you eat, whatever you give, whatever you strive for, do it as an offering to me."}
+  - {id: g9-29, ref: "9.29", topic: love, text: "I am the same to all beings. None is hateful to me and none is favoured. But those who worship me with love are in me, and I am in them."}
+  - {id: g9-31, ref: "9.31", topic: love, text: "Know this for certain: my devotee never perishes."}
+  - {id: g10-08, ref: "10.8", topic: perspective, text: "I am the source of everything. Everything comes from me."}
+  - {id: g10-20, ref: "10.20", topic: self, text: "I am the Self seated in the heart of every being. I am the beginning, the middle and the end of all beings."}
+  - {id: g10-41, ref: "10.41", topic: perspective, text: "Whatever is glorious, beautiful or mighty, know that it comes from a spark of my splendour."}
+  - {id: g11-12, ref: "11.12", topic: perspective, text: "If a thousand suns were to rise at once in the sky, their light might resemble the splendour of that great being."}
+  - {id: g11-32, ref: "11.32", topic: time, text: "I am Time, the mighty destroyer of worlds."}
+  - {id: g11-33, ref: "11.33", topic: courage, text: "Therefore, arise and win glory."}
+
+  # Chapters 12 to 17
+  - {id: g12-08, ref: "12.8", topic: love, text: "Fix your mind on me alone and rest your understanding in me. Then you will live in me."}
+  - {id: g12-12, ref: "12.12", topic: present, text: "Knowledge is better than mere practice, meditation better than knowledge, and letting go of results better than meditation. Peace follows it at once."}
+  - {id: g12-13, ref: "12.13", topic: kindness, text: "One who hates no being, who is friendly and compassionate, free from 'I' and 'mine', steady in pain and pleasure, and forgiving, is dear to me."}
+  - {id: g12-15, ref: "12.15", topic: anxiety, text: "One who does not disturb the world, and is not disturbed by the world, free from excitement, envy, fear and anxiety, is dear to me."}
+  - {id: g12-18, ref: "12.18", topic: patience, text: "One who is the same to friend and foe, in honour and dishonour, in heat and cold, in pleasure and pain, is dear to me."}
+  - {id: g12-19, ref: "12.19", topic: silence, text: "One who takes praise and blame alike, who is quiet and content with whatever comes, and steady in mind, is dear to me."}
+  - {id: g13-08, ref: "13.8", topic: integrity, text: "Humility, honesty, non-violence, patience, uprightness, purity, steadiness and self-control: this is true knowledge."}
+  - {id: g13-28, ref: "13.28", topic: kindness, text: "One who sees the same Lord living equally in every being does not harm the self by harming others."}
+  - {id: g14-17, ref: "14.17", topic: learning, text: "From goodness comes knowledge. From passion comes greed. From darkness comes ignorance."}
+  - {id: g14-24, ref: "14.24", topic: wealth, text: "One who sees a lump of earth, a stone and a piece of gold as equal, and stays steady in praise and blame, has risen above the world."}
+  - {id: g15-07, ref: "15.7", topic: self, text: "An eternal part of me becomes the living soul in every being."}
+  - {id: g16-01, ref: "16.1-3", topic: integrity, text: "Fearlessness, a pure heart, generosity, self-control, truthfulness, freedom from anger, compassion, gentleness and forgiveness: these are divine qualities."}
+  - {id: g16-21, ref: "16.21", topic: anger, text: "There are three gates to self-destruction: desire, anger and greed. Let go of all three."}
+  - {id: g17-03, ref: "17.3", topic: purpose, text: "A person is made of their faith. As their faith is, so are they."}
+  - {id: g17-15, ref: "17.15", topic: silence, text: "Words that cause no pain, that are true, kind and helpful: this is the discipline of speech."}
+  - {id: g17-16, ref: "17.16", topic: silence, text: "A calm mind, gentleness, silence, self-control and a pure heart: this is the discipline of the mind."}
+  - {id: g17-20, ref: "17.20", topic: kindness, text: "A gift given because it is right to give, to someone who cannot repay it, at the right time and place, is a gift of goodness."}
+
+  # Chapter 18
+  - {id: g18-20, ref: "18.20", topic: perspective, text: "The knowledge that sees one undivided reality in all beings, however divided they seem, is true knowledge."}
+  - {id: g18-26, ref: "18.26", topic: action, text: "The worker who is free from attachment and ego, full of resolve and energy, and unchanged by success or failure, is good."}
+  - {id: g18-33, ref: "18.33", topic: control, text: "The steadiness that holds the mind, breath and senses through disciplined practice is the steadiness of goodness."}
+  - {id: g18-37, ref: "18.37", topic: adversity, text: "What feels like poison at first but turns to nectar in the end is the happiness of goodness, born of a clear mind."}
+  - {id: g18-38, ref: "18.38", topic: wealth, text: "What feels like nectar at first but turns to poison in the end is the happiness of passion."}
+  - {id: g18-48, ref: "18.48", topic: action, text: "Do not give up the work you were born for, even if it has flaws. Every undertaking is clouded by flaws, as fire is by smoke."}
+  - {id: g18-58, ref: "18.58", topic: adversity, text: "Fix your mind on me, and by my grace you will cross every obstacle."}
+  - {id: g18-61, ref: "18.61", topic: self, text: "The Lord lives in the heart of every being."}
+  - {id: g18-63, ref: "18.63", topic: learning, text: "Reflect on all of this deeply, and then do as you choose."}
+  - {id: g18-66, ref: "18.66", topic: anxiety, text: "Let go of every other duty and take refuge in me alone. I will free you from all wrong. Do not grieve."}
+  - {id: g18-73, ref: "18.73", topic: courage, speaker: Arjuna, text: "My confusion is gone. I stand firm, my doubts are cleared. I will do as you say."}
+  - {id: g18-78, ref: "18.78", topic: purpose, text: "Wherever there is Krishna, master of yoga, and Arjuna, the archer, there will be fortune, victory, prosperity and justice."}

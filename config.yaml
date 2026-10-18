@@ -1,0 +1,141 @@
+# Settings for the reels pipeline. Secrets never go here: they live in .env
+# (see .env.example) and in the token file under data_dir.
+
+account:
+  # Shown small at the bottom of every reel. Set this to your real handle.
+  handle: "@dailyphilosophyforyou"
+
+content:
+  # Language of the on-screen text, caption and voice. "hi" uses
+  # content/quotes_hi.yaml and content/topics_hi.yaml; "en" uses the English.
+  # Run `philoreels generate` after changing it.
+  language: hi
+
+paths:
+  # Where rendered videos, the posting log and the access token are kept.
+  # This is on your own machine and is never committed to GitHub.
+  data_dir: "~/PhiloReels"
+
+instagram:
+  api_version: "v25.0"
+  # resumable: uploads the MP4 straight from this machine (needs Facebook
+  #            Login for Business, see README). Nothing is hosted publicly.
+  # url:       Instagram downloads the video from public_base_url/<file>.
+  upload_mode: resumable
+  public_base_url: null
+  share_to_feed: true
+  # Daily safety cap below Instagram's API limit of 100 posts per 24 hours.
+  hard_daily_cap: 25
+
+schedule:
+  # Posting window in this machine's local time.
+  window_start: "07:00"
+  window_end: "23:00"
+  # Each slot moves by up to this many minutes either way, so posts don't
+  # land on the same minute every day.
+  jitter_minutes: 12
+  # Never post two reels closer together than this.
+  min_gap_minutes: 40
+  # Reels per day by posting week. Week 1 starts on the day you run
+  # `philoreels start`. After the last row the last value is kept.
+  ramp:
+    - {week: 1, per_day: 2}
+    - {week: 2, per_day: 3}
+    - {week: 3, per_day: 4}
+    - {week: 4, per_day: 5}
+    - {week: 5, per_day: 6}
+    - {week: 6, per_day: 8}
+    - {week: 7, per_day: 10}
+  # Stop and alert after this many failed posts in a row.
+  max_consecutive_failures: 3
+
+images:
+  # What `philoreels fetch-images` downloads into assets/backgrounds. Only
+  # free pictures (CC0, public domain, Pixabay licence) are kept, and any
+  # picture with a human face in it is dropped.
+  sources: [openverse, commons, pixabay]   # pixabay needs PIXABAY_API_KEY in .env; "met" adds museum paintings
+  reject_faces: true
+  queries:
+    # Not "Indian village": that mostly finds Native American villages.
+    - "village in India"
+    - "rural India landscape"
+    - "village India hut"
+    - "mud house India village"
+    - "paddy field India"
+    - "rice terraces India"
+    - "mustard field India"
+    - "village pond India"
+    - "bullock cart India"
+    - "cows village India"
+    - "Rajasthan village desert"
+    - "Kerala backwaters"
+    - "Himalayan village India"
+    - "village temple India"
+    - "banyan tree village India"
+    - "sunrise village India"
+    - "village India painting"
+    - "Warli painting village"
+
+render:
+  width: 1080
+  height: 1920
+  fps: 30
+  # x264 speed/quality trade-off: faster, fast, medium (default), slow.
+  preset: medium
+  # Keep this many rendered reels ready ahead of the schedule.
+  render_ahead: 12
+  # Read every line on screen aloud. The verse reference is shown but not
+  # read unless voice_reads_reference is true.
+  voiceover: true
+  voice_reads_reference: false
+  # Voice engine: "say" (the Mac's built-in voices, free) or "elevenlabs"
+  # (for example a clone of your own voice; see README).
+  tts: elevenlabs
+  # say: the first voice in this list that the Mac has is used. Lekha is the
+  # Mac's Hindi voice. A better-sounding "Enhanced"/"Premium" version can be
+  # downloaded in System Settings > Accessibility > Spoken Content > System
+  # voice > Manage Voices. For English text use e.g. ["Rishi", "Daniel"].
+  voice: ["Lekha (Premium)", "Lekha (Enhanced)", "Lekha"]
+  voice_rate: 160  # words per minute; the Mac default is about 180
+  elevenlabs:
+    voice_id: BHiHOHnZhvsZ8knoOk3E   # "Abhimanyu Katyayan" (Hindi clone); `philoreels voices` lists ids
+    model: eleven_multilingual_v2   # speaks Hindi
+    stability: 0.5
+    similarity_boost: 0.8
+    style: 0.0
+    speed: 0.9   # 0.7 to 1.2; lower is slower
+  music_volume: 0.35
+  # How much background pictures are darkened behind the text (0 = not at all, 1 = black).
+  picture_dim: 0.25
+  music_volume_with_voice: 0.15
+  # Fonts are tried in order; the first file that exists is used. Drop your
+  # own .ttf/.otf files in assets/fonts and list them first if you like.
+  fonts:
+    serif:
+      - "assets/fonts/serif.ttf"
+      - "/System/Library/Fonts/Supplemental/Georgia.ttf"
+      - "/System/Library/Fonts/Supplemental/Times New Roman.ttf"
+      - "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+    serif_italic:
+      - "assets/fonts/serif-italic.ttf"
+      - "/System/Library/Fonts/Supplemental/Georgia Italic.ttf"
+      - "/System/Library/Fonts/Supplemental/Times New Roman Italic.ttf"
+      - "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf"
+      - "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+    # Devanagari fonts for Hindi text. Kohinoor Devanagari and Devanagari
+    # Sangam MN come with macOS; FreeSerif/FreeSans are the Linux fallbacks.
+    hindi:
+      - "assets/fonts/hindi.ttf"
+      - "/System/Library/Fonts/Kohinoor.ttc#0"
+      - "/System/Library/Fonts/Supplemental/Devanagari Sangam MN.ttc#0"
+      - "/usr/share/fonts/truetype/freefont/FreeSerif.ttf"
+    hindi_bold:
+      - "assets/fonts/hindi-bold.ttf"
+      - "/System/Library/Fonts/Kohinoor.ttc#2"
+      - "/System/Library/Fonts/Supplemental/Devanagari Sangam MN.ttc#1"
+      - "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf"
+    sans:
+      - "assets/fonts/sans.ttf"
+      - "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
+      - "/System/Library/Fonts/Helvetica.ttc"
+      - "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
