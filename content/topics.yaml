@@ -1,0 +1,114 @@
+# Per-topic text used around a quote: opening hooks, closing reflection
+# questions and hashtags. The recipe generator rotates through these so the
+# same quote never comes back with the same words around it.
+
+defaults:
+  hashtags: ["#philosophy", "#wisdom", "#stoicism", "#mindset", "#selfimprovement", "#quotes"]
+  ctas:
+    - "Save this for a hard day."
+    - "Send this to someone who needs it."
+    - "Follow for daily wisdom."
+    - "Read it twice."
+    - "Which line stays with you?"
+
+topics:
+  action:
+    hooks: ["Stop waiting to feel ready.", "Thinking about it is not doing it.", "Start before you're ready."]
+    reflections: ["What is one small thing you can do today?", "What have you been putting off?"]
+    hashtags: ["#discipline", "#motivation"]
+  happiness:
+    hooks: ["Happiness is closer than you think.", "You already have more than you need.", "Read this if nothing feels like enough."]
+    reflections: ["What are you grateful for right now?", "What would be enough for you?"]
+    hashtags: ["#happiness", "#gratitude"]
+  anger:
+    hooks: ["Before you reply in anger, read this.", "Anger costs more than it pays.", "Someone hurt you. Now what?"]
+    reflections: ["What would you do if you waited one more hour?", "Who controls you when you are angry?"]
+    hashtags: ["#anger", "#selfcontrol"]
+  change:
+    hooks: ["Everything you have is borrowed.", "Afraid of change? Read this.", "Nothing stays. That's the point."]
+    reflections: ["What are you holding on to too tightly?", "What change are you resisting?"]
+    hashtags: ["#change", "#lettinggo"]
+  integrity:
+    hooks: ["Your character is your real wealth.", "Nobody is watching. Act anyway.", "Words are cheap. This isn't."]
+    reflections: ["Would you be proud if everyone saw this choice?", "Where are you cutting corners?"]
+    hashtags: ["#integrity", "#character"]
+  adversity:
+    hooks: ["Going through something hard?", "The obstacle is the path.", "Read this when life gets heavy."]
+    reflections: ["What is this difficulty teaching you?", "Who will you be after this?"]
+    hashtags: ["#resilience", "#strength"]
+  mortality:
+    hooks: ["You don't have as much time as you think.", "Memento mori.", "One day you won't wake up. Today you did."]
+    reflections: ["If this was your last year, what would change?", "What are you saving for later?"]
+    hashtags: ["#mementomori", "#life"]
+  self:
+    hooks: ["The hardest battle is with yourself.", "Who are you when no one is watching?", "Read this if you feel lost."]
+    reflections: ["When did you last listen to yourself?", "What would the best version of you do now?"]
+    hashtags: ["#selfmastery", "#selfawareness"]
+  kindness:
+    hooks: ["The world needs this reminder.", "Be the reason someone's day gets better.", "Kindness is not weakness."]
+    reflections: ["Who could use your kindness today?", "When did someone's kindness change your day?"]
+    hashtags: ["#kindness", "#compassion"]
+  present:
+    hooks: ["Stop living in tomorrow.", "Today is the only day you have.", "You keep waiting for life to start."]
+    reflections: ["What would you notice if you slowed down right now?", "Where is your mind right now?"]
+    hashtags: ["#presentmoment", "#mindfulness"]
+  perspective:
+    hooks: ["Your problems look smaller from up here.", "Zoom out.", "Feeling small? Look up."]
+    reflections: ["Will this matter in five years?", "What does the bigger picture show you?"]
+    hashtags: ["#perspective", "#stoic"]
+  mind:
+    hooks: ["Your thoughts are shaping your life.", "It's not the event. It's your story about it.", "Overthinking? Read this."]
+    reflections: ["Which thought is hurting you most today?", "What story are you telling yourself?"]
+    hashtags: ["#mindset", "#overthinking"]
+  time:
+    hooks: ["You are not short on time. You are spending it.", "Where did the year go?", "Stop saying 'someday'."]
+    reflections: ["Where did your time go this week?", "What are you postponing?"]
+    hashtags: ["#time", "#productivity"]
+  people:
+    hooks: ["Not everyone deserves your peace.", "You become who you spend time with.", "Dealing with difficult people?"]
+    reflections: ["Who makes you better?", "Who are you letting disturb your peace?"]
+    hashtags: ["#relationships", "#peace"]
+  anxiety:
+    hooks: ["Anxious about tomorrow? Read this.", "Most of your fears will never happen.", "Breathe. Then read this."]
+    reflections: ["What are you afraid of that hasn't happened?", "What is actually happening right now?"]
+    hashtags: ["#anxiety", "#calm"]
+  learning:
+    hooks: ["The wisest people know this.", "Never stop being a student.", "Being wrong is how you grow."]
+    reflections: ["What did you learn this week?", "Where do you pretend to know?"]
+    hashtags: ["#learning", "#growth"]
+  courage:
+    hooks: ["Fear is not a reason to stop.", "Courage is quieter than you think.", "Be brave today."]
+    reflections: ["What would you do if you were not afraid?", "Where do you need courage right now?"]
+    hashtags: ["#courage", "#bravery"]
+  wealth:
+    hooks: ["Rich is a state of mind.", "You don't need more. Read this.", "The richest people want the least."]
+    reflections: ["What is enough for you?", "What do you own that owns you?"]
+    hashtags: ["#minimalism", "#contentment"]
+  purpose:
+    hooks: ["Do you know where you're going?", "Find your why.", "Busy is not the same as meaningful."]
+    reflections: ["What is your why?", "Where is your life heading?"]
+    hashtags: ["#purpose", "#meaning"]
+  solitude:
+    hooks: ["Learn to be alone.", "Silence is not loneliness.", "When did you last sit with your thoughts?"]
+    reflections: ["Can you sit alone for ten minutes without your phone?", "What do you hear in silence?"]
+    hashtags: ["#solitude", "#innerpeace"]
+  control:
+    hooks: ["Stop trying to control everything.", "The secret to peace of mind.", "Let go of what isn't yours."]
+    reflections: ["What is in your control today?", "What are you trying to control that you can't?"]
+    hashtags: ["#dichotomyofcontrol", "#stoic"]
+  patience:
+    hooks: ["Slow down.", "Water always wins.", "Good things take time."]
+    reflections: ["Where are you rushing?", "What deserves more patience from you?"]
+    hashtags: ["#patience", "#calm"]
+  silence:
+    hooks: ["Say less.", "The wise stay quiet.", "Silence speaks."]
+    reflections: ["When did you last listen without waiting to reply?", "What could you leave unsaid today?"]
+    hashtags: ["#silence", "#wisdom"]
+  love:
+    hooks: ["The heart knows.", "Not everything can be explained.", "Love is not logic."]
+    reflections: ["What does your heart already know?", "Who do you love without reason?"]
+    hashtags: ["#love", "#heart"]
+  simplicity:
+    hooks: ["Your life is too complicated.", "Simplify.", "Less, but better."]
+    reflections: ["What could you remove from your life this week?", "What actually matters to you?"]
+    hashtags: ["#simplicity", "#minimalism"]

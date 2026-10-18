@@ -1,0 +1,244 @@
+# Quote bank. Every reel is built from one of these.
+#
+# Wording follows public-domain English translations (Long, Gummere, Legge,
+# Muller, Arnold) or the author's own English. Lines marked "paraphrase" are
+# common modern renderings of a real passage, not a word-for-word translation.
+#
+# checked: false means nobody has compared the wording to the source yet.
+# Run `philoreels quotes --unchecked` to list them, verify, then set true.
+#
+# topic must be one of the keys in content/topics.yaml.
+
+- {id: ma01, author: Marcus Aurelius, work: "Meditations 10.16", topic: action, checked: false,
+   text: "Waste no more time arguing about what a good man should be. Be one."}
+- {id: ma02, author: Marcus Aurelius, work: "Meditations 7.67", topic: happiness, checked: false,
+   text: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking."}
+- {id: ma03, author: Marcus Aurelius, work: "Meditations 6.6", topic: anger, checked: false,
+   text: "The best way of avenging yourself is not to become like the wrongdoer."}
+- {id: ma04, author: Marcus Aurelius, work: "Meditations 9.35", topic: change, checked: false,
+   text: "Loss is nothing else but change, and change is Nature's delight."}
+- {id: ma05, author: Marcus Aurelius, work: "Meditations 12.17", topic: integrity, checked: false,
+   text: "If it is not right, do not do it; if it is not true, do not say it."}
+- {id: ma06, author: Marcus Aurelius, work: "Meditations 5.20", topic: adversity, checked: false,
+   text: "The impediment to action advances action. What stands in the way becomes the way."}
+- {id: ma07, author: Marcus Aurelius, work: "Meditations 4.17", topic: mortality, checked: false,
+   text: "Do not act as if you were going to live ten thousand years. While you live, while it is in your power, be good."}
+- {id: ma08, author: Marcus Aurelius, work: "Meditations 11.18", topic: anger, checked: false,
+   text: "How much more grievous are the consequences of anger than the causes of it."}
+- {id: ma09, author: Marcus Aurelius, work: "Meditations 7.59", topic: self, checked: false,
+   text: "Look within. Within is the fountain of good, and it will ever bubble up, if you will ever dig."}
+- {id: ma10, author: Marcus Aurelius, work: "Meditations 6.39", topic: kindness, checked: false,
+   text: "Love the people with whom fate brings you together, and do so with all your heart."}
+- {id: ma11, author: Marcus Aurelius, work: "Meditations 3.7", topic: integrity, checked: false,
+   text: "Never value anything as profitable that compels you to break your promise or lose your self-respect."}
+- {id: ma12, author: Marcus Aurelius, work: "Meditations 7.29", topic: present, checked: false,
+   text: "Confine yourself to the present."}
+- {id: ma13, author: Marcus Aurelius, work: "Meditations 7.47", topic: perspective, checked: false,
+   text: "Look round at the courses of the stars, as if you were going along with them."}
+- {id: ma14, author: Marcus Aurelius, work: "Meditations 5.16", topic: mind, checked: false,
+   text: "Such as are your habitual thoughts, such also will be the character of your mind; for the soul is dyed by the thoughts."}
+- {id: ma15, author: Marcus Aurelius, work: "Meditations 4.7", topic: mind, checked: false,
+   text: "Take away your opinion, and then there is taken away the complaint, 'I have been harmed.'"}
+- {id: ma16, author: Marcus Aurelius, work: "Meditations 4.43", topic: time, checked: false,
+   text: "Time is a sort of river of passing events, and strong is its current."}
+- {id: ma17, author: Marcus Aurelius, work: "Meditations 2.1", topic: people, checked: false,
+   text: "Begin the morning by saying to yourself: I shall meet with the busy-body, the ungrateful, the arrogant. But none of them can injure me."}
+- {id: ma18, author: Marcus Aurelius, work: "Meditations 8.47", topic: mind, checked: false,
+   text: "If you are pained by any external thing, it is not this thing that disturbs you, but your own judgement about it."}
+
+- {id: se01, author: Seneca, work: "Letters to Lucilius 13", topic: anxiety, checked: false,
+   text: "We are more often frightened than hurt; and we suffer more from imagination than from reality."}
+- {id: se02, author: Seneca, work: "Letters to Lucilius 1", topic: time, checked: false,
+   text: "While we are postponing, life speeds by."}
+- {id: se03, author: Seneca, work: "On the Shortness of Life", topic: time, checked: false,
+   text: "It is not that we have a short time to live, but that we waste a lot of it."}
+- {id: se04, author: Seneca, work: "Letters to Lucilius (paraphrase)", topic: adversity, checked: false,
+   text: "Difficulties strengthen the mind, as labour does the body."}
+- {id: se05, author: Seneca, work: "Letters to Lucilius 76", topic: learning, checked: false,
+   text: "As long as you live, keep learning how to live."}
+- {id: se06, author: Seneca, work: "Letters to Lucilius 76", topic: learning, checked: false,
+   text: "No man was ever wise by chance."}
+- {id: se07, author: Seneca, work: "On the Happy Life", topic: kindness, checked: false,
+   text: "Wherever there is a human being, there is an opportunity for a kindness."}
+- {id: se08, author: Seneca, work: "Letters to Lucilius 101", topic: present, checked: false,
+   text: "Begin at once to live, and count each separate day as a separate life."}
+- {id: se09, author: Seneca, work: "On Anger", topic: anger, checked: false,
+   text: "The greatest remedy for anger is delay."}
+- {id: se10, author: Seneca, work: "Letters to Lucilius 7", topic: people, checked: false,
+   text: "Associate with those who will make a better man of you."}
+- {id: se11, author: Seneca, work: "Letters to Lucilius 78", topic: courage, checked: false,
+   text: "Sometimes even to live is an act of courage."}
+- {id: se12, author: Seneca, work: "Letters to Lucilius 2", topic: wealth, checked: false,
+   text: "It is not the man who has too little, but the man who craves more, that is poor."}
+- {id: se13, author: Seneca, work: "Letters to Lucilius 71", topic: purpose, checked: false,
+   text: "If a man does not know to which port he is sailing, no wind is favourable."}
+- {id: se14, author: Seneca, work: "Letters to Lucilius 2", topic: solitude, checked: false,
+   text: "The primary indication of a well-ordered mind is a man's ability to remain in one place and linger in his own company."}
+- {id: se15, author: Seneca, work: "Letters to Lucilius 1", topic: time, checked: false,
+   text: "Hold every hour in your grasp. Lay hold of today's task, and you will not need to depend so much upon tomorrow's."}
+- {id: se16, author: Seneca, work: "On Providence", topic: adversity, checked: false,
+   text: "Fire tests gold, suffering tests brave men."}
+- {id: se17, author: Seneca, work: "Letters to Lucilius 9", topic: happiness, checked: false,
+   text: "He who is not satisfied with what he has would not be satisfied with what he would like to have."}
+- {id: se18, author: Seneca, work: "Letters to Lucilius 5", topic: anxiety, checked: false,
+   text: "Cease to hope, and you will cease to fear."}
+- {id: se19, author: Seneca, work: "On Tranquillity of Mind", topic: change, checked: false,
+   text: "We must not be too attached to the things we have; they are lent, not given."}
+- {id: se20, author: Seneca, work: "Letters to Lucilius 28", topic: self, checked: false,
+   text: "You need a change of soul rather than a change of climate."}
+
+- {id: ep01, author: Epictetus, work: "Enchiridion 5", topic: mind, checked: false,
+   text: "Men are disturbed not by things, but by the views which they take of things."}
+- {id: ep02, author: Epictetus, work: "Enchiridion 1", topic: control, checked: false,
+   text: "Some things are within our power, while others are not."}
+- {id: ep03, author: Epictetus, work: "Fragments", topic: self, checked: false,
+   text: "No man is free who is not master of himself."}
+- {id: ep04, author: Epictetus, work: "Discourses 3.23", topic: purpose, checked: false,
+   text: "First say to yourself what you would be; and then do what you have to do."}
+- {id: ep05, author: Epictetus, work: "Fragments (paraphrase)", topic: wealth, checked: false,
+   text: "Wealth consists not in having great possessions, but in having few wants."}
+- {id: ep06, author: Epictetus, work: "Enchiridion 13", topic: learning, checked: false,
+   text: "If you want to improve, be content to be thought foolish and stupid."}
+- {id: ep07, author: Epictetus, work: "Enchiridion 8", topic: control, checked: false,
+   text: "Do not seek for things to happen as you wish, but wish them to happen as they do, and you will go on well."}
+- {id: ep08, author: Epictetus, work: "Discourses 2.1", topic: learning, checked: false,
+   text: "Only the educated are free."}
+- {id: ep09, author: Epictetus, work: "Fragments", topic: happiness, checked: false,
+   text: "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has."}
+- {id: ep10, author: Epictetus, work: "Discourses 1.24", topic: adversity, checked: false,
+   text: "It is difficulties that show what men are."}
+- {id: ep11, author: Epictetus, work: "Discourses 4.1", topic: control, checked: false,
+   text: "Freedom is not procured by a full enjoyment of what is desired, but by controlling the desire."}
+- {id: ze01, author: Zeno of Citium, work: "via Diogenes Laertius", topic: people, checked: false,
+   text: "We have two ears and one mouth, so that we may listen more and talk less."}
+
+- {id: lz01, author: Laozi, work: "Tao Te Ching 64", topic: action, checked: false,
+   text: "A journey of a thousand miles begins with a single step."}
+- {id: lz02, author: Laozi, work: "Tao Te Ching 33", topic: self, checked: false,
+   text: "He who knows others is wise; he who knows himself is enlightened."}
+- {id: lz03, author: Laozi, work: "Tao Te Ching 33", topic: self, checked: false,
+   text: "He who overcomes others is strong; he who overcomes himself is mighty."}
+- {id: lz04, author: Laozi, work: "Tao Te Ching 43", topic: patience, checked: false,
+   text: "The softest thing in the world dashes against and overcomes the hardest."}
+- {id: lz05, author: Laozi, work: "Tao Te Ching 46", topic: wealth, checked: false,
+   text: "He who knows that enough is enough will always have enough."}
+- {id: lz06, author: Laozi, work: "Tao Te Ching 56", topic: silence, checked: false,
+   text: "He who knows does not speak; he who speaks does not know."}
+- {id: lz07, author: Laozi, work: "Tao Te Ching 46", topic: wealth, checked: false,
+   text: "There is no greater calamity than not knowing what is enough."}
+- {id: lz08, author: Laozi, work: "Tao Te Ching 63", topic: action, checked: false,
+   text: "Do difficult things while they are easy, and great things while they are small."}
+
+- {id: cf01, author: Confucius, work: "Analects 2.17", topic: learning, checked: false,
+   text: "When you know a thing, to hold that you know it; and when you do not know a thing, to allow that you do not know it: this is knowledge."}
+- {id: cf02, author: Confucius, work: "Analects 15.24", topic: kindness, checked: false,
+   text: "What you do not want done to yourself, do not do to others."}
+- {id: cf03, author: Confucius, work: "Analects 14.27", topic: integrity, checked: false,
+   text: "The superior man is modest in his speech, but exceeds in his actions."}
+- {id: cf04, author: Confucius, work: "Analects 2.24", topic: courage, checked: false,
+   text: "To see what is right and not to do it is want of courage."}
+- {id: cf05, author: Confucius, work: "Analects 2.15", topic: learning, checked: false,
+   text: "Learning without thought is labour lost; thought without learning is perilous."}
+- {id: cf06, author: Confucius, work: "Analects 4.17", topic: people, checked: false,
+   text: "When we see men of worth, we should think of equalling them."}
+
+- {id: bu01, author: The Buddha, work: "Dhammapada 1", topic: mind, checked: false,
+   text: "All that we are is the result of what we have thought."}
+- {id: bu02, author: The Buddha, work: "Dhammapada 5", topic: anger, checked: false,
+   text: "Hatred does not cease by hatred at any time; hatred ceases by love."}
+- {id: bu03, author: The Buddha, work: "Dhammapada 103", topic: self, checked: false,
+   text: "If one man conquer in battle a thousand times a thousand men, and another conquer himself, he is the greatest of conquerors."}
+- {id: bu04, author: The Buddha, work: "Dhammapada 204", topic: happiness, checked: false,
+   text: "Health is the greatest of gifts, contentedness the greatest of riches."}
+- {id: bu05, author: The Buddha, work: "Dhammapada 81", topic: patience, checked: false,
+   text: "As a solid rock is not shaken by the wind, wise people falter not amidst blame and praise."}
+- {id: bu06, author: The Buddha, work: "Dhammapada 276", topic: action, checked: false,
+   text: "You yourself must strive. The Buddhas only point the way."}
+- {id: bu07, author: The Buddha, work: "Dhammapada 223", topic: kindness, checked: false,
+   text: "Let a man overcome anger by love, let him overcome evil by good."}
+
+- {id: bg01, author: Bhagavad Gita, work: "Chapter 2, verse 47 (paraphrase)", topic: action, checked: false,
+   text: "You have a right to your actions, but never to the fruits of your actions."}
+- {id: bg02, author: Bhagavad Gita, work: "Chapter 3, verse 35", topic: purpose, checked: false,
+   text: "Better is one's own duty, though imperfectly performed, than the duty of another well performed."}
+- {id: bg03, author: Bhagavad Gita, work: "Chapter 6, verse 35 (paraphrase)", topic: mind, checked: false,
+   text: "The mind is restless and hard to restrain, but it is subdued by practice."}
+- {id: bg04, author: Bhagavad Gita, work: "Chapter 2, verse 20 (paraphrase)", topic: mortality, checked: false,
+   text: "For the soul there is neither birth nor death. It is not slain when the body is slain."}
+
+- {id: so01, author: Socrates, work: "Plato, Apology 38a", topic: self, checked: false,
+   text: "The unexamined life is not worth living."}
+- {id: pl01, author: Plato, work: "Laws I (paraphrase)", topic: self, checked: false,
+   text: "The first and best victory is to conquer self."}
+- {id: ar01, author: Aristotle, work: "via Diogenes Laertius", topic: learning, checked: false,
+   text: "The roots of education are bitter, but the fruit is sweet."}
+- {id: ar02, author: Aristotle, work: "Nicomachean Ethics (paraphrase)", topic: happiness, checked: false,
+   text: "Happiness depends upon ourselves."}
+- {id: he01, author: Heraclitus, work: "Fragments (paraphrase)", topic: change, checked: false,
+   text: "No man ever steps in the same river twice, for it is not the same river and he is not the same man."}
+- {id: he02, author: Heraclitus, work: "Fragments", topic: integrity, checked: false,
+   text: "Character is destiny."}
+- {id: dg01, author: Diogenes, work: "to Alexander the Great, via Diogenes Laertius", topic: wealth, checked: false,
+   text: "Stand a little out of my sunlight."}
+- {id: eu01, author: Epicurus, work: "Fragments", topic: happiness, checked: false,
+   text: "Do not spoil what you have by desiring what you have not."}
+- {id: eu02, author: Epicurus, work: "Fragments", topic: wealth, checked: false,
+   text: "Not what we have but what we enjoy constitutes our abundance."}
+- {id: cc01, author: Cicero, work: "Pro Plancio", topic: kindness, checked: false,
+   text: "Gratitude is not only the greatest of virtues, but the parent of all the others."}
+- {id: cc02, author: Cicero, work: "On Duties (paraphrase)", topic: integrity, checked: false,
+   text: "The shifts of fortune test the reliability of friends."}
+- {id: pu01, author: Plutarch, work: "On Listening (paraphrase)", topic: learning, checked: false,
+   text: "The mind is not a vessel to be filled, but a fire to be kindled."}
+
+- {id: nz01, author: Friedrich Nietzsche, work: "Twilight of the Idols", topic: purpose, checked: false,
+   text: "He who has a why to live can bear almost any how."}
+- {id: nz02, author: Friedrich Nietzsche, work: "Twilight of the Idols", topic: adversity, checked: false,
+   text: "What does not kill me makes me stronger."}
+- {id: nz03, author: Friedrich Nietzsche, work: "The Gay Science 270", topic: self, checked: false,
+   text: "Become who you are."}
+- {id: nz04, author: Friedrich Nietzsche, work: "Twilight of the Idols", topic: happiness, checked: false,
+   text: "Without music, life would be a mistake."}
+- {id: sc01, author: Arthur Schopenhauer, work: "The World as Will and Representation (paraphrase)", topic: self, checked: false,
+   text: "Talent hits a target no one else can hit; genius hits a target no one else can see."}
+- {id: sc02, author: Arthur Schopenhauer, work: "Counsels and Maxims", topic: solitude, checked: false,
+   text: "A man can be himself only so long as he is alone."}
+- {id: sc03, author: Arthur Schopenhauer, work: "Counsels and Maxims (paraphrase)", topic: self, checked: false,
+   text: "We forfeit three-fourths of ourselves in order to be like other people."}
+- {id: pa01, author: Blaise Pascal, work: "Pensees 139 (paraphrase)", topic: solitude, checked: false,
+   text: "All of humanity's problems stem from man's inability to sit quietly in a room alone."}
+- {id: pa02, author: Blaise Pascal, work: "Pensees 277", topic: love, checked: false,
+   text: "The heart has its reasons which reason does not know."}
+- {id: mo01, author: Michel de Montaigne, work: "Essays (attributed)", topic: anxiety, checked: false,
+   text: "My life has been full of terrible misfortunes, most of which never happened."}
+- {id: mo02, author: Michel de Montaigne, work: "Essays I.39", topic: solitude, checked: false,
+   text: "The greatest thing in the world is to know how to belong to oneself."}
+- {id: sp01, author: Baruch Spinoza, work: "Ethics V", topic: integrity, checked: false,
+   text: "All things excellent are as difficult as they are rare."}
+- {id: kg01, author: Soren Kierkegaard, work: "Journals, 1843", topic: time, checked: false,
+   text: "Life can only be understood backwards; but it must be lived forwards."}
+
+- {id: em01, author: Ralph Waldo Emerson, work: "Self-Reliance", topic: self, checked: false,
+   text: "Nothing can bring you peace but yourself."}
+- {id: em02, author: Ralph Waldo Emerson, work: "Self-Reliance", topic: self, checked: false,
+   text: "Trust thyself: every heart vibrates to that iron string."}
+- {id: em03, author: Ralph Waldo Emerson, work: "Education", topic: patience, checked: false,
+   text: "Adopt the pace of nature: her secret is patience."}
+- {id: em04, author: Ralph Waldo Emerson, work: "Self-Reliance", topic: present, checked: false,
+   text: "With the past I have nothing to do; nor with the future. I live now."}
+- {id: em05, author: Ralph Waldo Emerson, work: "Self-Reliance", topic: courage, checked: false,
+   text: "Whoso would be a man must be a nonconformist."}
+- {id: th01, author: Henry David Thoreau, work: "Walden", topic: simplicity, checked: false,
+   text: "Our life is frittered away by detail. Simplify, simplify."}
+- {id: th02, author: Henry David Thoreau, work: "Walden", topic: purpose, checked: false,
+   text: "The mass of men lead lives of quiet desperation."}
+- {id: th03, author: Henry David Thoreau, work: "Walden", topic: purpose, checked: false,
+   text: "I went to the woods because I wished to live deliberately."}
+- {id: th04, author: Henry David Thoreau, work: "Walden", topic: integrity, checked: false,
+   text: "Rather than love, than money, than fame, give me truth."}
+- {id: th05, author: Henry David Thoreau, work: "Walden", topic: simplicity, checked: false,
+   text: "A man is rich in proportion to the number of things which he can afford to let alone."}
+- {id: wj01, author: William James, work: "attributed", topic: anxiety, checked: false,
+   text: "The greatest weapon against stress is our ability to choose one thought over another."}
+- {id: wj02, author: William James, work: "attributed", topic: action, checked: false,
+   text: "Act as if what you do makes a difference. It does."}
