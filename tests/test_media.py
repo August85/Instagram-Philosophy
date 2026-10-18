@@ -39,6 +39,7 @@ class FakeSession:
             }
             return FakeResponse({"query": {"pages": pages}})
         if url.endswith("/search"):
+            assert "/v1.1/" in url, "the Met retired v1/search on 2026-10-01"
             return FakeResponse({"objectIDs": [7, 8]})
         if url.endswith("/objects/7"):
             return FakeResponse({"isPublicDomain": True, "primaryImage": "https://x/met.jpg", "title": "Krishna and Arjuna",
@@ -48,8 +49,9 @@ class FakeSession:
         return FakeResponse(content=self.jpeg)
 
 
-def test_fetch_keeps_only_public_domain(tmp_path):
+def test_fetch_keeps_only_public_domain(tmp_path, monkeypatch):
     import io
+    monkeypatch.setattr(images.time, "sleep", lambda _: None)
     buf = io.BytesIO()
     Image.new("RGB", (1400, 1000), "orange").save(buf, "JPEG")
     f = images.Fetcher(FakeSession(buf.getvalue()))
@@ -57,6 +59,13 @@ def test_fetch_keeps_only_public_domain(tmp_path):
     assert len(saved) == 2
     credits = (tmp_path / "CREDITS.md").read_text()
     assert "Krishna and Arjuna" in credits and "Modern" not in credits
+
+
+def test_fetcher_overrides_default_user_agent():
+    # Wikimedia returns 403 to requests' default "python-requests/x" agent.
+    import requests
+    f = images.Fetcher(requests.Session())
+    assert f.http.headers["User-Agent"] == images.USER_AGENT
 
 
 def test_music_synth_is_clean_stereo():

@@ -16,6 +16,7 @@ from __future__ import annotations
 import hashlib
 import io
 import re
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
@@ -25,7 +26,10 @@ from PIL import Image
 
 USER_AGENT = "philoreels/0.1 (Instagram philosophy reels; https://github.com/August85/Instagram-Philosophy)"
 
-MET_QUERIES = ["Krishna", "Krishna and Arjuna", "Bhagavad Gita", "Arjuna", "Vishnu", "Radha Krishna", "Mahabharata"]
+# v1.1 search ranks loose matches (e.g. the printmaker Krishna Reddy) highly,
+# so the queries name Indian painting explicitly.
+MET_QUERIES = ["Krishna painting India", "Krishna and Arjuna", "Bhagavata Purana", "Radha Krishna painting",
+               "Vishnu painting India", "Mahabharata painting"]
 COMMONS_QUERIES = [
     "Krishna Arjuna chariot painting",
     "Bhagavad Gita painting",
@@ -71,21 +75,33 @@ def _strip_html(text: str) -> str:
 class Fetcher:
     def __init__(self, session: requests.Session | None = None):
         self.http = session or requests.Session()
-        self.http.headers.setdefault("User-Agent", USER_AGENT)
+        # requests.Session already carries a "python-requests" User-Agent, which
+        # Wikimedia rejects with 403, so always overwrite it.
+        self.http.headers["User-Agent"] = USER_AGENT
 
     # -- The Met ---------------------------------------------------------------
-    def met(self, queries: Iterable[str] = MET_QUERIES, per_query: int = 40) -> list[Picture]:
+    def met(self, queries: Iterable[str] = MET_QUERIES, per_query: int = 60, delay: float = 0.5) -> list[Picture]:
         base = "https://collectionapi.metmuseum.org/public/collection/v1"
+        # v1/search was retired on 2026-10-01; v1.1/search is paginated.
+        search = "https://collectionapi.metmuseum.org/public/collection/v1.1/search"
         seen: set[int] = set()
         out: list[Picture] = []
         for q in queries:
-            r = self.http.get(f"{base}/search", params={"q": q, "hasImages": "true"}, timeout=60)
+            r = self.http.get(search, params={"q": q, "hasImages": "true", "limit": per_query, "offset": 0}, timeout=60)
             ids = (r.json().get("objectIDs") or [])[:per_query]
             for oid in ids:
                 if oid in seen:
                     continue
                 seen.add(oid)
-                obj = self.http.get(f"{base}/objects/{oid}", timeout=60).json()
+                time.sleep(delay)
+                r = self.http.get(f"{base}/objects/{oid}", timeout=60)
+                if r.status_code == 403:
+                    # The Met's bot protection answers rapid runs with 403 HTML;
+                    # keep what we have rather than losing every result.
+                    return out
+                if r.status_code != 200:
+                    continue
+                obj = r.json()
                 if not obj.get("isPublicDomain") or not obj.get("primaryImage"):
                     continue
                 if obj.get("classification") and not re.search(r"paint|drawing|manuscript|album|codic", obj["classification"], re.I):
