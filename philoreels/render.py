@@ -100,9 +100,11 @@ def draw_text_layer(
     for i, line in enumerate(lines):
         lw = d_text.textlength(line, font=font)
         x, y = (w - lw) / 2, y0 + i * line_h
-        d_shadow.text((x + 3, y + 4), line, font=font, fill=(0, 0, 0, 170))
+        # A soft dark glow around the letters keeps them readable on bright pictures.
+        d_shadow.text((x, y + 3), line, font=font, fill=(0, 0, 0, 235), stroke_width=max(3, font.size // 14),
+                      stroke_fill=(0, 0, 0, 235))
         d_text.text((x, y), line, font=font, fill=color)
-    shadow = shadow.filter(ImageFilter.GaussianBlur(6))
+    shadow = shadow.filter(ImageFilter.GaussianBlur(9))
     return Image.alpha_composite(shadow, text_layer), y0 + block_h
 
 
@@ -114,7 +116,7 @@ def _save_cropped(img: Image.Image, path: Path) -> tuple[int, int]:
     return x0, y0
 
 
-def prepare_background(cfg: Config, src: Path, margin: float = 1.1) -> Path:
+def prepare_background(cfg: Config, src: Path, margin: float = 1.1, min_fill: float = 0.6) -> Path:
     """Fit a picture into a vertical frame without cutting it off.
 
     The picture is shown whole, as wide as the frame, over a blurred and
@@ -124,7 +126,7 @@ def prepare_background(cfg: Config, src: Path, margin: float = 1.1) -> Path:
     W, H = int(w * margin), int(h * margin)
     cache = cfg.data_dir / "bg-cache"
     cache.mkdir(parents=True, exist_ok=True)
-    key = hashlib.sha1(f"{src.resolve()}:{src.stat().st_mtime_ns}:{W}x{H}".encode()).hexdigest()[:12]
+    key = hashlib.sha1(f"{src.resolve()}:{src.stat().st_mtime_ns}:{W}x{H}:{min_fill}:v2".encode()).hexdigest()[:12]
     out = cache / f"{src.stem}-{key}.jpg"
     if out.exists():
         return out
@@ -135,9 +137,16 @@ def prepare_background(cfg: Config, src: Path, margin: float = 1.1) -> Path:
     left, top = (cover.width - W) // 2, (cover.height - H) // 2
     canvas = cover.crop((left, top, left + W, top + H)).filter(ImageFilter.GaussianBlur(40))
     canvas = Image.blend(canvas, Image.new("RGB", (W, H), "black"), 0.35)
-    # Foreground: the whole picture, full width (or full height if it is very tall).
+    # Foreground: the picture full width (or full height if it is very tall).
+    # Wide pictures are enlarged to fill more of the frame, trimming at most a
+    # third of their width, so they don't sit in a thin strip.
     fit = min(W / img.width, H * 0.92 / img.height)
+    if img.height * fit < H * min_fill:
+        fit = min(H * min_fill / img.height, W * 1.5 / img.width)
     fg = img.resize((int(img.width * fit), int(img.height * fit)), Image.LANCZOS)
+    if fg.width > W:
+        left = (fg.width - W) // 2
+        fg = fg.crop((left, 0, left + W, fg.height))
     canvas.paste(fg, ((W - fg.width) // 2, (H - fg.height) // 2))
     canvas.save(out, "JPEG", quality=92)
     return out
@@ -283,10 +292,11 @@ def ffmpeg_command(cfg: Config, recipe: Recipe, layers, out: Path,
             framed = prepare_background(cfg, bg)
             args += ["-loop", "1", "-framerate", f"{fps}", "-t", f"{dur}", "-i", str(framed)]
             frames = int(dur * fps)
+            dim = cfg.get("render.picture_dim", 0.25)
             # Slow push-in on the picture, darkened so the words stay readable.
             filters.append(
                 f"[0:v]zoompan=z='1+0.08*on/{frames}':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
-                f":s={w}x{h}:fps={fps},setsar=1,drawbox=color=black@0.45:t=fill,trim=duration={dur}[bg]"
+                f":s={w}x{h}:fps={fps},setsar=1,drawbox=color=black@{dim}:t=fill,trim=duration={dur}[bg]"
             )
     else:
         args += [
