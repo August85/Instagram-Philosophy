@@ -90,7 +90,7 @@ render:
   voice_reads_reference: false
   # Voice engine: "say" (the Mac's built-in voices, free) or "elevenlabs"
   # (for example a clone of your own voice; see README).
-  tts: say
+  tts: elevenlabs
   # say: the first voice in this list that the Mac has is used. Lekha is the
   # Mac's Hindi voice. A better-sounding "Enhanced"/"Premium" version can be
   # downloaded in System Settings > Accessibility > Spoken Content > System
@@ -98,7 +98,7 @@ render:
   voice: ["Lekha (Premium)", "Lekha (Enhanced)", "Lekha"]
   voice_rate: 160  # words per minute; the Mac default is about 180
   elevenlabs:
-    voice_id: null          # your voice's id (`philoreels voices` lists them), or ELEVENLABS_VOICE_ID in .env
+    voice_id: BHiHOHnZhvsZ8knoOk3E   # "Abhimanyu Katyayan" (Hindi clone); `philoreels voices` lists ids
     model: eleven_multilingual_v2   # speaks Hindi
     stability: 0.5
     similarity_boost: 0.8
