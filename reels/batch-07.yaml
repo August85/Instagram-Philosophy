@@ -3,29 +3,29 @@
   quote_id: g13-08
   format: quote
   theme: sand
-  duration: 8.38
+  duration: 9.1
   segments:
   - role: quote
-    text: '“Humility, honesty, non-violence, patience, uprightness, purity, steadiness and self-control:
-      this is true knowledge.”'
+    text: '“विनम्रता, दिखावे से दूरी, अहिंसा, सहनशीलता, सरलता, पवित्रता, स्थिरता और आत्म-संयम: यही सच्चा
+      ज्ञान है।”'
     start: 0.4
-    end: 8.38
+    end: 9.1
   - role: author
-    text: — Bhagavad Gita 13.8
+    text: — भगवद्गीता 13.8
     start: 1.2
-    end: 8.38
-  voiceover_text: 'Humility, honesty, non-violence, patience, uprightness, purity, steadiness and self-control:
-    this is true knowledge.'
+    end: 9.1
+  voiceover_text: 'विनम्रता, दिखावे से दूरी, अहिंसा, सहनशीलता, सरलता, पवित्रता, स्थिरता और आत्म-संयम:
+    यही सच्चा ज्ञान है।'
   voiceover_start: 0.7
   caption: |-
-    “Humility, honesty, non-violence, patience, uprightness, purity, steadiness and self-control: this is true knowledge.”
-    — Bhagavad Gita 13.8
+    “विनम्रता, दिखावे से दूरी, अहिंसा, सहनशीलता, सरलता, पवित्रता, स्थिरता और आत्म-संयम: यही सच्चा ज्ञान है।”
+    — भगवद्गीता 13.8
 
-    Would you be proud if everyone saw this choice?
+    अगर सब यह फ़ैसला देखते, तो क्या तुम्हें गर्व होता?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #integrity #character #karma #spirituality
+    #bhagavadgita #gita #integrity #character #krishna #gitagyan
 - id: '0602'
   quote_id: g2-56
   format: quote_reflection
@@ -33,164 +33,160 @@
   duration: 16.14
   segments:
   - role: quote
-    text: “One whose mind is not shaken by sorrow, who does not crave pleasure, and who is free from fear
-      and anger, is called wise.”
+    text: “जिसका मन दुख में नहीं डगमगाता, जो सुख की लालसा नहीं करता, और जो भय और क्रोध से मुक्त है, वही
+      ज्ञानी कहलाता है।”
     start: 0.4
     end: 11.74
   - role: author
-    text: — Bhagavad Gita 2.56
+    text: — भगवद्गीता 2.56
     start: 1.2
     end: 11.74
   - role: reflection
-    text: Which thought is hurting you most today?
+    text: आज कौन-सा विचार तुम्हें सबसे ज़्यादा दुख दे रहा है?
     start: 11.94
     end: 16.14
-  voiceover_text: One whose mind is not shaken by sorrow, who does not crave pleasure, and who is free
-    from fear and anger, is called wise.
+  voiceover_text: जिसका मन दुख में नहीं डगमगाता, जो सुख की लालसा नहीं करता, और जो भय और क्रोध से मुक्त
+    है, वही ज्ञानी कहलाता है।
   voiceover_start: 0.7
   caption: |-
-    “One whose mind is not shaken by sorrow, who does not crave pleasure, and who is free from fear and anger, is called wise.”
-    — Bhagavad Gita 2.56
+    “जिसका मन दुख में नहीं डगमगाता, जो सुख की लालसा नहीं करता, और जो भय और क्रोध से मुक्त है, वही ज्ञानी कहलाता है।”
+    — भगवद्गीता 2.56
 
-    Which thought is hurting you most today?
+    आज कौन-सा विचार तुम्हें सबसे ज़्यादा दुख दे रहा है?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #mindset #overthinking #karma #krishna
+    #bhagavadgita #gita #mindset #overthinking #hindiquotes #sanatandharma
 - id: '0603'
   quote_id: g17-16
   format: lesson
   theme: ink
-  duration: 15.02
+  duration: 13.58
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: '“A calm mind, gentleness, silence, self-control and a pure heart: this is the discipline of
-      the mind.”'
+    text: '“शांत मन, कोमलता, मौन, आत्म-संयम और शुद्ध हृदय: यही मन का तप है।”'
     start: 3.0
-    end: 11.82
+    end: 10.38
   - role: author
-    text: — Bhagavad Gita 17.16
+    text: — भगवद्गीता 17.16
     start: 3.8
-    end: 11.82
+    end: 10.38
   - role: cta
-    text: Send this to someone who needs it.
-    start: 12.02
-    end: 15.02
-  voiceover_text: 'A calm mind, gentleness, silence, self-control and a pure heart: this is the discipline
-    of the mind.'
+    text: उसे भेजो जिसे आज इसकी ज़रूरत है।
+    start: 10.58
+    end: 13.58
+  voiceover_text: 'शांत मन, कोमलता, मौन, आत्म-संयम और शुद्ध हृदय: यही मन का तप है।'
   voiceover_start: 3.3
   caption: |-
-    “A calm mind, gentleness, silence, self-control and a pure heart: this is the discipline of the mind.”
-    — Bhagavad Gita 17.16
+    “शांत मन, कोमलता, मौन, आत्म-संयम और शुद्ध हृदय: यही मन का तप है।”
+    — भगवद्गीता 17.16
 
-    When did you last listen without waiting to reply?
+    आख़िरी बार कब तुमने जवाब देने की जल्दी के बिना सुना था?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #silence #wisdom #spirituality #krishna
+    #bhagavadgita #gita #silence #wisdom #श्रीकृष्ण #gitagyan
 - id: '0604'
   quote_id: g2-14
   format: hook_quote_cta
   theme: marble
-  duration: 15.94
+  duration: 15.22
   segments:
   - role: hook
-    text: Water always wins.
+    text: पानी हमेशा जीतता है।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Pleasure and pain come and go like winter and summer. They do not last. Learn to bear them
-      patiently.”
+    text: “सुख और दुख सर्दी-गर्मी की तरह आते-जाते रहते हैं। ये टिकते नहीं। इन्हें धैर्य से सहना सीखो।”
     start: 3.2
-    end: 12.74
+    end: 12.02
   - role: author
-    text: — Bhagavad Gita 2.14
+    text: — भगवद्गीता 2.14
     start: 4.0
-    end: 12.74
+    end: 12.02
   - role: cta
-    text: Send this to someone who needs it.
-    start: 12.94
-    end: 15.94
-  voiceover_text: Pleasure and pain come and go like winter and summer. They do not last. Learn to bear
-    them patiently.
+    text: उसे भेजो जिसे आज इसकी ज़रूरत है।
+    start: 12.22
+    end: 15.22
+  voiceover_text: सुख और दुख सर्दी-गर्मी की तरह आते-जाते रहते हैं। ये टिकते नहीं। इन्हें धैर्य से सहना
+    सीखो।
   voiceover_start: 3.5
   caption: |-
-    Water always wins.
+    पानी हमेशा जीतता है।
 
-    “Pleasure and pain come and go like winter and summer. They do not last. Learn to bear them patiently.”
-    — Bhagavad Gita 2.14
+    “सुख और दुख सर्दी-गर्मी की तरह आते-जाते रहते हैं। ये टिकते नहीं। इन्हें धैर्य से सहना सीखो।”
+    — भगवद्गीता 2.14
 
-    Where are you rushing?
+    तुम कहाँ जल्दबाज़ी कर रहे हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #patience #calm #dharma #spirituality
+    #bhagavadgita #gita #patience #calm #sanatandharma #karma
 - id: '0605'
   quote_id: g18-48
   format: lesson
   theme: forest
-  duration: 18.26
+  duration: 19.4
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “Do not give up the work you were born for, even if it has flaws. Every undertaking is clouded
-      by flaws, as fire is by smoke.”
+    text: “जिस काम के लिए तुम जन्मे हो, उसे मत छोड़ो, भले ही उसमें दोष हों। हर काम में कोई न कोई दोष होता
+      है, जैसे आग धुएँ से घिरी रहती है।”
     start: 3.0
-    end: 15.06
+    end: 16.2
   - role: author
-    text: — Bhagavad Gita 18.48
+    text: — भगवद्गीता 18.48
     start: 3.8
-    end: 15.06
+    end: 16.2
   - role: cta
-    text: Save this for a hard day.
-    start: 15.26
-    end: 18.26
-  voiceover_text: Do not give up the work you were born for, even if it has flaws. Every undertaking is
-    clouded by flaws, as fire is by smoke.
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
+    start: 16.4
+    end: 19.4
+  voiceover_text: जिस काम के लिए तुम जन्मे हो, उसे मत छोड़ो, भले ही उसमें दोष हों। हर काम में कोई न कोई
+    दोष होता है, जैसे आग धुएँ से घिरी रहती है।
   voiceover_start: 3.3
   caption: |-
-    “Do not give up the work you were born for, even if it has flaws. Every undertaking is clouded by flaws, as fire is by smoke.”
-    — Bhagavad Gita 18.48
+    “जिस काम के लिए तुम जन्मे हो, उसे मत छोड़ो, भले ही उसमें दोष हों। हर काम में कोई न कोई दोष होता है, जैसे आग धुएँ से घिरी रहती है।”
+    — भगवद्गीता 18.48
 
-    What is one small thing you can do today?
+    आज तुम कौन-सा एक छोटा काम कर सकते हो?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #discipline #motivation #dharma #spirituality
+    #bhagavadgita #gita #discipline #motivation #dharma #wisdom
 - id: '0606'
   quote_id: g3-42
   format: quote
   theme: sand
-  duration: 12.34
+  duration: 10.54
   segments:
   - role: quote
-    text: “The senses are higher than the body, the mind higher than the senses, the intellect higher
-      than the mind. Higher still is the Self.”
+    text: “इंद्रियाँ शरीर से ऊपर हैं, मन इंद्रियों से ऊपर, बुद्धि मन से ऊपर। और आत्मा इन सबसे ऊपर है।”
     start: 0.4
-    end: 12.34
+    end: 10.54
   - role: author
-    text: — Bhagavad Gita 3.42
+    text: — भगवद्गीता 3.42
     start: 1.2
-    end: 12.34
-  voiceover_text: The senses are higher than the body, the mind higher than the senses, the intellect
-    higher than the mind. Higher still is the Self.
+    end: 10.54
+  voiceover_text: इंद्रियाँ शरीर से ऊपर हैं, मन इंद्रियों से ऊपर, बुद्धि मन से ऊपर। और आत्मा इन सबसे ऊपर
+    है।
   voiceover_start: 0.7
   caption: |-
-    “The senses are higher than the body, the mind higher than the senses, the intellect higher than the mind. Higher still is the Self.”
-    — Bhagavad Gita 3.42
+    “इंद्रियाँ शरीर से ऊपर हैं, मन इंद्रियों से ऊपर, बुद्धि मन से ऊपर। और आत्मा इन सबसे ऊपर है।”
+    — भगवद्गीता 3.42
 
-    What would the best version of you do now?
+    तुम्हारा सबसे अच्छा रूप अभी क्या करता?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #selfmastery #selfawareness #krishna #spirituality
+    #bhagavadgita #gita #selfmastery #selfawareness #gitagyan #spirituality
 - id: '0607'
   quote_id: g2-27
   format: hook_quote
@@ -198,350 +194,350 @@
   duration: 15.14
   segments:
   - role: hook
-    text: One day you won't wake up. Today you did.
+    text: एक दिन तुम नहीं जागोगे। आज तुम जागे हो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Death is certain for one who is born, and birth is certain for one who dies. Do not grieve
-      over what cannot be avoided.”
+    text: “जो जन्मा है उसकी मृत्यु निश्चित है, और जो मरा है उसका जन्म निश्चित है। जो टल नहीं सकता, उस
+      पर शोक मत करो।”
     start: 3.2
     end: 15.14
   - role: author
-    text: — Bhagavad Gita 2.27
+    text: — भगवद्गीता 2.27
     start: 4.0
     end: 15.14
-  voiceover_text: Death is certain for one who is born, and birth is certain for one who dies. Do not
-    grieve over what cannot be avoided.
+  voiceover_text: जो जन्मा है उसकी मृत्यु निश्चित है, और जो मरा है उसका जन्म निश्चित है। जो टल नहीं सकता,
+    उस पर शोक मत करो।
   voiceover_start: 3.5
   caption: |-
-    One day you won't wake up. Today you did.
+    एक दिन तुम नहीं जागोगे। आज तुम जागे हो।
 
-    “Death is certain for one who is born, and birth is certain for one who dies. Do not grieve over what cannot be avoided.”
-    — Bhagavad Gita 2.27
+    “जो जन्मा है उसकी मृत्यु निश्चित है, और जो मरा है उसका जन्म निश्चित है। जो टल नहीं सकता, उस पर शोक मत करो।”
+    — भगवद्गीता 2.27
 
-    What are you saving for later?
+    तुम किस चीज़ को बाद के लिए बचाकर रख रहे हो?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #life #soul #hinduism #dharma
+    #bhagavadgita #gita #life #soul #karma #spirituality
 - id: 0608
   quote_id: g6-01
   format: hook_quote
   theme: ink
-  duration: 12.98
+  duration: 12.62
   segments:
   - role: hook
-    text: Start before you're ready.
+    text: तैयार होने से पहले शुरू करो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “One who does the work that should be done, without depending on its fruit, is the true renunciate.”
+    text: “जो फल पर निर्भर हुए बिना वह काम करता है जो करना चाहिए, वही सच्चा संन्यासी है।”
     start: 3.2
-    end: 12.98
+    end: 12.62
   - role: author
-    text: — Bhagavad Gita 6.1
+    text: — भगवद्गीता 6.1
     start: 4.0
-    end: 12.98
-  voiceover_text: One who does the work that should be done, without depending on its fruit, is the true
-    renunciate.
+    end: 12.62
+  voiceover_text: जो फल पर निर्भर हुए बिना वह काम करता है जो करना चाहिए, वही सच्चा संन्यासी है।
   voiceover_start: 3.5
   caption: |-
-    Start before you're ready.
+    तैयार होने से पहले शुरू करो।
 
-    “One who does the work that should be done, without depending on its fruit, is the true renunciate.”
-    — Bhagavad Gita 6.1
+    “जो फल पर निर्भर हुए बिना वह काम करता है जो करना चाहिए, वही सच्चा संन्यासी है।”
+    — भगवद्गीता 6.1
 
-    What have you been putting off?
+    तुम क्या टालते आ रहे हो?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #discipline #motivation #krishna #karma
+    #bhagavadgita #gita #discipline #motivation #gitagyan #श्रीकृष्ण
 - id: 0609
   quote_id: g9-22
   format: lesson
   theme: marble
-  duration: 15.38
+  duration: 17.9
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “To those who worship me with single-minded devotion, I bring what they lack and protect what
-      they have.”
+    text: “जो एकनिष्ठ भक्ति से मेरी उपासना करते हैं, उन्हें जो नहीं मिला वह मैं देता हूँ, और जो उनके पास
+      है उसकी रक्षा करता हूँ।”
     start: 3.0
-    end: 12.18
+    end: 14.7
   - role: author
-    text: — Bhagavad Gita 9.22
+    text: — भगवद्गीता 9.22
     start: 3.8
-    end: 12.18
+    end: 14.7
   - role: cta
-    text: Follow for daily wisdom.
-    start: 12.38
-    end: 15.38
-  voiceover_text: To those who worship me with single-minded devotion, I bring what they lack and protect
-    what they have.
+    text: रोज़ की सीख के लिए फ़ॉलो करो।
+    start: 14.9
+    end: 17.9
+  voiceover_text: जो एकनिष्ठ भक्ति से मेरी उपासना करते हैं, उन्हें जो नहीं मिला वह मैं देता हूँ, और जो
+    उनके पास है उसकी रक्षा करता हूँ।
   voiceover_start: 3.3
   caption: |-
-    “To those who worship me with single-minded devotion, I bring what they lack and protect what they have.”
-    — Bhagavad Gita 9.22
+    “जो एकनिष्ठ भक्ति से मेरी उपासना करते हैं, उन्हें जो नहीं मिला वह मैं देता हूँ, और जो उनके पास है उसकी रक्षा करता हूँ।”
+    — भगवद्गीता 9.22
 
-    Who do you love without reason?
+    तुम किसे बिना वजह प्यार करते हो?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #love #heart #karma #sanatandharma
+    #bhagavadgita #gita #love #heart #श्रीकृष्ण #hinduism
 - id: '0610'
   quote_id: g12-19
   format: hook_quote_cta
   theme: forest
-  duration: 17.38
+  duration: 18.46
   segments:
   - role: hook
-    text: Silence speaks.
+    text: मौन बोलता है।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “One who takes praise and blame alike, who is quiet and content with whatever comes, and steady
-      in mind, is dear to me.”
+    text: “जो प्रशंसा और निंदा को एक-सा मानता है, जो शांत है और जो मिले उसमें संतुष्ट है, और जिसका मन
+      स्थिर है, वह मुझे प्रिय है।”
     start: 3.2
-    end: 14.18
+    end: 15.26
   - role: author
-    text: — Bhagavad Gita 12.19
+    text: — भगवद्गीता 12.19
     start: 4.0
-    end: 14.18
+    end: 15.26
   - role: cta
-    text: Follow for daily wisdom.
-    start: 14.38
-    end: 17.38
-  voiceover_text: One who takes praise and blame alike, who is quiet and content with whatever comes,
-    and steady in mind, is dear to me.
+    text: रोज़ की सीख के लिए फ़ॉलो करो।
+    start: 15.46
+    end: 18.46
+  voiceover_text: जो प्रशंसा और निंदा को एक-सा मानता है, जो शांत है और जो मिले उसमें संतुष्ट है, और जिसका
+    मन स्थिर है, वह मुझे प्रिय है।
   voiceover_start: 3.5
   caption: |-
-    Silence speaks.
+    मौन बोलता है।
 
-    “One who takes praise and blame alike, who is quiet and content with whatever comes, and steady in mind, is dear to me.”
-    — Bhagavad Gita 12.19
+    “जो प्रशंसा और निंदा को एक-सा मानता है, जो शांत है और जो मिले उसमें संतुष्ट है, और जिसका मन स्थिर है, वह मुझे प्रिय है।”
+    — भगवद्गीता 12.19
 
-    What could you leave unsaid today?
+    आज तुम क्या अनकहा छोड़ सकते हो?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #silence #wisdom #karma #dharma
+    #bhagavadgita #gita #silence #wisdom #spirituality #dharma
 - id: '0611'
   quote_id: g2-23
   format: quote_reflection
   theme: ocean
-  duration: 13.62
+  duration: 16.14
   segments:
   - role: quote
-    text: “Weapons cannot cut the soul. Fire cannot burn it. Water cannot wet it. Wind cannot dry it.”
+    text: “आत्मा को न शस्त्र काट सकते हैं, न आग जला सकती है। न पानी उसे भिगो सकता है, न हवा उसे सुखा सकती
+      है।”
     start: 0.4
-    end: 9.22
+    end: 11.74
   - role: author
-    text: — Bhagavad Gita 2.23
+    text: — भगवद्गीता 2.23
     start: 1.2
-    end: 9.22
+    end: 11.74
   - role: reflection
-    text: What would the best version of you do now?
-    start: 9.42
-    end: 13.62
-  voiceover_text: Weapons cannot cut the soul. Fire cannot burn it. Water cannot wet it. Wind cannot dry
-    it.
+    text: तुम्हारा सबसे अच्छा रूप अभी क्या करता?
+    start: 11.94
+    end: 16.14
+  voiceover_text: आत्मा को न शस्त्र काट सकते हैं, न आग जला सकती है। न पानी उसे भिगो सकता है, न हवा उसे
+    सुखा सकती है।
   voiceover_start: 0.7
   caption: |-
-    “Weapons cannot cut the soul. Fire cannot burn it. Water cannot wet it. Wind cannot dry it.”
-    — Bhagavad Gita 2.23
+    “आत्मा को न शस्त्र काट सकते हैं, न आग जला सकती है। न पानी उसे भिगो सकता है, न हवा उसे सुखा सकती है।”
+    — भगवद्गीता 2.23
 
-    What would the best version of you do now?
+    तुम्हारा सबसे अच्छा रूप अभी क्या करता?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #selfmastery #selfawareness #spirituality #wisdom
+    #bhagavadgita #gita #selfmastery #selfawareness #dharma #श्रीकृष्ण
 - id: '0612'
   quote_id: g12-12
   format: hook_quote
   theme: midnight
-  duration: 14.78
+  duration: 15.5
   segments:
   - role: hook
-    text: You keep waiting for life to start.
+    text: तुम ज़िंदगी शुरू होने का इंतज़ार करते जा रहे हो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Knowledge is better than mere practice, meditation better than knowledge, and letting go of
-      results better than meditation. Peace follows it at once.”
+    text: “अभ्यास से ज्ञान बेहतर है, ज्ञान से ध्यान बेहतर है, और ध्यान से कर्मफल का त्याग बेहतर है। त्याग
+      के बाद तुरंत शांति मिलती है।”
     start: 3.2
-    end: 14.78
+    end: 15.5
   - role: author
-    text: — Bhagavad Gita 12.12
+    text: — भगवद्गीता 12.12
     start: 4.0
-    end: 14.78
-  voiceover_text: Knowledge is better than mere practice, meditation better than knowledge, and letting
-    go of results better than meditation. Peace follows it at once.
+    end: 15.5
+  voiceover_text: अभ्यास से ज्ञान बेहतर है, ज्ञान से ध्यान बेहतर है, और ध्यान से कर्मफल का त्याग बेहतर
+    है। त्याग के बाद तुरंत शांति मिलती है।
   voiceover_start: 3.5
   caption: |-
-    You keep waiting for life to start.
+    तुम ज़िंदगी शुरू होने का इंतज़ार करते जा रहे हो।
 
-    “Knowledge is better than mere practice, meditation better than knowledge, and letting go of results better than meditation. Peace follows it at once.”
-    — Bhagavad Gita 12.12
+    “अभ्यास से ज्ञान बेहतर है, ज्ञान से ध्यान बेहतर है, और ध्यान से कर्मफल का त्याग बेहतर है। त्याग के बाद तुरंत शांति मिलती है।”
+    — भगवद्गीता 12.12
 
-    Where is your mind right now?
+    तुम्हारा मन अभी कहाँ है?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #presentmoment #mindfulness #wisdom #sanatandharma
+    #bhagavadgita #gita #presentmoment #mindfulness #hindiquotes #karma
 - id: '0613'
   quote_id: g2-13
   format: quote
   theme: dusk
-  duration: 13.06
+  duration: 12.34
   segments:
   - role: quote
-    text: “As the soul passes through childhood, youth and old age in this body, so it passes into another
-      body. The wise are not shaken by this.”
+    text: “जैसे आत्मा इस शरीर में बचपन, जवानी और बुढ़ापे से गुज़रती है, वैसे ही वह दूसरा शरीर पाती है।
+      ज्ञानी इससे विचलित नहीं होते।”
     start: 0.4
-    end: 13.06
+    end: 12.34
   - role: author
-    text: — Bhagavad Gita 2.13
+    text: — भगवद्गीता 2.13
     start: 1.2
-    end: 13.06
-  voiceover_text: As the soul passes through childhood, youth and old age in this body, so it passes into
-    another body. The wise are not shaken by this.
+    end: 12.34
+  voiceover_text: जैसे आत्मा इस शरीर में बचपन, जवानी और बुढ़ापे से गुज़रती है, वैसे ही वह दूसरा शरीर पाती
+    है। ज्ञानी इससे विचलित नहीं होते।
   voiceover_start: 0.7
   caption: |-
-    “As the soul passes through childhood, youth and old age in this body, so it passes into another body. The wise are not shaken by this.”
-    — Bhagavad Gita 2.13
+    “जैसे आत्मा इस शरीर में बचपन, जवानी और बुढ़ापे से गुज़रती है, वैसे ही वह दूसरा शरीर पाती है। ज्ञानी इससे विचलित नहीं होते।”
+    — भगवद्गीता 2.13
 
-    What change are you resisting?
+    तुम किस बदलाव से लड़ रहे हो?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #change #lettinggo #dharma #sanatandharma
+    #bhagavadgita #gita #change #lettinggo #dharma #gitagyan
 - id: '0614'
   quote_id: g7-11
   format: lesson
   theme: sand
-  duration: 12.5
+  duration: 12.86
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “I am strength that is free from desire and attachment.”
+    text: “मैं वह बल हूँ जो इच्छा और आसक्ति से मुक्त है।”
     start: 3.0
-    end: 9.3
+    end: 9.66
   - role: author
-    text: — Bhagavad Gita 7.11
+    text: — भगवद्गीता 7.11
     start: 3.8
-    end: 9.3
+    end: 9.66
   - role: cta
-    text: Save this for a hard day.
-    start: 9.5
-    end: 12.5
-  voiceover_text: I am strength that is free from desire and attachment.
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
+    start: 9.86
+    end: 12.86
+  voiceover_text: मैं वह बल हूँ जो इच्छा और आसक्ति से मुक्त है।
   voiceover_start: 3.3
   caption: |-
-    “I am strength that is free from desire and attachment.”
-    — Bhagavad Gita 7.11
+    “मैं वह बल हूँ जो इच्छा और आसक्ति से मुक्त है।”
+    — भगवद्गीता 7.11
 
-    What are you trying to control that you can't?
+    तुम किस चीज़ को कंट्रोल करना चाहते हो जो तुम्हारे बस में नहीं?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #selfcontrol #innerpeace #krishna #karma
+    #bhagavadgita #gita #selfcontrol #innerpeace #gitagyan #wisdom
 - id: '0615'
   quote_id: g4-38
   format: quote
   theme: ember
-  duration: 7.3
+  duration: 8.02
   segments:
   - role: quote
-    text: “There is nothing in this world as purifying as knowledge.”
+    text: “इस दुनिया में ज्ञान जैसा पवित्र करने वाला कुछ भी नहीं है।”
     start: 0.4
-    end: 7.3
+    end: 8.02
   - role: author
-    text: — Bhagavad Gita 4.38
+    text: — भगवद्गीता 4.38
     start: 1.2
-    end: 7.3
-  voiceover_text: There is nothing in this world as purifying as knowledge.
+    end: 8.02
+  voiceover_text: इस दुनिया में ज्ञान जैसा पवित्र करने वाला कुछ भी नहीं है।
   voiceover_start: 0.7
   caption: |-
-    “There is nothing in this world as purifying as knowledge.”
-    — Bhagavad Gita 4.38
+    “इस दुनिया में ज्ञान जैसा पवित्र करने वाला कुछ भी नहीं है।”
+    — भगवद्गीता 4.38
 
-    Where do you pretend to know?
+    तुम कहाँ जानने का दिखावा करते हो?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #learning #growth #karma #hinduism
+    #bhagavadgita #gita #learning #growth #karma #spirituality
 - id: '0616'
   quote_id: g6-06
   format: hook_quote
   theme: ink
-  duration: 14.78
+  duration: 14.42
   segments:
   - role: hook
-    text: Overthinking? Read this.
+    text: बहुत ज़्यादा सोचते हो? यह पढ़ो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “For one who has conquered the mind, the mind is the best friend. For one who has not, it is
-      the worst enemy.”
+    text: “जिसने मन को जीत लिया, उसके लिए मन सबसे अच्छा मित्र है। जिसने नहीं जीता, उसके लिए वही सबसे बड़ा
+      शत्रु है।”
     start: 3.2
-    end: 14.78
+    end: 14.42
   - role: author
-    text: — Bhagavad Gita 6.6
+    text: — भगवद्गीता 6.6
     start: 4.0
-    end: 14.78
-  voiceover_text: For one who has conquered the mind, the mind is the best friend. For one who has not,
-    it is the worst enemy.
+    end: 14.42
+  voiceover_text: जिसने मन को जीत लिया, उसके लिए मन सबसे अच्छा मित्र है। जिसने नहीं जीता, उसके लिए वही
+    सबसे बड़ा शत्रु है।
   voiceover_start: 3.5
   caption: |-
-    Overthinking? Read this.
+    बहुत ज़्यादा सोचते हो? यह पढ़ो।
 
-    “For one who has conquered the mind, the mind is the best friend. For one who has not, it is the worst enemy.”
-    — Bhagavad Gita 6.6
+    “जिसने मन को जीत लिया, उसके लिए मन सबसे अच्छा मित्र है। जिसने नहीं जीता, उसके लिए वही सबसे बड़ा शत्रु है।”
+    — भगवद्गीता 6.6
 
-    What story are you telling yourself?
+    तुम खुद को कौन-सी कहानी सुना रहे हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #mindset #overthinking #karma #spirituality
+    #bhagavadgita #gita #mindset #overthinking #श्रीकृष्ण #hindiquotes
 - id: '0617'
   quote_id: g2-50
   format: hook_quote_cta
   theme: marble
-  duration: 11.1
+  duration: 11.26
   segments:
   - role: hook
-    text: Start before you're ready.
+    text: तैयार होने से पहले शुरू करो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Yoga is skill in action.”
+    text: “कर्म में कुशलता ही योग है।”
     start: 3.2
-    end: 7.9
+    end: 8.06
   - role: author
-    text: — Bhagavad Gita 2.50
+    text: — भगवद्गीता 2.50
     start: 4.0
-    end: 7.9
+    end: 8.06
   - role: cta
-    text: Save this for a hard day.
-    start: 8.1
-    end: 11.1
-  voiceover_text: Yoga is skill in action.
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
+    start: 8.26
+    end: 11.26
+  voiceover_text: कर्म में कुशलता ही योग है।
   voiceover_start: 3.5
   caption: |-
-    Start before you're ready.
+    तैयार होने से पहले शुरू करो।
 
-    “Yoga is skill in action.”
-    — Bhagavad Gita 2.50
+    “कर्म में कुशलता ही योग है।”
+    — भगवद्गीता 2.50
 
-    What have you been putting off?
+    तुम क्या टालते आ रहे हो?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
     #bhagavadgita #gita #discipline #motivation #sanatandharma #spirituality
 - id: 0618
@@ -551,96 +547,96 @@
   duration: 9.74
   segments:
   - role: hook
-    text: Read this if you feel lost.
+    text: खोया-खोया महसूस कर रहे हो? यह पढ़ो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “The Lord lives in the heart of every being.”
+    text: “ईश्वर हर प्राणी के हृदय में निवास करता है।”
     start: 3.2
     end: 9.74
   - role: author
-    text: — Bhagavad Gita 18.61
+    text: — भगवद्गीता 18.61
     start: 4.0
     end: 9.74
-  voiceover_text: The Lord lives in the heart of every being.
+  voiceover_text: ईश्वर हर प्राणी के हृदय में निवास करता है।
   voiceover_start: 3.5
   caption: |-
-    Read this if you feel lost.
+    खोया-खोया महसूस कर रहे हो? यह पढ़ो।
 
-    “The Lord lives in the heart of every being.”
-    — Bhagavad Gita 18.61
+    “ईश्वर हर प्राणी के हृदय में निवास करता है।”
+    — भगवद्गीता 18.61
 
-    What would the best version of you do now?
+    तुम्हारा सबसे अच्छा रूप अभी क्या करता?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #selfmastery #selfawareness #hinduism #dharma
+    #bhagavadgita #gita #selfmastery #selfawareness #karma #श्रीकृष्ण
 - id: 0619
   quote_id: g9-29
   format: lesson
   theme: ocean
-  duration: 19.4
+  duration: 18.98
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “I am the same to all beings. None is hateful to me and none is favoured. But those who worship
-      me with love are in me, and I am in them.”
+    text: “मैं सभी प्राणियों के लिए समान हूँ। न कोई मुझे अप्रिय है, न कोई प्रिय। पर जो प्रेम से मुझे भजते
+      हैं, वे मुझमें हैं और मैं उनमें।”
     start: 3.0
-    end: 16.2
+    end: 15.78
   - role: author
-    text: — Bhagavad Gita 9.29
+    text: — भगवद्गीता 9.29
     start: 3.8
-    end: 16.2
+    end: 15.78
   - role: cta
-    text: Read it twice.
-    start: 16.4
-    end: 19.4
-  voiceover_text: I am the same to all beings. None is hateful to me and none is favoured. But those who
-    worship me with love are in me, and I am in them.
+    text: इसे दोबारा पढ़ो।
+    start: 15.98
+    end: 18.98
+  voiceover_text: मैं सभी प्राणियों के लिए समान हूँ। न कोई मुझे अप्रिय है, न कोई प्रिय। पर जो प्रेम से
+    मुझे भजते हैं, वे मुझमें हैं और मैं उनमें।
   voiceover_start: 3.3
   caption: |-
-    “I am the same to all beings. None is hateful to me and none is favoured. But those who worship me with love are in me, and I am in them.”
-    — Bhagavad Gita 9.29
+    “मैं सभी प्राणियों के लिए समान हूँ। न कोई मुझे अप्रिय है, न कोई प्रिय। पर जो प्रेम से मुझे भजते हैं, वे मुझमें हैं और मैं उनमें।”
+    — भगवद्गीता 9.29
 
-    Who do you love without reason?
+    तुम किसे बिना वजह प्यार करते हो?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #love #heart #spirituality #wisdom
+    #bhagavadgita #gita #love #heart #krishna #hinduism
 - id: '0620'
   quote_id: g2-70
   format: quote_reflection
   theme: midnight
-  duration: 16.86
+  duration: 18.0
   segments:
   - role: quote
-    text: “The ocean stays still while rivers pour into it. The one who stays still while desires pour
-      in finds peace, not the one who chases them.”
+    text: “नदियाँ समुद्र में गिरती रहती हैं, फिर भी वह शांत रहता है। जो इच्छाओं के आने पर भी शांत रहता
+      है, उसे शांति मिलती है, उनके पीछे भागने वाले को नहीं।”
     start: 0.4
-    end: 12.46
+    end: 13.6
   - role: author
-    text: — Bhagavad Gita 2.70
+    text: — भगवद्गीता 2.70
     start: 1.2
-    end: 12.46
+    end: 13.6
   - role: reflection
-    text: What do you own that owns you?
-    start: 12.66
-    end: 16.86
-  voiceover_text: The ocean stays still while rivers pour into it. The one who stays still while desires
-    pour in finds peace, not the one who chases them.
+    text: तुम्हारी कौन-सी चीज़ तुम पर हुकूमत करती है?
+    start: 13.8
+    end: 18.0
+  voiceover_text: नदियाँ समुद्र में गिरती रहती हैं, फिर भी वह शांत रहता है। जो इच्छाओं के आने पर भी शांत
+    रहता है, उसे शांति मिलती है, उनके पीछे भागने वाले को नहीं।
   voiceover_start: 0.7
   caption: |-
-    “The ocean stays still while rivers pour into it. The one who stays still while desires pour in finds peace, not the one who chases them.”
-    — Bhagavad Gita 2.70
+    “नदियाँ समुद्र में गिरती रहती हैं, फिर भी वह शांत रहता है। जो इच्छाओं के आने पर भी शांत रहता है, उसे शांति मिलती है, उनके पीछे भागने वाले को नहीं।”
+    — भगवद्गीता 2.70
 
-    What do you own that owns you?
+    तुम्हारी कौन-सी चीज़ तुम पर हुकूमत करती है?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #minimalism #contentment #sanatandharma #hinduism
+    #bhagavadgita #gita #minimalism #contentment #krishna #spirituality
 - id: '0621'
   quote_id: g18-26
   format: quote
@@ -648,51 +644,51 @@
   duration: 11.62
   segments:
   - role: quote
-    text: “The worker who is free from attachment and ego, full of resolve and energy, and unchanged by
-      success or failure, is good.”
+    text: “जो कर्ता आसक्ति और अहंकार से मुक्त है, धैर्य और उत्साह से भरा है, और सफलता-असफलता में नहीं
+      बदलता, वह सात्त्विक है।”
     start: 0.4
     end: 11.62
   - role: author
-    text: — Bhagavad Gita 18.26
+    text: — भगवद्गीता 18.26
     start: 1.2
     end: 11.62
-  voiceover_text: The worker who is free from attachment and ego, full of resolve and energy, and unchanged
-    by success or failure, is good.
+  voiceover_text: जो कर्ता आसक्ति और अहंकार से मुक्त है, धैर्य और उत्साह से भरा है, और सफलता-असफलता में
+    नहीं बदलता, वह सात्त्विक है।
   voiceover_start: 0.7
   caption: |-
-    “The worker who is free from attachment and ego, full of resolve and energy, and unchanged by success or failure, is good.”
-    — Bhagavad Gita 18.26
+    “जो कर्ता आसक्ति और अहंकार से मुक्त है, धैर्य और उत्साह से भरा है, और सफलता-असफलता में नहीं बदलता, वह सात्त्विक है।”
+    — भगवद्गीता 18.26
 
-    What have you been putting off?
+    तुम क्या टालते आ रहे हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #discipline #motivation #karma #dharma
+    #bhagavadgita #gita #discipline #motivation #gitagyan #dharma
 - id: '0622'
   quote_id: g6-16
   format: quote
   theme: sand
-  duration: 11.62
+  duration: 12.34
   segments:
   - role: quote
-    text: “Yoga is not for one who eats too much or too little, nor for one who sleeps too much or too
-      little.”
+    text: “योग उसके लिए नहीं जो बहुत ज़्यादा या बहुत कम खाता है, और न उसके लिए जो बहुत ज़्यादा या बहुत
+      कम सोता है।”
     start: 0.4
-    end: 11.62
+    end: 12.34
   - role: author
-    text: — Bhagavad Gita 6.16
+    text: — भगवद्गीता 6.16
     start: 1.2
-    end: 11.62
-  voiceover_text: Yoga is not for one who eats too much or too little, nor for one who sleeps too much
-    or too little.
+    end: 12.34
+  voiceover_text: योग उसके लिए नहीं जो बहुत ज़्यादा या बहुत कम खाता है, और न उसके लिए जो बहुत ज़्यादा
+    या बहुत कम सोता है।
   voiceover_start: 0.7
   caption: |-
-    “Yoga is not for one who eats too much or too little, nor for one who sleeps too much or too little.”
-    — Bhagavad Gita 6.16
+    “योग उसके लिए नहीं जो बहुत ज़्यादा या बहुत कम खाता है, और न उसके लिए जो बहुत ज़्यादा या बहुत कम सोता है।”
+    — भगवद्गीता 6.16
 
-    What actually matters to you?
+    तुम्हारे लिए सच में क्या मायने रखता है?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
     #bhagavadgita #gita #simplicity #minimalism #dharma #hinduism
 - id: '0623'
@@ -702,34 +698,34 @@
   duration: 14.5
   segments:
   - role: hook
-    text: Be brave today.
+    text: आज हिम्मत दिखाओ।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Cut the doubt in your heart with the sword of knowledge. Stand up and act.”
+    text: “अपने मन के संदेह को ज्ञान की तलवार से काट दो। उठो और कर्म करो।”
     start: 3.2
     end: 11.3
   - role: author
-    text: — Bhagavad Gita 4.42
+    text: — भगवद्गीता 4.42
     start: 4.0
     end: 11.3
   - role: cta
-    text: Follow for daily wisdom.
+    text: रोज़ की सीख के लिए फ़ॉलो करो।
     start: 11.5
     end: 14.5
-  voiceover_text: Cut the doubt in your heart with the sword of knowledge. Stand up and act.
+  voiceover_text: अपने मन के संदेह को ज्ञान की तलवार से काट दो। उठो और कर्म करो।
   voiceover_start: 3.5
   caption: |-
-    Be brave today.
+    आज हिम्मत दिखाओ।
 
-    “Cut the doubt in your heart with the sword of knowledge. Stand up and act.”
-    — Bhagavad Gita 4.42
+    “अपने मन के संदेह को ज्ञान की तलवार से काट दो। उठो और कर्म करो।”
+    — भगवद्गीता 4.42
 
-    Where do you need courage right now?
+    अभी तुम्हें कहाँ हिम्मत की ज़रूरत है?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #courage #bravery #krishna #hinduism
+    #bhagavadgita #gita #courage #bravery #sanatandharma #wisdom
 - id: '0624'
   quote_id: g12-15
   format: lesson
@@ -737,92 +733,92 @@
   duration: 17.9
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “One who does not disturb the world, and is not disturbed by the world, free from excitement,
-      envy, fear and anxiety, is dear to me.”
+    text: “जिससे दुनिया परेशान नहीं होती और जो दुनिया से परेशान नहीं होता, जो हर्ष, ईर्ष्या, भय और चिंता
+      से मुक्त है, वह मुझे प्रिय है।”
     start: 3.0
     end: 14.7
   - role: author
-    text: — Bhagavad Gita 12.15
+    text: — भगवद्गीता 12.15
     start: 3.8
     end: 14.7
   - role: cta
-    text: Save this for a hard day.
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
     start: 14.9
     end: 17.9
-  voiceover_text: One who does not disturb the world, and is not disturbed by the world, free from excitement,
-    envy, fear and anxiety, is dear to me.
+  voiceover_text: जिससे दुनिया परेशान नहीं होती और जो दुनिया से परेशान नहीं होता, जो हर्ष, ईर्ष्या, भय
+    और चिंता से मुक्त है, वह मुझे प्रिय है।
   voiceover_start: 3.3
   caption: |-
-    “One who does not disturb the world, and is not disturbed by the world, free from excitement, envy, fear and anxiety, is dear to me.”
-    — Bhagavad Gita 12.15
+    “जिससे दुनिया परेशान नहीं होती और जो दुनिया से परेशान नहीं होता, जो हर्ष, ईर्ष्या, भय और चिंता से मुक्त है, वह मुझे प्रिय है।”
+    — भगवद्गीता 12.15
 
-    What is actually happening right now?
+    अभी सच में क्या हो रहा है?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #anxiety #calm #wisdom #dharma
+    #bhagavadgita #gita #anxiety #calm #karma #krishna
 - id: '0625'
   quote_id: g3-08
   format: hook_quote
   theme: marble
-  duration: 9.38
+  duration: 10.46
   segments:
   - role: hook
-    text: Start before you're ready.
+    text: तैयार होने से पहले शुरू करो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Do your duty. Action is better than inaction.”
+    text: “अपना कर्तव्य करो। कर्म न करने से कर्म करना बेहतर है।”
     start: 3.2
-    end: 9.38
+    end: 10.46
   - role: author
-    text: — Bhagavad Gita 3.8
+    text: — भगवद्गीता 3.8
     start: 4.0
-    end: 9.38
-  voiceover_text: Do your duty. Action is better than inaction.
+    end: 10.46
+  voiceover_text: अपना कर्तव्य करो। कर्म न करने से कर्म करना बेहतर है।
   voiceover_start: 3.5
   caption: |-
-    Start before you're ready.
+    तैयार होने से पहले शुरू करो।
 
-    “Do your duty. Action is better than inaction.”
-    — Bhagavad Gita 3.8
+    “अपना कर्तव्य करो। कर्म न करने से कर्म करना बेहतर है।”
+    — भगवद्गीता 3.8
 
-    What have you been putting off?
+    तुम क्या टालते आ रहे हो?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #discipline #motivation #hinduism #karma
+    #bhagavadgita #gita #discipline #motivation #hinduism #krishna
 - id: '0626'
   quote_id: g4-39
   format: quote
   theme: forest
-  duration: 9.46
+  duration: 11.62
   segments:
   - role: quote
-    text: “One who has faith and masters the senses gains knowledge, and with knowledge comes supreme
-      peace.”
+    text: “जिसमें श्रद्धा है और जो इंद्रियों को वश में रखता है, उसे ज्ञान मिलता है, और ज्ञान से परम शांति
+      आती है।”
     start: 0.4
-    end: 9.46
+    end: 11.62
   - role: author
-    text: — Bhagavad Gita 4.39
+    text: — भगवद्गीता 4.39
     start: 1.2
-    end: 9.46
-  voiceover_text: One who has faith and masters the senses gains knowledge, and with knowledge comes supreme
-    peace.
+    end: 11.62
+  voiceover_text: जिसमें श्रद्धा है और जो इंद्रियों को वश में रखता है, उसे ज्ञान मिलता है, और ज्ञान से
+    परम शांति आती है।
   voiceover_start: 0.7
   caption: |-
-    “One who has faith and masters the senses gains knowledge, and with knowledge comes supreme peace.”
-    — Bhagavad Gita 4.39
+    “जिसमें श्रद्धा है और जो इंद्रियों को वश में रखता है, उसे ज्ञान मिलता है, और ज्ञान से परम शांति आती है।”
+    — भगवद्गीता 4.39
 
-    Where do you pretend to know?
+    तुम कहाँ जानने का दिखावा करते हो?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #learning #growth #hinduism #spirituality
+    #bhagavadgita #gita #learning #growth #karma #wisdom
 - id: '0627'
   quote_id: g18-33
   format: hook_quote
@@ -830,786 +826,784 @@
   duration: 12.62
   segments:
   - role: hook
-    text: Let go of what isn't yours.
+    text: जो तुम्हारा नहीं, उसे जाने दो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “The steadiness that holds the mind, breath and senses through disciplined practice is the steadiness
-      of goodness.”
+    text: “जो धैर्य अनुशासित अभ्यास से मन, प्राण और इंद्रियों को थामे रखता है, वह सात्त्विक धैर्य है।”
     start: 3.2
     end: 12.62
   - role: author
-    text: — Bhagavad Gita 18.33
+    text: — भगवद्गीता 18.33
     start: 4.0
     end: 12.62
-  voiceover_text: The steadiness that holds the mind, breath and senses through disciplined practice is
-    the steadiness of goodness.
+  voiceover_text: जो धैर्य अनुशासित अभ्यास से मन, प्राण और इंद्रियों को थामे रखता है, वह सात्त्विक धैर्य
+    है।
   voiceover_start: 3.5
   caption: |-
-    Let go of what isn't yours.
+    जो तुम्हारा नहीं, उसे जाने दो।
 
-    “The steadiness that holds the mind, breath and senses through disciplined practice is the steadiness of goodness.”
-    — Bhagavad Gita 18.33
+    “जो धैर्य अनुशासित अभ्यास से मन, प्राण और इंद्रियों को थामे रखता है, वह सात्त्विक धैर्य है।”
+    — भगवद्गीता 18.33
 
-    What are you trying to control that you can't?
+    तुम किस चीज़ को कंट्रोल करना चाहते हो जो तुम्हारे बस में नहीं?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #selfcontrol #innerpeace #karma #hinduism
+    #bhagavadgita #gita #selfcontrol #innerpeace #spirituality #gitagyan
 - id: 0628
   quote_id: g12-08
   format: hook_quote
   theme: midnight
-  duration: 12.98
+  duration: 12.26
   segments:
   - role: hook
-    text: Love is not logic.
+    text: प्रेम तर्क नहीं है।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Fix your mind on me alone and rest your understanding in me. Then you will live in me.”
+    text: “अपना मन केवल मुझमें लगाओ और अपनी बुद्धि मुझमें टिकाओ। तब तुम मुझमें ही निवास करोगे।”
     start: 3.2
-    end: 12.98
+    end: 12.26
   - role: author
-    text: — Bhagavad Gita 12.8
+    text: — भगवद्गीता 12.8
     start: 4.0
-    end: 12.98
-  voiceover_text: Fix your mind on me alone and rest your understanding in me. Then you will live in me.
+    end: 12.26
+  voiceover_text: अपना मन केवल मुझमें लगाओ और अपनी बुद्धि मुझमें टिकाओ। तब तुम मुझमें ही निवास करोगे।
   voiceover_start: 3.5
   caption: |-
-    Love is not logic.
+    प्रेम तर्क नहीं है।
 
-    “Fix your mind on me alone and rest your understanding in me. Then you will live in me.”
-    — Bhagavad Gita 12.8
+    “अपना मन केवल मुझमें लगाओ और अपनी बुद्धि मुझमें टिकाओ। तब तुम मुझमें ही निवास करोगे।”
+    — भगवद्गीता 12.8
 
-    Who do you love without reason?
+    तुम किसे बिना वजह प्यार करते हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #love #heart #dharma #sanatandharma
+    #bhagavadgita #gita #love #heart #gitagyan #wisdom
 - id: 0629
   quote_id: g2-62
   format: quote
   theme: dusk
-  duration: 9.82
+  duration: 11.26
   segments:
   - role: quote
-    text: “Thinking about the objects of the senses creates attachment. Attachment creates desire, and
-      from desire comes anger.”
+    text: “विषयों के बारे में सोचते रहने से आसक्ति पैदा होती है। आसक्ति से इच्छा जन्म लेती है, और इच्छा
+      से क्रोध।”
     start: 0.4
-    end: 9.82
+    end: 11.26
   - role: author
-    text: — Bhagavad Gita 2.62
+    text: — भगवद्गीता 2.62
     start: 1.2
-    end: 9.82
-  voiceover_text: Thinking about the objects of the senses creates attachment. Attachment creates desire,
-    and from desire comes anger.
+    end: 11.26
+  voiceover_text: विषयों के बारे में सोचते रहने से आसक्ति पैदा होती है। आसक्ति से इच्छा जन्म लेती है,
+    और इच्छा से क्रोध।
   voiceover_start: 0.7
   caption: |-
-    “Thinking about the objects of the senses creates attachment. Attachment creates desire, and from desire comes anger.”
-    — Bhagavad Gita 2.62
+    “विषयों के बारे में सोचते रहने से आसक्ति पैदा होती है। आसक्ति से इच्छा जन्म लेती है, और इच्छा से क्रोध।”
+    — भगवद्गीता 2.62
 
-    Who controls you when you are angry?
+    जब तुम गुस्से में होते हो, तब तुम्हें कौन चला रहा होता है?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #anger #selfcontrol #dharma #hinduism
+    #bhagavadgita #gita #anger #selfcontrol #sanatandharma #spirituality
 - id: '0630'
   quote_id: g4-11
   format: quote_reflection
   theme: sand
-  duration: 12.9
+  duration: 15.06
   segments:
   - role: quote
-    text: “In whatever way people come to me, I receive them. Every path leads to me.”
+    text: “लोग जिस भी तरह मेरी ओर आते हैं, मैं उन्हें उसी तरह अपनाता हूँ। हर राह मुझ तक ही आती है।”
     start: 0.4
-    end: 8.5
+    end: 10.66
   - role: author
-    text: — Bhagavad Gita 4.11
+    text: — भगवद्गीता 4.11
     start: 1.2
-    end: 8.5
+    end: 10.66
   - role: reflection
-    text: Who do you love without reason?
-    start: 8.7
-    end: 12.9
-  voiceover_text: In whatever way people come to me, I receive them. Every path leads to me.
+    text: तुम किसे बिना वजह प्यार करते हो?
+    start: 10.86
+    end: 15.06
+  voiceover_text: लोग जिस भी तरह मेरी ओर आते हैं, मैं उन्हें उसी तरह अपनाता हूँ। हर राह मुझ तक ही आती
+    है।
   voiceover_start: 0.7
   caption: |-
-    “In whatever way people come to me, I receive them. Every path leads to me.”
-    — Bhagavad Gita 4.11
+    “लोग जिस भी तरह मेरी ओर आते हैं, मैं उन्हें उसी तरह अपनाता हूँ। हर राह मुझ तक ही आती है।”
+    — भगवद्गीता 4.11
 
-    Who do you love without reason?
+    तुम किसे बिना वजह प्यार करते हो?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #love #heart #dharma #sanatandharma
+    #bhagavadgita #gita #love #heart #spirituality #sanatandharma
 - id: '0631'
   quote_id: g11-33
   format: hook_quote
   theme: ember
-  duration: 8.5
+  duration: 8.66
   segments:
   - role: hook
-    text: Be brave today.
+    text: आज हिम्मत दिखाओ।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Therefore, arise and win glory.”
+    text: “इसलिए उठो, और यश प्राप्त करो।”
     start: 3.2
-    end: 8.5
+    end: 8.66
   - role: author
-    text: — Bhagavad Gita 11.33
+    text: — भगवद्गीता 11.33
     start: 4.0
-    end: 8.5
-  voiceover_text: Therefore, arise and win glory.
+    end: 8.66
+  voiceover_text: इसलिए उठो, और यश प्राप्त करो।
   voiceover_start: 3.5
   caption: |-
-    Be brave today.
+    आज हिम्मत दिखाओ।
 
-    “Therefore, arise and win glory.”
-    — Bhagavad Gita 11.33
+    “इसलिए उठो, और यश प्राप्त करो।”
+    — भगवद्गीता 11.33
 
-    Where do you need courage right now?
+    अभी तुम्हें कहाँ हिम्मत की ज़रूरत है?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #courage #bravery #dharma #krishna
+    #bhagavadgita #gita #courage #bravery #gitagyan #sanatandharma
 - id: '0632'
   quote_id: g10-20
   format: hook_quote_cta
   theme: ink
-  duration: 17.38
+  duration: 15.94
   segments:
   - role: hook
-    text: Read this if you feel lost.
+    text: खोया-खोया महसूस कर रहे हो? यह पढ़ो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “I am the Self seated in the heart of every being. I am the beginning, the middle and the end
-      of all beings.”
+    text: “मैं हर प्राणी के हृदय में बसी आत्मा हूँ। मैं ही सभी प्राणियों का आदि, मध्य और अंत हूँ।”
     start: 3.2
-    end: 14.18
+    end: 12.74
   - role: author
-    text: — Bhagavad Gita 10.20
+    text: — भगवद्गीता 10.20
     start: 4.0
-    end: 14.18
+    end: 12.74
   - role: cta
-    text: Save this for a hard day.
-    start: 14.38
-    end: 17.38
-  voiceover_text: I am the Self seated in the heart of every being. I am the beginning, the middle and
-    the end of all beings.
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
+    start: 12.94
+    end: 15.94
+  voiceover_text: मैं हर प्राणी के हृदय में बसी आत्मा हूँ। मैं ही सभी प्राणियों का आदि, मध्य और अंत हूँ।
   voiceover_start: 3.5
   caption: |-
-    Read this if you feel lost.
+    खोया-खोया महसूस कर रहे हो? यह पढ़ो।
 
-    “I am the Self seated in the heart of every being. I am the beginning, the middle and the end of all beings.”
-    — Bhagavad Gita 10.20
+    “मैं हर प्राणी के हृदय में बसी आत्मा हूँ। मैं ही सभी प्राणियों का आदि, मध्य और अंत हूँ।”
+    — भगवद्गीता 10.20
 
-    What would the best version of you do now?
+    तुम्हारा सबसे अच्छा रूप अभी क्या करता?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #selfmastery #selfawareness #spirituality #sanatandharma
+    #bhagavadgita #gita #selfmastery #selfawareness #श्रीकृष्ण #krishna
 - id: '0633'
   quote_id: g6-19
   format: quote
   theme: marble
-  duration: 9.1
+  duration: 9.82
   segments:
   - role: quote
-    text: “As a lamp in a windless place does not flicker, so is the disciplined mind.”
+    text: “जैसे हवा रहित जगह में दीपक की लौ नहीं काँपती, वैसा ही होता है संयमी का मन।”
     start: 0.4
-    end: 9.1
+    end: 9.82
   - role: author
-    text: — Bhagavad Gita 6.19
+    text: — भगवद्गीता 6.19
     start: 1.2
-    end: 9.1
-  voiceover_text: As a lamp in a windless place does not flicker, so is the disciplined mind.
+    end: 9.82
+  voiceover_text: जैसे हवा रहित जगह में दीपक की लौ नहीं काँपती, वैसा ही होता है संयमी का मन।
   voiceover_start: 0.7
   caption: |-
-    “As a lamp in a windless place does not flicker, so is the disciplined mind.”
-    — Bhagavad Gita 6.19
+    “जैसे हवा रहित जगह में दीपक की लौ नहीं काँपती, वैसा ही होता है संयमी का मन।”
+    — भगवद्गीता 6.19
 
-    What story are you telling yourself?
+    तुम खुद को कौन-सी कहानी सुना रहे हो?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #mindset #overthinking #hinduism #wisdom
+    #bhagavadgita #gita #mindset #overthinking #gitagyan #hinduism
 - id: '0634'
   quote_id: g18-63
   format: quote_reflection
   theme: forest
-  duration: 11.82
+  duration: 12.54
   segments:
   - role: quote
-    text: “Reflect on all of this deeply, and then do as you choose.”
+    text: “इन सब बातों पर गहराई से विचार करो, और फिर जैसा चाहो वैसा करो।”
     start: 0.4
-    end: 7.42
+    end: 8.14
   - role: author
-    text: — Bhagavad Gita 18.63
+    text: — भगवद्गीता 18.63
     start: 1.2
-    end: 7.42
+    end: 8.14
   - role: reflection
-    text: Where do you pretend to know?
-    start: 7.62
-    end: 11.82
-  voiceover_text: Reflect on all of this deeply, and then do as you choose.
+    text: तुम कहाँ जानने का दिखावा करते हो?
+    start: 8.34
+    end: 12.54
+  voiceover_text: इन सब बातों पर गहराई से विचार करो, और फिर जैसा चाहो वैसा करो।
   voiceover_start: 0.7
   caption: |-
-    “Reflect on all of this deeply, and then do as you choose.”
-    — Bhagavad Gita 18.63
+    “इन सब बातों पर गहराई से विचार करो, और फिर जैसा चाहो वैसा करो।”
+    — भगवद्गीता 18.63
 
-    Where do you pretend to know?
+    तुम कहाँ जानने का दिखावा करते हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #learning #growth #krishna #karma
+    #bhagavadgita #gita #learning #growth #wisdom #gitagyan
 - id: '0635'
   quote_id: g13-28
   format: lesson
   theme: ocean
-  duration: 15.74
+  duration: 17.9
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “One who sees the same Lord living equally in every being does not harm the self by harming
-      others.”
+    text: “जो हर प्राणी में एक ही ईश्वर को समान रूप से बसा हुआ देखता है, वह दूसरों को चोट पहुँचाकर खुद
+      को चोट नहीं पहुँचाता।”
     start: 3.0
-    end: 12.54
+    end: 14.7
   - role: author
-    text: — Bhagavad Gita 13.28
+    text: — भगवद्गीता 13.28
     start: 3.8
-    end: 12.54
+    end: 14.7
   - role: cta
-    text: Send this to someone who needs it.
-    start: 12.74
-    end: 15.74
-  voiceover_text: One who sees the same Lord living equally in every being does not harm the self by harming
-    others.
+    text: उसे भेजो जिसे आज इसकी ज़रूरत है।
+    start: 14.9
+    end: 17.9
+  voiceover_text: जो हर प्राणी में एक ही ईश्वर को समान रूप से बसा हुआ देखता है, वह दूसरों को चोट पहुँचाकर
+    खुद को चोट नहीं पहुँचाता।
   voiceover_start: 3.3
   caption: |-
-    “One who sees the same Lord living equally in every being does not harm the self by harming others.”
-    — Bhagavad Gita 13.28
+    “जो हर प्राणी में एक ही ईश्वर को समान रूप से बसा हुआ देखता है, वह दूसरों को चोट पहुँचाकर खुद को चोट नहीं पहुँचाता।”
+    — भगवद्गीता 13.28
 
-    When did someone's kindness change your day?
+    कब किसी की दयालुता ने तुम्हारा दिन बदल दिया था?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #kindness #compassion #hinduism #spirituality
+    #bhagavadgita #gita #kindness #compassion #hinduism #karma
 - id: '0636'
   quote_id: g7-08
   format: hook_quote
   theme: midnight
-  duration: 11.54
+  duration: 10.46
   segments:
   - role: hook
-    text: Feeling small? Look up.
+    text: छोटा महसूस कर रहे हो? ऊपर देखो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “I am the taste in water, the light of the sun and the moon.”
+    text: “मैं जल में स्वाद हूँ, सूर्य और चंद्रमा का प्रकाश हूँ।”
     start: 3.2
-    end: 11.54
+    end: 10.46
   - role: author
-    text: — Bhagavad Gita 7.8
+    text: — भगवद्गीता 7.8
     start: 4.0
-    end: 11.54
-  voiceover_text: I am the taste in water, the light of the sun and the moon.
+    end: 10.46
+  voiceover_text: मैं जल में स्वाद हूँ, सूर्य और चंद्रमा का प्रकाश हूँ।
   voiceover_start: 3.5
   caption: |-
-    Feeling small? Look up.
+    छोटा महसूस कर रहे हो? ऊपर देखो।
 
-    “I am the taste in water, the light of the sun and the moon.”
-    — Bhagavad Gita 7.8
+    “मैं जल में स्वाद हूँ, सूर्य और चंद्रमा का प्रकाश हूँ।”
+    — भगवद्गीता 7.8
 
-    What does the bigger picture show you?
+    बड़ी तस्वीर तुम्हें क्या दिखाती है?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #perspective #divine #karma #hinduism
+    #bhagavadgita #gita #perspective #divine #spirituality #hinduism
 - id: '0637'
   quote_id: g2-41
   format: hook_quote
   theme: dusk
-  duration: 12.26
+  duration: 14.06
   segments:
   - role: hook
-    text: Busy is not the same as meaningful.
+    text: व्यस्त रहना और सार्थक होना एक बात नहीं।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “The resolute mind is focused and one-pointed. The thoughts of the irresolute branch out without
-      end.”
+    text: “दृढ़ निश्चय वाला मन एक ही लक्ष्य पर टिका रहता है। अस्थिर मन के विचार अनगिनत दिशाओं में बिखर
+      जाते हैं।”
     start: 3.2
-    end: 12.26
+    end: 14.06
   - role: author
-    text: — Bhagavad Gita 2.41
+    text: — भगवद्गीता 2.41
     start: 4.0
-    end: 12.26
-  voiceover_text: The resolute mind is focused and one-pointed. The thoughts of the irresolute branch
-    out without end.
+    end: 14.06
+  voiceover_text: दृढ़ निश्चय वाला मन एक ही लक्ष्य पर टिका रहता है। अस्थिर मन के विचार अनगिनत दिशाओं में
+    बिखर जाते हैं।
   voiceover_start: 3.5
   caption: |-
-    Busy is not the same as meaningful.
+    व्यस्त रहना और सार्थक होना एक बात नहीं।
 
-    “The resolute mind is focused and one-pointed. The thoughts of the irresolute branch out without end.”
-    — Bhagavad Gita 2.41
+    “दृढ़ निश्चय वाला मन एक ही लक्ष्य पर टिका रहता है। अस्थिर मन के विचार अनगिनत दिशाओं में बिखर जाते हैं।”
+    — भगवद्गीता 2.41
 
-    Where is your life heading?
+    तुम्हारी ज़िंदगी किस ओर जा रही है?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #purpose #meaning #spirituality #wisdom
+    #bhagavadgita #gita #purpose #meaning #sanatandharma #spirituality
 - id: 0638
   quote_id: g12-18
   format: quote_reflection
   theme: sand
-  duration: 16.5
+  duration: 15.42
   segments:
   - role: quote
-    text: “One who is the same to friend and foe, in honour and dishonour, in heat and cold, in pleasure
-      and pain, is dear to me.”
+    text: “जो मित्र और शत्रु, मान और अपमान, सर्दी और गर्मी, सुख और दुख में एक समान रहता है, वह मुझे प्रिय
+      है।”
     start: 0.4
-    end: 12.1
+    end: 11.02
   - role: author
-    text: — Bhagavad Gita 12.18
+    text: — भगवद्गीता 12.18
     start: 1.2
-    end: 12.1
+    end: 11.02
   - role: reflection
-    text: What deserves more patience from you?
-    start: 12.3
-    end: 16.5
-  voiceover_text: One who is the same to friend and foe, in honour and dishonour, in heat and cold, in
-    pleasure and pain, is dear to me.
+    text: किस चीज़ को तुम्हारे धैर्य की ज़्यादा ज़रूरत है?
+    start: 11.22
+    end: 15.42
+  voiceover_text: जो मित्र और शत्रु, मान और अपमान, सर्दी और गर्मी, सुख और दुख में एक समान रहता है, वह
+    मुझे प्रिय है।
   voiceover_start: 0.7
   caption: |-
-    “One who is the same to friend and foe, in honour and dishonour, in heat and cold, in pleasure and pain, is dear to me.”
-    — Bhagavad Gita 12.18
+    “जो मित्र और शत्रु, मान और अपमान, सर्दी और गर्मी, सुख और दुख में एक समान रहता है, वह मुझे प्रिय है।”
+    — भगवद्गीता 12.18
 
-    What deserves more patience from you?
+    किस चीज़ को तुम्हारे धैर्य की ज़्यादा ज़रूरत है?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #patience #calm #karma #wisdom
+    #bhagavadgita #gita #patience #calm #hindiquotes #wisdom
 - id: 0639
   quote_id: g18-37
   format: hook_quote_cta
   theme: ember
-  duration: 17.38
+  duration: 17.02
   segments:
   - role: hook
-    text: Read this when life gets heavy.
+    text: जब ज़िंदगी भारी लगे, तब यह पढ़ो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “What feels like poison at first but turns to nectar in the end is the happiness of goodness,
-      born of a clear mind.”
+    text: “जो शुरू में ज़हर जैसा लगे पर अंत में अमृत बन जाए, वही सात्त्विक सुख है, जो निर्मल मन से जन्मता
+      है।”
     start: 3.2
-    end: 14.18
+    end: 13.82
   - role: author
-    text: — Bhagavad Gita 18.37
+    text: — भगवद्गीता 18.37
     start: 4.0
-    end: 14.18
+    end: 13.82
   - role: cta
-    text: Read it twice.
-    start: 14.38
-    end: 17.38
-  voiceover_text: What feels like poison at first but turns to nectar in the end is the happiness of goodness,
-    born of a clear mind.
+    text: इसे दोबारा पढ़ो।
+    start: 14.02
+    end: 17.02
+  voiceover_text: जो शुरू में ज़हर जैसा लगे पर अंत में अमृत बन जाए, वही सात्त्विक सुख है, जो निर्मल मन
+    से जन्मता है।
   voiceover_start: 3.5
   caption: |-
-    Read this when life gets heavy.
+    जब ज़िंदगी भारी लगे, तब यह पढ़ो।
 
-    “What feels like poison at first but turns to nectar in the end is the happiness of goodness, born of a clear mind.”
-    — Bhagavad Gita 18.37
+    “जो शुरू में ज़हर जैसा लगे पर अंत में अमृत बन जाए, वही सात्त्विक सुख है, जो निर्मल मन से जन्मता है।”
+    — भगवद्गीता 18.37
 
-    Who will you be after this?
+    इसके बाद तुम कैसे इंसान बनोगे?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #resilience #strength #dharma #karma
+    #bhagavadgita #gita #resilience #strength #sanatandharma #spirituality
 - id: '0640'
   quote_id: g7-03
   format: quote_reflection
   theme: ink
-  duration: 10.74
+  duration: 12.18
   segments:
   - role: quote
-    text: “Among thousands of people, hardly one strives for perfection.”
+    text: “हज़ारों लोगों में मुश्किल से कोई एक पूर्णता के लिए प्रयास करता है।”
     start: 0.4
-    end: 6.34
+    end: 7.78
   - role: author
-    text: — Bhagavad Gita 7.3
+    text: — भगवद्गीता 7.3
     start: 1.2
-    end: 6.34
+    end: 7.78
   - role: reflection
-    text: Where is your life heading?
-    start: 6.54
-    end: 10.74
-  voiceover_text: Among thousands of people, hardly one strives for perfection.
+    text: तुम्हारी ज़िंदगी किस ओर जा रही है?
+    start: 7.98
+    end: 12.18
+  voiceover_text: हज़ारों लोगों में मुश्किल से कोई एक पूर्णता के लिए प्रयास करता है।
   voiceover_start: 0.7
   caption: |-
-    “Among thousands of people, hardly one strives for perfection.”
-    — Bhagavad Gita 7.3
+    “हज़ारों लोगों में मुश्किल से कोई एक पूर्णता के लिए प्रयास करता है।”
+    — भगवद्गीता 7.3
 
-    Where is your life heading?
+    तुम्हारी ज़िंदगी किस ओर जा रही है?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #purpose #meaning #sanatandharma #karma
+    #bhagavadgita #gita #purpose #meaning #hinduism #wisdom
 - id: '0641'
   quote_id: g9-26
   format: quote_reflection
   theme: marble
-  duration: 15.42
+  duration: 17.22
   segments:
   - role: quote
-    text: “If you offer me with love a leaf, a flower, a fruit or a little water, I accept that offering
-      of love.”
+    text: “अगर तुम प्रेम से मुझे एक पत्ता, एक फूल, एक फल या थोड़ा-सा जल भी अर्पित करो, तो मैं प्रेम की
+      उस भेंट को स्वीकार करता हूँ।”
     start: 0.4
-    end: 11.02
+    end: 12.82
   - role: author
-    text: — Bhagavad Gita 9.26
+    text: — भगवद्गीता 9.26
     start: 1.2
-    end: 11.02
+    end: 12.82
   - role: reflection
-    text: Who do you love without reason?
-    start: 11.22
-    end: 15.42
-  voiceover_text: If you offer me with love a leaf, a flower, a fruit or a little water, I accept that
-    offering of love.
+    text: तुम किसे बिना वजह प्यार करते हो?
+    start: 13.02
+    end: 17.22
+  voiceover_text: अगर तुम प्रेम से मुझे एक पत्ता, एक फूल, एक फल या थोड़ा-सा जल भी अर्पित करो, तो मैं प्रेम
+    की उस भेंट को स्वीकार करता हूँ।
   voiceover_start: 0.7
   caption: |-
-    “If you offer me with love a leaf, a flower, a fruit or a little water, I accept that offering of love.”
-    — Bhagavad Gita 9.26
+    “अगर तुम प्रेम से मुझे एक पत्ता, एक फूल, एक फल या थोड़ा-सा जल भी अर्पित करो, तो मैं प्रेम की उस भेंट को स्वीकार करता हूँ।”
+    — भगवद्गीता 9.26
 
-    Who do you love without reason?
+    तुम किसे बिना वजह प्यार करते हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #love #heart #sanatandharma #spirituality
+    #bhagavadgita #gita #love #heart #hinduism #hindiquotes
 - id: '0642'
   quote_id: g2-15
   format: hook_quote
   theme: forest
-  duration: 12.62
+  duration: 13.34
   segments:
   - role: hook
-    text: Good things take time.
+    text: अच्छी चीज़ों में समय लगता है।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “The one who stays steady in pleasure and in pain, undisturbed by either, is ready for freedom.”
+    text: “जो सुख और दुख में एक-सा रहता है, किसी से भी विचलित नहीं होता, वही मुक्ति के योग्य है।”
     start: 3.2
-    end: 12.62
+    end: 13.34
   - role: author
-    text: — Bhagavad Gita 2.15
+    text: — भगवद्गीता 2.15
     start: 4.0
-    end: 12.62
-  voiceover_text: The one who stays steady in pleasure and in pain, undisturbed by either, is ready for
-    freedom.
+    end: 13.34
+  voiceover_text: जो सुख और दुख में एक-सा रहता है, किसी से भी विचलित नहीं होता, वही मुक्ति के योग्य है।
   voiceover_start: 3.5
   caption: |-
-    Good things take time.
+    अच्छी चीज़ों में समय लगता है।
 
-    “The one who stays steady in pleasure and in pain, undisturbed by either, is ready for freedom.”
-    — Bhagavad Gita 2.15
+    “जो सुख और दुख में एक-सा रहता है, किसी से भी विचलित नहीं होता, वही मुक्ति के योग्य है।”
+    — भगवद्गीता 2.15
 
-    What deserves more patience from you?
+    किस चीज़ को तुम्हारे धैर्य की ज़्यादा ज़रूरत है?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #patience #calm #krishna #sanatandharma
+    #bhagavadgita #gita #patience #calm #krishna #dharma
 - id: '0643'
   quote_id: g17-20
   format: hook_quote
   theme: ocean
-  duration: 15.86
+  duration: 17.0
   segments:
   - role: hook
-    text: Kindness is not weakness.
+    text: दयालुता कमज़ोरी नहीं है।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “A gift given because it is right to give, to someone who cannot repay it, at the right time
-      and place, is a gift of goodness.”
+    text: “जो दान यह सोचकर दिया जाए कि देना उचित है, ऐसे व्यक्ति को जो बदले में कुछ न दे सके, सही समय
+      और सही जगह पर, वही सात्त्विक दान है।”
     start: 3.2
-    end: 15.86
+    end: 17.0
   - role: author
-    text: — Bhagavad Gita 17.20
+    text: — भगवद्गीता 17.20
     start: 4.0
-    end: 15.86
-  voiceover_text: A gift given because it is right to give, to someone who cannot repay it, at the right
-    time and place, is a gift of goodness.
+    end: 17.0
+  voiceover_text: जो दान यह सोचकर दिया जाए कि देना उचित है, ऐसे व्यक्ति को जो बदले में कुछ न दे सके, सही
+    समय और सही जगह पर, वही सात्त्विक दान है।
   voiceover_start: 3.5
   caption: |-
-    Kindness is not weakness.
+    दयालुता कमज़ोरी नहीं है।
 
-    “A gift given because it is right to give, to someone who cannot repay it, at the right time and place, is a gift of goodness.”
-    — Bhagavad Gita 17.20
+    “जो दान यह सोचकर दिया जाए कि देना उचित है, ऐसे व्यक्ति को जो बदले में कुछ न दे सके, सही समय और सही जगह पर, वही सात्त्विक दान है।”
+    — भगवद्गीता 17.20
 
-    When did someone's kindness change your day?
+    कब किसी की दयालुता ने तुम्हारा दिन बदल दिया था?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #kindness #compassion #dharma #hinduism
+    #bhagavadgita #gita #kindness #compassion #spirituality #wisdom
 - id: '0644'
   quote_id: g11-12
   format: lesson
   theme: midnight
-  duration: 16.82
+  duration: 16.1
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “If a thousand suns were to rise at once in the sky, their light might resemble the splendour
-      of that great being.”
+    text: “अगर आकाश में एक साथ हज़ार सूर्य उदय हों, तो शायद उनका प्रकाश उस महान स्वरूप के तेज जैसा हो।”
     start: 3.0
-    end: 13.62
+    end: 12.9
   - role: author
-    text: — Bhagavad Gita 11.12
+    text: — भगवद्गीता 11.12
     start: 3.8
-    end: 13.62
+    end: 12.9
   - role: cta
-    text: Which line stays with you?
-    start: 13.82
-    end: 16.82
-  voiceover_text: If a thousand suns were to rise at once in the sky, their light might resemble the splendour
-    of that great being.
+    text: कौन-सी पंक्ति तुम्हारे दिल में रह गई?
+    start: 13.1
+    end: 16.1
+  voiceover_text: अगर आकाश में एक साथ हज़ार सूर्य उदय हों, तो शायद उनका प्रकाश उस महान स्वरूप के तेज जैसा
+    हो।
   voiceover_start: 3.3
   caption: |-
-    “If a thousand suns were to rise at once in the sky, their light might resemble the splendour of that great being.”
-    — Bhagavad Gita 11.12
+    “अगर आकाश में एक साथ हज़ार सूर्य उदय हों, तो शायद उनका प्रकाश उस महान स्वरूप के तेज जैसा हो।”
+    — भगवद्गीता 11.12
 
-    What does the bigger picture show you?
+    बड़ी तस्वीर तुम्हें क्या दिखाती है?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #perspective #divine #hinduism #wisdom
+    #bhagavadgita #gita #perspective #divine #hinduism #hindiquotes
 - id: '0645'
   quote_id: g10-41
   format: hook_quote_cta
   theme: dusk
-  duration: 14.86
+  duration: 17.02
   segments:
   - role: hook
-    text: Feeling small? Look up.
+    text: छोटा महसूस कर रहे हो? ऊपर देखो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Whatever is glorious, beautiful or mighty, know that it comes from a spark of my splendour.”
+    text: “जो कुछ भी महिमामय, सुंदर या शक्तिशाली है, जान लो कि वह मेरे तेज के एक अंश से ही उत्पन्न हुआ
+      है।”
     start: 3.2
-    end: 11.66
+    end: 13.82
   - role: author
-    text: — Bhagavad Gita 10.41
+    text: — भगवद्गीता 10.41
     start: 4.0
-    end: 11.66
+    end: 13.82
   - role: cta
-    text: Which line stays with you?
-    start: 11.86
-    end: 14.86
-  voiceover_text: Whatever is glorious, beautiful or mighty, know that it comes from a spark of my splendour.
+    text: कौन-सी पंक्ति तुम्हारे दिल में रह गई?
+    start: 14.02
+    end: 17.02
+  voiceover_text: जो कुछ भी महिमामय, सुंदर या शक्तिशाली है, जान लो कि वह मेरे तेज के एक अंश से ही उत्पन्न
+    हुआ है।
   voiceover_start: 3.5
   caption: |-
-    Feeling small? Look up.
+    छोटा महसूस कर रहे हो? ऊपर देखो।
 
-    “Whatever is glorious, beautiful or mighty, know that it comes from a spark of my splendour.”
-    — Bhagavad Gita 10.41
+    “जो कुछ भी महिमामय, सुंदर या शक्तिशाली है, जान लो कि वह मेरे तेज के एक अंश से ही उत्पन्न हुआ है।”
+    — भगवद्गीता 10.41
 
-    What does the bigger picture show you?
+    बड़ी तस्वीर तुम्हें क्या दिखाती है?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #perspective #divine #sanatandharma #krishna
+    #bhagavadgita #gita #perspective #divine #krishna #karma
 - id: '0646'
   quote_id: g16-01
   format: hook_quote_cta
   theme: sand
-  duration: 15.58
+  duration: 15.22
   segments:
   - role: hook
-    text: Words are cheap. This isn't.
+    text: बातें सस्ती हैं। यह नहीं।
     start: 0.4
     end: 3.0
   - role: quote
-    text: '“Fearlessness, a pure heart, generosity, self-control, truthfulness, freedom from anger, compassion,
-      gentleness and forgiveness: these are divine qualities.”'
+    text: '“निर्भयता, शुद्ध हृदय, दान, आत्म-संयम, सच्चाई, क्रोध से मुक्ति, करुणा, कोमलता और क्षमा: ये
+      दैवी गुण हैं।”'
     start: 3.2
-    end: 12.38
+    end: 12.02
   - role: author
-    text: — Bhagavad Gita 16.1-3
+    text: — भगवद्गीता 16.1-3
     start: 4.0
-    end: 12.38
+    end: 12.02
   - role: cta
-    text: Read it twice.
-    start: 12.58
-    end: 15.58
-  voiceover_text: 'Fearlessness, a pure heart, generosity, self-control, truthfulness, freedom from anger,
-    compassion, gentleness and forgiveness: these are divine qualities.'
+    text: इसे दोबारा पढ़ो।
+    start: 12.22
+    end: 15.22
+  voiceover_text: 'निर्भयता, शुद्ध हृदय, दान, आत्म-संयम, सच्चाई, क्रोध से मुक्ति, करुणा, कोमलता और क्षमा:
+    ये दैवी गुण हैं।'
   voiceover_start: 3.5
   caption: |-
-    Words are cheap. This isn't.
+    बातें सस्ती हैं। यह नहीं।
 
-    “Fearlessness, a pure heart, generosity, self-control, truthfulness, freedom from anger, compassion, gentleness and forgiveness: these are divine qualities.”
-    — Bhagavad Gita 16.1-3
+    “निर्भयता, शुद्ध हृदय, दान, आत्म-संयम, सच्चाई, क्रोध से मुक्ति, करुणा, कोमलता और क्षमा: ये दैवी गुण हैं।”
+    — भगवद्गीता 16.1-3
 
-    Where are you cutting corners?
+    तुम कहाँ शॉर्टकट ले रहे हो?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #integrity #character #dharma #karma
+    #bhagavadgita #gita #integrity #character #karma #dharma
 - id: '0647'
   quote_id: g9-31
   format: quote_reflection
   theme: ember
-  duration: 10.38
+  duration: 11.1
   segments:
   - role: quote
-    text: '“Know this for certain: my devotee never perishes.”'
+    text: '“यह निश्चित जान लो: मेरा भक्त कभी नष्ट नहीं होता।”'
     start: 0.4
-    end: 5.98
+    end: 6.7
   - role: author
-    text: — Bhagavad Gita 9.31
+    text: — भगवद्गीता 9.31
     start: 1.2
-    end: 5.98
+    end: 6.7
   - role: reflection
-    text: Who do you love without reason?
-    start: 6.18
-    end: 10.38
-  voiceover_text: 'Know this for certain: my devotee never perishes.'
+    text: तुम किसे बिना वजह प्यार करते हो?
+    start: 6.9
+    end: 11.1
+  voiceover_text: 'यह निश्चित जान लो: मेरा भक्त कभी नष्ट नहीं होता।'
   voiceover_start: 0.7
   caption: |-
-    “Know this for certain: my devotee never perishes.”
-    — Bhagavad Gita 9.31
+    “यह निश्चित जान लो: मेरा भक्त कभी नष्ट नहीं होता।”
+    — भगवद्गीता 9.31
 
-    Who do you love without reason?
+    तुम किसे बिना वजह प्यार करते हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #love #heart #hinduism #wisdom
+    #bhagavadgita #gita #love #heart #karma #hindiquotes
 - id: 0648
   quote_id: g3-37
   format: quote_reflection
   theme: ink
-  duration: 13.98
+  duration: 15.06
   segments:
   - role: quote
-    text: “It is desire, it is anger, born of restless passion and never satisfied. Know it as the enemy.”
+    text: “यह काम है, यही क्रोध है, जो रजोगुण से पैदा होता है और कभी तृप्त नहीं होता। इसे ही शत्रु जानो।”
     start: 0.4
-    end: 9.58
+    end: 10.66
   - role: author
-    text: — Bhagavad Gita 3.37
+    text: — भगवद्गीता 3.37
     start: 1.2
-    end: 9.58
+    end: 10.66
   - role: reflection
-    text: Who controls you when you are angry?
-    start: 9.78
-    end: 13.98
-  voiceover_text: It is desire, it is anger, born of restless passion and never satisfied. Know it as
-    the enemy.
+    text: जब तुम गुस्से में होते हो, तब तुम्हें कौन चला रहा होता है?
+    start: 10.86
+    end: 15.06
+  voiceover_text: यह काम है, यही क्रोध है, जो रजोगुण से पैदा होता है और कभी तृप्त नहीं होता। इसे ही शत्रु
+    जानो।
   voiceover_start: 0.7
   caption: |-
-    “It is desire, it is anger, born of restless passion and never satisfied. Know it as the enemy.”
-    — Bhagavad Gita 3.37
+    “यह काम है, यही क्रोध है, जो रजोगुण से पैदा होता है और कभी तृप्त नहीं होता। इसे ही शत्रु जानो।”
+    — भगवद्गीता 3.37
 
-    Who controls you when you are angry?
+    जब तुम गुस्से में होते हो, तब तुम्हें कौन चला रहा होता है?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #anger #selfcontrol #karma #sanatandharma
+    #bhagavadgita #gita #anger #selfcontrol #hindiquotes #karma
 - id: 0649
   quote_id: g2-40
   format: quote
   theme: marble
-  duration: 11.98
+  duration: 12.34
   segments:
   - role: quote
-    text: “On this path no effort is ever lost and no harm is done. Even a little of it protects you from
-      great fear.”
+    text: “इस मार्ग पर कोई प्रयास कभी व्यर्थ नहीं जाता और कोई नुकसान नहीं होता। इसका थोड़ा-सा पालन भी
+      बड़े भय से बचा लेता है।”
     start: 0.4
-    end: 11.98
+    end: 12.34
   - role: author
-    text: — Bhagavad Gita 2.40
+    text: — भगवद्गीता 2.40
     start: 1.2
-    end: 11.98
-  voiceover_text: On this path no effort is ever lost and no harm is done. Even a little of it protects
-    you from great fear.
+    end: 12.34
+  voiceover_text: इस मार्ग पर कोई प्रयास कभी व्यर्थ नहीं जाता और कोई नुकसान नहीं होता। इसका थोड़ा-सा पालन
+    भी बड़े भय से बचा लेता है।
   voiceover_start: 0.7
   caption: |-
-    “On this path no effort is ever lost and no harm is done. Even a little of it protects you from great fear.”
-    — Bhagavad Gita 2.40
+    “इस मार्ग पर कोई प्रयास कभी व्यर्थ नहीं जाता और कोई नुकसान नहीं होता। इसका थोड़ा-सा पालन भी बड़े भय से बचा लेता है।”
+    — भगवद्गीता 2.40
 
-    What have you been putting off?
+    तुम क्या टालते आ रहे हो?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #discipline #motivation #karma #spirituality
+    #bhagavadgita #gita #discipline #motivation #dharma #hinduism
 - id: '0650'
   quote_id: g3-35
   format: lesson
   theme: forest
-  duration: 12.86
+  duration: 13.94
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “Better your own duty done imperfectly than another's duty done perfectly.”
+    text: “दूसरे का धर्म अच्छे से निभाने से अपना धर्म अधूरा निभाना भी बेहतर है।”
     start: 3.0
-    end: 9.66
+    end: 10.74
   - role: author
-    text: — Bhagavad Gita 3.35
+    text: — भगवद्गीता 3.35
     start: 3.8
-    end: 9.66
+    end: 10.74
   - role: cta
-    text: Which line stays with you?
-    start: 9.86
-    end: 12.86
-  voiceover_text: Better your own duty done imperfectly than another's duty done perfectly.
+    text: कौन-सी पंक्ति तुम्हारे दिल में रह गई?
+    start: 10.94
+    end: 13.94
+  voiceover_text: दूसरे का धर्म अच्छे से निभाने से अपना धर्म अधूरा निभाना भी बेहतर है।
   voiceover_start: 3.3
   caption: |-
-    “Better your own duty done imperfectly than another's duty done perfectly.”
-    — Bhagavad Gita 3.35
+    “दूसरे का धर्म अच्छे से निभाने से अपना धर्म अधूरा निभाना भी बेहतर है।”
+    — भगवद्गीता 3.35
 
-    Where is your life heading?
+    तुम्हारी ज़िंदगी किस ओर जा रही है?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #purpose #meaning #wisdom #dharma
+    #bhagavadgita #gita #purpose #meaning #श्रीकृष्ण #wisdom
 - id: '0651'
   quote_id: g2-22
   format: quote
   theme: ocean
-  duration: 11.26
+  duration: 10.9
   segments:
   - role: quote
-    text: “As a person throws off worn-out clothes and puts on new ones, the soul leaves worn-out bodies
-      and enters new ones.”
+    text: “जैसे इंसान पुराने कपड़े उतारकर नए कपड़े पहनता है, वैसे ही आत्मा पुराने शरीर छोड़कर नए शरीर
+      में जाती है।”
     start: 0.4
-    end: 11.26
+    end: 10.9
   - role: author
-    text: — Bhagavad Gita 2.22
+    text: — भगवद्गीता 2.22
     start: 1.2
-    end: 11.26
-  voiceover_text: As a person throws off worn-out clothes and puts on new ones, the soul leaves worn-out
-    bodies and enters new ones.
+    end: 10.9
+  voiceover_text: जैसे इंसान पुराने कपड़े उतारकर नए कपड़े पहनता है, वैसे ही आत्मा पुराने शरीर छोड़कर नए
+    शरीर में जाती है।
   voiceover_start: 0.7
   caption: |-
-    “As a person throws off worn-out clothes and puts on new ones, the soul leaves worn-out bodies and enters new ones.”
-    — Bhagavad Gita 2.22
+    “जैसे इंसान पुराने कपड़े उतारकर नए कपड़े पहनता है, वैसे ही आत्मा पुराने शरीर छोड़कर नए शरीर में जाती है।”
+    — भगवद्गीता 2.22
 
-    What change are you resisting?
+    तुम किस बदलाव से लड़ रहे हो?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #change #lettinggo #dharma #spirituality
+    #bhagavadgita #gita #change #lettinggo #dharma #gitagyan
 - id: '0652'
   quote_id: g4-33
   format: quote_reflection
@@ -1617,269 +1611,265 @@
   duration: 11.46
   segments:
   - role: quote
-    text: “The offering of knowledge is greater than any offering of wealth.”
+    text: “ज्ञान का दान किसी भी धन के दान से बड़ा है।”
     start: 0.4
     end: 7.06
   - role: author
-    text: — Bhagavad Gita 4.33
+    text: — भगवद्गीता 4.33
     start: 1.2
     end: 7.06
   - role: reflection
-    text: Where do you pretend to know?
+    text: तुम कहाँ जानने का दिखावा करते हो?
     start: 7.26
     end: 11.46
-  voiceover_text: The offering of knowledge is greater than any offering of wealth.
+  voiceover_text: ज्ञान का दान किसी भी धन के दान से बड़ा है।
   voiceover_start: 0.7
   caption: |-
-    “The offering of knowledge is greater than any offering of wealth.”
-    — Bhagavad Gita 4.33
+    “ज्ञान का दान किसी भी धन के दान से बड़ा है।”
+    — भगवद्गीता 4.33
 
-    Where do you pretend to know?
+    तुम कहाँ जानने का दिखावा करते हो?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #learning #growth #dharma #sanatandharma
+    #bhagavadgita #gita #learning #growth #spirituality #dharma
 - id: '0653'
   quote_id: g6-35
   format: hook_quote
   theme: dusk
-  duration: 13.34
+  duration: 13.7
   segments:
   - role: hook
-    text: Overthinking? Read this.
+    text: बहुत ज़्यादा सोचते हो? यह पढ़ो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “The mind is restless and hard to control, but it can be trained by practice and by letting
-      go.”
+    text: “मन चंचल है और इसे वश में करना कठिन है, पर अभ्यास और वैराग्य से इसे साधा जा सकता है।”
     start: 3.2
-    end: 13.34
+    end: 13.7
   - role: author
-    text: — Bhagavad Gita 6.35
+    text: — भगवद्गीता 6.35
     start: 4.0
-    end: 13.34
-  voiceover_text: The mind is restless and hard to control, but it can be trained by practice and by letting
-    go.
+    end: 13.7
+  voiceover_text: मन चंचल है और इसे वश में करना कठिन है, पर अभ्यास और वैराग्य से इसे साधा जा सकता है।
   voiceover_start: 3.5
   caption: |-
-    Overthinking? Read this.
+    बहुत ज़्यादा सोचते हो? यह पढ़ो।
 
-    “The mind is restless and hard to control, but it can be trained by practice and by letting go.”
-    — Bhagavad Gita 6.35
+    “मन चंचल है और इसे वश में करना कठिन है, पर अभ्यास और वैराग्य से इसे साधा जा सकता है।”
+    — भगवद्गीता 6.35
 
-    What story are you telling yourself?
+    तुम खुद को कौन-सी कहानी सुना रहे हो?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #mindset #overthinking #spirituality #wisdom
+    #bhagavadgita #gita #mindset #overthinking #wisdom #krishna
 - id: '0654'
   quote_id: g2-66
   format: quote_reflection
   theme: sand
-  duration: 10.02
+  duration: 10.38
   segments:
   - role: quote
-    text: “Without peace, how can there be happiness?”
+    text: “जिसके पास शांति नहीं, उसे सुख कैसे मिलेगा?”
     start: 0.4
-    end: 5.62
+    end: 5.98
   - role: author
-    text: — Bhagavad Gita 2.66
+    text: — भगवद्गीता 2.66
     start: 1.2
-    end: 5.62
+    end: 5.98
   - role: reflection
-    text: What would be enough for you?
-    start: 5.82
-    end: 10.02
-  voiceover_text: Without peace, how can there be happiness?
+    text: तुम्हारे लिए कितना काफ़ी होगा?
+    start: 6.18
+    end: 10.38
+  voiceover_text: जिसके पास शांति नहीं, उसे सुख कैसे मिलेगा?
   voiceover_start: 0.7
   caption: |-
-    “Without peace, how can there be happiness?”
-    — Bhagavad Gita 2.66
+    “जिसके पास शांति नहीं, उसे सुख कैसे मिलेगा?”
+    — भगवद्गीता 2.66
 
-    What would be enough for you?
+    तुम्हारे लिए कितना काफ़ी होगा?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #happiness #gratitude #wisdom #dharma
+    #bhagavadgita #gita #happiness #gratitude #dharma #hinduism
 - id: '0655'
   quote_id: g6-34
   format: lesson
   theme: ember
-  duration: 15.02
+  duration: 16.1
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “The mind is restless, turbulent, strong and stubborn. Taming it seems as hard as taming the
-      wind.”
+    text: “मन चंचल है, बेचैन है, बलवान और ज़िद्दी है। इसे वश में करना हवा को बाँधने जितना कठिन लगता है।”
     start: 3.0
-    end: 11.82
+    end: 12.9
   - role: author
-    text: — Bhagavad Gita 6.34
+    text: — भगवद्गीता 6.34
     start: 3.8
-    end: 11.82
+    end: 12.9
   - role: cta
-    text: Send this to someone who needs it.
-    start: 12.02
-    end: 15.02
-  voiceover_text: The mind is restless, turbulent, strong and stubborn. Taming it seems as hard as taming
-    the wind.
+    text: उसे भेजो जिसे आज इसकी ज़रूरत है।
+    start: 13.1
+    end: 16.1
+  voiceover_text: मन चंचल है, बेचैन है, बलवान और ज़िद्दी है। इसे वश में करना हवा को बाँधने जितना कठिन
+    लगता है।
   voiceover_start: 3.3
   caption: |-
-    “The mind is restless, turbulent, strong and stubborn. Taming it seems as hard as taming the wind.”
-    — Bhagavad Gita 6.34, spoken by Arjuna
+    “मन चंचल है, बेचैन है, बलवान और ज़िद्दी है। इसे वश में करना हवा को बाँधने जितना कठिन लगता है।”
+    — भगवद्गीता 6.34, spoken by Arjuna
 
-    What story are you telling yourself?
+    तुम खुद को कौन-सी कहानी सुना रहे हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #mindset #overthinking #wisdom #sanatandharma
+    #bhagavadgita #gita #mindset #overthinking #krishna #hinduism
 - id: '0656'
   quote_id: g5-24
   format: hook_quote
   theme: ink
-  duration: 12.26
+  duration: 12.98
   segments:
   - role: hook
-    text: Read this if nothing feels like enough.
+    text: अगर कुछ भी काफ़ी नहीं लगता, तो यह पढ़ो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “One whose happiness is within, whose joy is within and whose light is within, becomes free.”
+    text: “जिसका सुख भीतर है, जिसका आनंद भीतर है और जिसका प्रकाश भीतर है, वह मुक्त हो जाता है।”
     start: 3.2
-    end: 12.26
+    end: 12.98
   - role: author
-    text: — Bhagavad Gita 5.24
+    text: — भगवद्गीता 5.24
     start: 4.0
-    end: 12.26
-  voiceover_text: One whose happiness is within, whose joy is within and whose light is within, becomes
-    free.
+    end: 12.98
+  voiceover_text: जिसका सुख भीतर है, जिसका आनंद भीतर है और जिसका प्रकाश भीतर है, वह मुक्त हो जाता है।
   voiceover_start: 3.5
   caption: |-
-    Read this if nothing feels like enough.
+    अगर कुछ भी काफ़ी नहीं लगता, तो यह पढ़ो।
 
-    “One whose happiness is within, whose joy is within and whose light is within, becomes free.”
-    — Bhagavad Gita 5.24
+    “जिसका सुख भीतर है, जिसका आनंद भीतर है और जिसका प्रकाश भीतर है, वह मुक्त हो जाता है।”
+    — भगवद्गीता 5.24
 
-    What would be enough for you?
+    तुम्हारे लिए कितना काफ़ी होगा?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #happiness #gratitude #spirituality #karma
+    #bhagavadgita #gita #happiness #gratitude #karma #hinduism
 - id: '0657'
   quote_id: g10-08
   format: quote
   theme: marble
-  duration: 7.3
+  duration: 8.74
   segments:
   - role: quote
-    text: “I am the source of everything. Everything comes from me.”
+    text: “मैं ही सब कुछ का स्रोत हूँ। सब कुछ मुझसे ही उत्पन्न होता है।”
     start: 0.4
-    end: 7.3
+    end: 8.74
   - role: author
-    text: — Bhagavad Gita 10.8
+    text: — भगवद्गीता 10.8
     start: 1.2
-    end: 7.3
-  voiceover_text: I am the source of everything. Everything comes from me.
+    end: 8.74
+  voiceover_text: मैं ही सब कुछ का स्रोत हूँ। सब कुछ मुझसे ही उत्पन्न होता है।
   voiceover_start: 0.7
   caption: |-
-    “I am the source of everything. Everything comes from me.”
-    — Bhagavad Gita 10.8
+    “मैं ही सब कुछ का स्रोत हूँ। सब कुछ मुझसे ही उत्पन्न होता है।”
+    — भगवद्गीता 10.8
 
-    What does the bigger picture show you?
+    बड़ी तस्वीर तुम्हें क्या दिखाती है?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #perspective #divine #dharma #krishna
+    #bhagavadgita #gita #perspective #divine #wisdom #dharma
 - id: 0658
   quote_id: g2-20
   format: quote_reflection
   theme: forest
-  duration: 13.62
+  duration: 14.34
   segments:
   - role: quote
-    text: “The soul is never born and never dies. It is not killed when the body is killed.”
+    text: “आत्मा न कभी जन्म लेती है, न कभी मरती है। शरीर के मारे जाने पर भी वह नहीं मरती।”
     start: 0.4
-    end: 9.22
+    end: 9.94
   - role: author
-    text: — Bhagavad Gita 2.20
+    text: — भगवद्गीता 2.20
     start: 1.2
-    end: 9.22
+    end: 9.94
   - role: reflection
-    text: What are you saving for later?
-    start: 9.42
-    end: 13.62
-  voiceover_text: The soul is never born and never dies. It is not killed when the body is killed.
+    text: तुम किस चीज़ को बाद के लिए बचाकर रख रहे हो?
+    start: 10.14
+    end: 14.34
+  voiceover_text: आत्मा न कभी जन्म लेती है, न कभी मरती है। शरीर के मारे जाने पर भी वह नहीं मरती।
   voiceover_start: 0.7
   caption: |-
-    “The soul is never born and never dies. It is not killed when the body is killed.”
-    — Bhagavad Gita 2.20
+    “आत्मा न कभी जन्म लेती है, न कभी मरती है। शरीर के मारे जाने पर भी वह नहीं मरती।”
+    — भगवद्गीता 2.20
 
-    What are you saving for later?
+    तुम किस चीज़ को बाद के लिए बचाकर रख रहे हो?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #life #soul #wisdom #spirituality
+    #bhagavadgita #gita #life #soul #wisdom #krishna
 - id: 0659
   quote_id: g3-43
   format: quote_reflection
   theme: ocean
-  duration: 14.7
+  duration: 15.42
   segments:
   - role: quote
-    text: “Know the Self as higher than the intellect. Steady the mind with the Self, and conquer the
-      enemy called desire.”
+    text: “आत्मा को बुद्धि से भी ऊपर जानो। आत्मा के सहारे मन को स्थिर करो, और इच्छा नाम के शत्रु को जीत
+      लो।”
     start: 0.4
-    end: 10.3
+    end: 11.02
   - role: author
-    text: — Bhagavad Gita 3.43
+    text: — भगवद्गीता 3.43
     start: 1.2
-    end: 10.3
+    end: 11.02
   - role: reflection
-    text: What are you trying to control that you can't?
-    start: 10.5
-    end: 14.7
-  voiceover_text: Know the Self as higher than the intellect. Steady the mind with the Self, and conquer
-    the enemy called desire.
+    text: तुम किस चीज़ को कंट्रोल करना चाहते हो जो तुम्हारे बस में नहीं?
+    start: 11.22
+    end: 15.42
+  voiceover_text: आत्मा को बुद्धि से भी ऊपर जानो। आत्मा के सहारे मन को स्थिर करो, और इच्छा नाम के शत्रु
+    को जीत लो।
   voiceover_start: 0.7
   caption: |-
-    “Know the Self as higher than the intellect. Steady the mind with the Self, and conquer the enemy called desire.”
-    — Bhagavad Gita 3.43
+    “आत्मा को बुद्धि से भी ऊपर जानो। आत्मा के सहारे मन को स्थिर करो, और इच्छा नाम के शत्रु को जीत लो।”
+    — भगवद्गीता 3.43
 
-    What are you trying to control that you can't?
+    तुम किस चीज़ को कंट्रोल करना चाहते हो जो तुम्हारे बस में नहीं?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #selfcontrol #innerpeace #hinduism #sanatandharma
+    #bhagavadgita #gita #selfcontrol #innerpeace #spirituality #hinduism
 - id: '0660'
   quote_id: g12-13
   format: quote
   theme: midnight
-  duration: 13.06
+  duration: 13.78
   segments:
   - role: quote
-    text: “One who hates no being, who is friendly and compassionate, free from 'I' and 'mine', steady
-      in pain and pleasure, and forgiving, is dear to me.”
+    text: “जो किसी प्राणी से द्वेष नहीं करता, जो मित्रवत और दयालु है, ‘मैं’ और ‘मेरा’ से मुक्त है, सुख-दुख
+      में स्थिर और क्षमाशील है, वह मुझे प्रिय है।”
     start: 0.4
-    end: 13.06
+    end: 13.78
   - role: author
-    text: — Bhagavad Gita 12.13
+    text: — भगवद्गीता 12.13
     start: 1.2
-    end: 13.06
-  voiceover_text: One who hates no being, who is friendly and compassionate, free from 'I' and 'mine',
-    steady in pain and pleasure, and forgiving, is dear to me.
+    end: 13.78
+  voiceover_text: जो किसी प्राणी से द्वेष नहीं करता, जो मित्रवत और दयालु है, ‘मैं’ और ‘मेरा’ से मुक्त
+    है, सुख-दुख में स्थिर और क्षमाशील है, वह मुझे प्रिय है।
   voiceover_start: 0.7
   caption: |-
-    “One who hates no being, who is friendly and compassionate, free from 'I' and 'mine', steady in pain and pleasure, and forgiving, is dear to me.”
-    — Bhagavad Gita 12.13
+    “जो किसी प्राणी से द्वेष नहीं करता, जो मित्रवत और दयालु है, ‘मैं’ और ‘मेरा’ से मुक्त है, सुख-दुख में स्थिर और क्षमाशील है, वह मुझे प्रिय है।”
+    — भगवद्गीता 12.13
 
-    When did someone's kindness change your day?
+    कब किसी की दयालुता ने तुम्हारा दिन बदल दिया था?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #kindness #compassion #spirituality #wisdom
+    #bhagavadgita #gita #kindness #compassion #hinduism #sanatandharma
 - id: '0661'
   quote_id: g6-23
   format: quote_reflection
@@ -1887,28 +1877,28 @@
   duration: 10.38
   segments:
   - role: quote
-    text: “Yoga is freedom from the grip of sorrow.”
+    text: “दुख की पकड़ से मुक्ति ही योग है।”
     start: 0.4
     end: 5.98
   - role: author
-    text: — Bhagavad Gita 6.23
+    text: — भगवद्गीता 6.23
     start: 1.2
     end: 5.98
   - role: reflection
-    text: What would be enough for you?
+    text: तुम्हारे लिए कितना काफ़ी होगा?
     start: 6.18
     end: 10.38
-  voiceover_text: Yoga is freedom from the grip of sorrow.
+  voiceover_text: दुख की पकड़ से मुक्ति ही योग है।
   voiceover_start: 0.7
   caption: |-
-    “Yoga is freedom from the grip of sorrow.”
-    — Bhagavad Gita 6.23
+    “दुख की पकड़ से मुक्ति ही योग है।”
+    — भगवद्गीता 6.23
 
-    What would be enough for you?
+    तुम्हारे लिए कितना काफ़ी होगा?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #happiness #gratitude #krishna #hinduism
+    #bhagavadgita #gita #happiness #gratitude #hindiquotes #gitagyan
 - id: '0662'
   quote_id: g18-58
   format: quote
@@ -1916,156 +1906,155 @@
   duration: 8.74
   segments:
   - role: quote
-    text: “Fix your mind on me, and by my grace you will cross every obstacle.”
+    text: “अपना मन मुझमें लगाओ, और मेरी कृपा से तुम हर बाधा पार कर जाओगे।”
     start: 0.4
     end: 8.74
   - role: author
-    text: — Bhagavad Gita 18.58
+    text: — भगवद्गीता 18.58
     start: 1.2
     end: 8.74
-  voiceover_text: Fix your mind on me, and by my grace you will cross every obstacle.
+  voiceover_text: अपना मन मुझमें लगाओ, और मेरी कृपा से तुम हर बाधा पार कर जाओगे।
   voiceover_start: 0.7
   caption: |-
-    “Fix your mind on me, and by my grace you will cross every obstacle.”
-    — Bhagavad Gita 18.58
+    “अपना मन मुझमें लगाओ, और मेरी कृपा से तुम हर बाधा पार कर जाओगे।”
+    — भगवद्गीता 18.58
 
-    Who will you be after this?
+    इसके बाद तुम कैसे इंसान बनोगे?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #resilience #strength #sanatandharma #dharma
+    #bhagavadgita #gita #resilience #strength #श्रीकृष्ण #karma
 - id: '0663'
   quote_id: g3-21
   format: hook_quote_cta
   theme: ember
-  duration: 14.14
+  duration: 15.94
   segments:
   - role: hook
-    text: Words are cheap. This isn't.
+    text: बातें सस्ती हैं। यह नहीं।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Whatever a great person does, others follow. Whatever standard they set, the world pursues.”
+    text: “महान लोग जो करते हैं, दूसरे वही करते हैं। वे जो मानक बनाते हैं, दुनिया उसी पर चलती है।”
     start: 3.2
-    end: 10.94
+    end: 12.74
   - role: author
-    text: — Bhagavad Gita 3.21
+    text: — भगवद्गीता 3.21
     start: 4.0
-    end: 10.94
+    end: 12.74
   - role: cta
-    text: Send this to someone who needs it.
-    start: 11.14
-    end: 14.14
-  voiceover_text: Whatever a great person does, others follow. Whatever standard they set, the world pursues.
+    text: उसे भेजो जिसे आज इसकी ज़रूरत है।
+    start: 12.94
+    end: 15.94
+  voiceover_text: महान लोग जो करते हैं, दूसरे वही करते हैं। वे जो मानक बनाते हैं, दुनिया उसी पर चलती है।
   voiceover_start: 3.5
   caption: |-
-    Words are cheap. This isn't.
+    बातें सस्ती हैं। यह नहीं।
 
-    “Whatever a great person does, others follow. Whatever standard they set, the world pursues.”
-    — Bhagavad Gita 3.21
+    “महान लोग जो करते हैं, दूसरे वही करते हैं। वे जो मानक बनाते हैं, दुनिया उसी पर चलती है।”
+    — भगवद्गीता 3.21
 
-    Where are you cutting corners?
+    तुम कहाँ शॉर्टकट ले रहे हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #integrity #character #wisdom #hinduism
+    #bhagavadgita #gita #integrity #character #spirituality #wisdom
 - id: '0664'
   quote_id: g5-22
   format: hook_quote
   theme: ink
-  duration: 14.06
+  duration: 14.78
   segments:
   - role: hook
-    text: The richest people want the least.
+    text: सबसे अमीर लोग सबसे कम चाहते हैं।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Pleasures born of the senses are sources of pain. They begin and they end. The wise do not
-      delight in them.”
+    text: “इंद्रियों से मिलने वाले सुख दुख की जड़ हैं। वे शुरू होते हैं और खत्म हो जाते हैं। ज्ञानी उनमें
+      आनंद नहीं ढूँढते।”
     start: 3.2
-    end: 14.06
+    end: 14.78
   - role: author
-    text: — Bhagavad Gita 5.22
+    text: — भगवद्गीता 5.22
     start: 4.0
-    end: 14.06
-  voiceover_text: Pleasures born of the senses are sources of pain. They begin and they end. The wise
-    do not delight in them.
+    end: 14.78
+  voiceover_text: इंद्रियों से मिलने वाले सुख दुख की जड़ हैं। वे शुरू होते हैं और खत्म हो जाते हैं। ज्ञानी
+    उनमें आनंद नहीं ढूँढते।
   voiceover_start: 3.5
   caption: |-
-    The richest people want the least.
+    सबसे अमीर लोग सबसे कम चाहते हैं।
 
-    “Pleasures born of the senses are sources of pain. They begin and they end. The wise do not delight in them.”
-    — Bhagavad Gita 5.22
+    “इंद्रियों से मिलने वाले सुख दुख की जड़ हैं। वे शुरू होते हैं और खत्म हो जाते हैं। ज्ञानी उनमें आनंद नहीं ढूँढते।”
+    — भगवद्गीता 5.22
 
-    What do you own that owns you?
+    तुम्हारी कौन-सी चीज़ तुम पर हुकूमत करती है?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #minimalism #contentment #wisdom #karma
+    #bhagavadgita #gita #minimalism #contentment #hinduism #karma
 - id: '0665'
   quote_id: g3-19
   format: quote_reflection
   theme: marble
-  duration: 13.62
+  duration: 14.7
   segments:
   - role: quote
-    text: “Do the work that must be done, without attachment. By working without attachment, one reaches
-      the highest.”
+    text: “जो काम करना ज़रूरी है, उसे आसक्ति के बिना करो। आसक्ति के बिना कर्म करके इंसान परम को पाता है।”
     start: 0.4
-    end: 9.22
+    end: 10.3
   - role: author
-    text: — Bhagavad Gita 3.19
+    text: — भगवद्गीता 3.19
     start: 1.2
-    end: 9.22
+    end: 10.3
   - role: reflection
-    text: What have you been putting off?
-    start: 9.42
-    end: 13.62
-  voiceover_text: Do the work that must be done, without attachment. By working without attachment, one
-    reaches the highest.
+    text: तुम क्या टालते आ रहे हो?
+    start: 10.5
+    end: 14.7
+  voiceover_text: जो काम करना ज़रूरी है, उसे आसक्ति के बिना करो। आसक्ति के बिना कर्म करके इंसान परम को
+    पाता है।
   voiceover_start: 0.7
   caption: |-
-    “Do the work that must be done, without attachment. By working without attachment, one reaches the highest.”
-    — Bhagavad Gita 3.19
+    “जो काम करना ज़रूरी है, उसे आसक्ति के बिना करो। आसक्ति के बिना कर्म करके इंसान परम को पाता है।”
+    — भगवद्गीता 3.19
 
-    What have you been putting off?
+    तुम क्या टालते आ रहे हो?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #discipline #motivation #wisdom #krishna
+    #bhagavadgita #gita #discipline #motivation #hinduism #krishna
 - id: '0666'
   quote_id: g2-03
   format: hook_quote
   theme: forest
-  duration: 13.7
+  duration: 14.06
   segments:
   - role: hook
-    text: Be brave today.
+    text: आज हिम्मत दिखाओ।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Do not yield to weakness. It does not suit you. Shake off this small faintness of heart and
-      stand up.”
+    text: “कमज़ोरी के आगे मत झुको। यह तुम्हें शोभा नहीं देती। मन की इस छोटी-सी दुर्बलता को छोड़ो और उठ
+      खड़े हो।”
     start: 3.2
-    end: 13.7
+    end: 14.06
   - role: author
-    text: — Bhagavad Gita 2.3
+    text: — भगवद्गीता 2.3
     start: 4.0
-    end: 13.7
-  voiceover_text: Do not yield to weakness. It does not suit you. Shake off this small faintness of heart
-    and stand up.
+    end: 14.06
+  voiceover_text: कमज़ोरी के आगे मत झुको। यह तुम्हें शोभा नहीं देती। मन की इस छोटी-सी दुर्बलता को छोड़ो
+    और उठ खड़े हो।
   voiceover_start: 3.5
   caption: |-
-    Be brave today.
+    आज हिम्मत दिखाओ।
 
-    “Do not yield to weakness. It does not suit you. Shake off this small faintness of heart and stand up.”
-    — Bhagavad Gita 2.3
+    “कमज़ोरी के आगे मत झुको। यह तुम्हें शोभा नहीं देती। मन की इस छोटी-सी दुर्बलता को छोड़ो और उठ खड़े हो।”
+    — भगवद्गीता 2.3
 
-    Where do you need courage right now?
+    अभी तुम्हें कहाँ हिम्मत की ज़रूरत है?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #courage #bravery #karma #sanatandharma
+    #bhagavadgita #gita #courage #bravery #sanatandharma #dharma
 - id: '0667'
   quote_id: g15-07
   format: quote
@@ -2073,215 +2062,216 @@
   duration: 8.02
   segments:
   - role: quote
-    text: “An eternal part of me becomes the living soul in every being.”
+    text: “मेरा ही एक सनातन अंश हर प्राणी में जीवात्मा बन जाता है।”
     start: 0.4
     end: 8.02
   - role: author
-    text: — Bhagavad Gita 15.7
+    text: — भगवद्गीता 15.7
     start: 1.2
     end: 8.02
-  voiceover_text: An eternal part of me becomes the living soul in every being.
+  voiceover_text: मेरा ही एक सनातन अंश हर प्राणी में जीवात्मा बन जाता है।
   voiceover_start: 0.7
   caption: |-
-    “An eternal part of me becomes the living soul in every being.”
-    — Bhagavad Gita 15.7
+    “मेरा ही एक सनातन अंश हर प्राणी में जीवात्मा बन जाता है।”
+    — भगवद्गीता 15.7
 
-    What would the best version of you do now?
+    तुम्हारा सबसे अच्छा रूप अभी क्या करता?
 
-    Follow for daily wisdom.
+    रोज़ की सीख के लिए फ़ॉलो करो।
 
-    #bhagavadgita #gita #selfmastery #selfawareness #krishna #spirituality
+    #bhagavadgita #gita #selfmastery #selfawareness #krishna #gitagyan
 - id: 0668
   quote_id: g2-58
   format: hook_quote
   theme: midnight
-  duration: 13.34
+  duration: 13.7
   segments:
   - role: hook
-    text: Let go of what isn't yours.
+    text: जो तुम्हारा नहीं, उसे जाने दो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “As a tortoise draws in its limbs, the wise draw their senses back from the objects of the senses.”
+    text: “जैसे कछुआ अपने अंगों को भीतर समेट लेता है, वैसे ही ज्ञानी अपनी इंद्रियों को विषयों से हटा लेता
+      है।”
     start: 3.2
-    end: 13.34
+    end: 13.7
   - role: author
-    text: — Bhagavad Gita 2.58
+    text: — भगवद्गीता 2.58
     start: 4.0
-    end: 13.34
-  voiceover_text: As a tortoise draws in its limbs, the wise draw their senses back from the objects of
-    the senses.
+    end: 13.7
+  voiceover_text: जैसे कछुआ अपने अंगों को भीतर समेट लेता है, वैसे ही ज्ञानी अपनी इंद्रियों को विषयों से
+    हटा लेता है।
   voiceover_start: 3.5
   caption: |-
-    Let go of what isn't yours.
+    जो तुम्हारा नहीं, उसे जाने दो।
 
-    “As a tortoise draws in its limbs, the wise draw their senses back from the objects of the senses.”
-    — Bhagavad Gita 2.58
+    “जैसे कछुआ अपने अंगों को भीतर समेट लेता है, वैसे ही ज्ञानी अपनी इंद्रियों को विषयों से हटा लेता है।”
+    — भगवद्गीता 2.58
 
-    What are you trying to control that you can't?
+    तुम किस चीज़ को कंट्रोल करना चाहते हो जो तुम्हारे बस में नहीं?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #selfcontrol #innerpeace #krishna #hinduism
+    #bhagavadgita #gita #selfcontrol #innerpeace #sanatandharma #hindiquotes
 - id: 0669
   quote_id: g17-03
   format: quote
   theme: dusk
-  duration: 8.74
+  duration: 8.02
   segments:
   - role: quote
-    text: “A person is made of their faith. As their faith is, so are they.”
+    text: “इंसान अपनी श्रद्धा से बना है। जैसी उसकी श्रद्धा, वैसा ही वह।”
     start: 0.4
-    end: 8.74
+    end: 8.02
   - role: author
-    text: — Bhagavad Gita 17.3
+    text: — भगवद्गीता 17.3
     start: 1.2
-    end: 8.74
-  voiceover_text: A person is made of their faith. As their faith is, so are they.
+    end: 8.02
+  voiceover_text: इंसान अपनी श्रद्धा से बना है। जैसी उसकी श्रद्धा, वैसा ही वह।
   voiceover_start: 0.7
   caption: |-
-    “A person is made of their faith. As their faith is, so are they.”
-    — Bhagavad Gita 17.3
+    “इंसान अपनी श्रद्धा से बना है। जैसी उसकी श्रद्धा, वैसा ही वह।”
+    — भगवद्गीता 17.3
 
-    Where is your life heading?
+    तुम्हारी ज़िंदगी किस ओर जा रही है?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #purpose #meaning #karma #krishna
+    #bhagavadgita #gita #purpose #meaning #dharma #wisdom
 - id: '0670'
   quote_id: g6-30
   format: quote_reflection
   theme: sand
-  duration: 15.42
+  duration: 16.5
   segments:
   - role: quote
-    text: “One who sees me everywhere and sees everything in me is never lost to me, and I am never lost
-      to them.”
+    text: “जो मुझे हर जगह देखता है और सब कुछ मुझमें देखता है, वह मुझसे कभी दूर नहीं होता, और मैं उससे
+      कभी दूर नहीं होता।”
     start: 0.4
-    end: 11.02
+    end: 12.1
   - role: author
-    text: — Bhagavad Gita 6.30
+    text: — भगवद्गीता 6.30
     start: 1.2
-    end: 11.02
+    end: 12.1
   - role: reflection
-    text: Who do you love without reason?
-    start: 11.22
-    end: 15.42
-  voiceover_text: One who sees me everywhere and sees everything in me is never lost to me, and I am never
-    lost to them.
+    text: तुम किसे बिना वजह प्यार करते हो?
+    start: 12.3
+    end: 16.5
+  voiceover_text: जो मुझे हर जगह देखता है और सब कुछ मुझमें देखता है, वह मुझसे कभी दूर नहीं होता, और मैं
+    उससे कभी दूर नहीं होता।
   voiceover_start: 0.7
   caption: |-
-    “One who sees me everywhere and sees everything in me is never lost to me, and I am never lost to them.”
-    — Bhagavad Gita 6.30
+    “जो मुझे हर जगह देखता है और सब कुछ मुझमें देखता है, वह मुझसे कभी दूर नहीं होता, और मैं उससे कभी दूर नहीं होता।”
+    — भगवद्गीता 6.30
 
-    Who do you love without reason?
+    तुम किसे बिना वजह प्यार करते हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #love #heart #krishna #karma
+    #bhagavadgita #gita #love #heart #wisdom #hinduism
 - id: '0671'
   quote_id: g2-63
   format: hook_quote_cta
   theme: ember
-  duration: 17.02
+  duration: 19.54
   segments:
   - role: hook
-    text: Someone hurt you. Now what?
+    text: किसी ने तुम्हें चोट पहुँचाई? अब क्या?
     start: 0.4
     end: 3.0
   - role: quote
-    text: “From anger comes confusion. From confusion, memory fails. When memory fails, reason is lost,
-      and when reason is lost, one is ruined.”
+    text: “क्रोध से भ्रम पैदा होता है। भ्रम से स्मृति खो जाती है। स्मृति खोने से विवेक नष्ट होता है, और
+      विवेक नष्ट होने पर इंसान बर्बाद हो जाता है।”
     start: 3.2
-    end: 13.82
+    end: 16.34
   - role: author
-    text: — Bhagavad Gita 2.63
+    text: — भगवद्गीता 2.63
     start: 4.0
-    end: 13.82
+    end: 16.34
   - role: cta
-    text: Send this to someone who needs it.
-    start: 14.02
-    end: 17.02
-  voiceover_text: From anger comes confusion. From confusion, memory fails. When memory fails, reason
-    is lost, and when reason is lost, one is ruined.
+    text: उसे भेजो जिसे आज इसकी ज़रूरत है।
+    start: 16.54
+    end: 19.54
+  voiceover_text: क्रोध से भ्रम पैदा होता है। भ्रम से स्मृति खो जाती है। स्मृति खोने से विवेक नष्ट होता
+    है, और विवेक नष्ट होने पर इंसान बर्बाद हो जाता है।
   voiceover_start: 3.5
   caption: |-
-    Someone hurt you. Now what?
+    किसी ने तुम्हें चोट पहुँचाई? अब क्या?
 
-    “From anger comes confusion. From confusion, memory fails. When memory fails, reason is lost, and when reason is lost, one is ruined.”
-    — Bhagavad Gita 2.63
+    “क्रोध से भ्रम पैदा होता है। भ्रम से स्मृति खो जाती है। स्मृति खोने से विवेक नष्ट होता है, और विवेक नष्ट होने पर इंसान बर्बाद हो जाता है।”
+    — भगवद्गीता 2.63
 
-    Who controls you when you are angry?
+    जब तुम गुस्से में होते हो, तब तुम्हें कौन चला रहा होता है?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #anger #selfcontrol #karma #sanatandharma
+    #bhagavadgita #gita #anger #selfcontrol #karma #wisdom
 - id: '0672'
   quote_id: g16-21
   format: lesson
   theme: ink
-  duration: 14.3
+  duration: 13.94
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: '“There are three gates to self-destruction: desire, anger and greed. Let go of all three.”'
+    text: '“आत्म-विनाश के तीन द्वार हैं: काम, क्रोध और लोभ। इन तीनों को छोड़ दो।”'
     start: 3.0
-    end: 11.1
+    end: 10.74
   - role: author
-    text: — Bhagavad Gita 16.21
+    text: — भगवद्गीता 16.21
     start: 3.8
-    end: 11.1
+    end: 10.74
   - role: cta
-    text: Send this to someone who needs it.
-    start: 11.3
-    end: 14.3
-  voiceover_text: 'There are three gates to self-destruction: desire, anger and greed. Let go of all three.'
+    text: उसे भेजो जिसे आज इसकी ज़रूरत है।
+    start: 10.94
+    end: 13.94
+  voiceover_text: 'आत्म-विनाश के तीन द्वार हैं: काम, क्रोध और लोभ। इन तीनों को छोड़ दो।'
   voiceover_start: 3.3
   caption: |-
-    “There are three gates to self-destruction: desire, anger and greed. Let go of all three.”
-    — Bhagavad Gita 16.21
+    “आत्म-विनाश के तीन द्वार हैं: काम, क्रोध और लोभ। इन तीनों को छोड़ दो।”
+    — भगवद्गीता 16.21
 
-    Who controls you when you are angry?
+    जब तुम गुस्से में होते हो, तब तुम्हें कौन चला रहा होता है?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #anger #selfcontrol #krishna #karma
+    #bhagavadgita #gita #anger #selfcontrol #gitagyan #dharma
 - id: '0673'
   quote_id: g2-64
   format: hook_quote
   theme: marble
-  duration: 12.98
+  duration: 13.7
   segments:
   - role: hook
-    text: Let go of what isn't yours.
+    text: जो तुम्हारा नहीं, उसे जाने दो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “One who moves through the world with the senses under control, free from craving and dislike,
-      finds peace.”
+    text: “जो इंद्रियों को वश में रखकर, लालसा और द्वेष से मुक्त होकर दुनिया में चलता है, उसे शांति मिलती
+      है।”
     start: 3.2
-    end: 12.98
+    end: 13.7
   - role: author
-    text: — Bhagavad Gita 2.64
+    text: — भगवद्गीता 2.64
     start: 4.0
-    end: 12.98
-  voiceover_text: One who moves through the world with the senses under control, free from craving and
-    dislike, finds peace.
+    end: 13.7
+  voiceover_text: जो इंद्रियों को वश में रखकर, लालसा और द्वेष से मुक्त होकर दुनिया में चलता है, उसे शांति
+    मिलती है।
   voiceover_start: 3.5
   caption: |-
-    Let go of what isn't yours.
+    जो तुम्हारा नहीं, उसे जाने दो।
 
-    “One who moves through the world with the senses under control, free from craving and dislike, finds peace.”
-    — Bhagavad Gita 2.64
+    “जो इंद्रियों को वश में रखकर, लालसा और द्वेष से मुक्त होकर दुनिया में चलता है, उसे शांति मिलती है।”
+    — भगवद्गीता 2.64
 
-    What are you trying to control that you can't?
+    तुम किस चीज़ को कंट्रोल करना चाहते हो जो तुम्हारे बस में नहीं?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #selfcontrol #innerpeace #hinduism #sanatandharma
+    #bhagavadgita #gita #selfcontrol #innerpeace #श्रीकृष्ण #wisdom
 - id: '0674'
   quote_id: g9-27
   format: hook_quote_cta
@@ -2289,193 +2279,192 @@
   duration: 16.3
   segments:
   - role: hook
-    text: Busy is not the same as meaningful.
+    text: व्यस्त रहना और सार्थक होना एक बात नहीं।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Whatever you do, whatever you eat, whatever you give, whatever you strive for, do it as an
-      offering to me.”
+    text: “तुम जो भी करो, जो भी खाओ, जो भी दो, जिसके लिए भी प्रयास करो, उसे मुझे अर्पण करके करो।”
     start: 3.2
     end: 13.1
   - role: author
-    text: — Bhagavad Gita 9.27
+    text: — भगवद्गीता 9.27
     start: 4.0
     end: 13.1
   - role: cta
-    text: Read it twice.
+    text: इसे दोबारा पढ़ो।
     start: 13.3
     end: 16.3
-  voiceover_text: Whatever you do, whatever you eat, whatever you give, whatever you strive for, do it
-    as an offering to me.
+  voiceover_text: तुम जो भी करो, जो भी खाओ, जो भी दो, जिसके लिए भी प्रयास करो, उसे मुझे अर्पण करके करो।
   voiceover_start: 3.5
   caption: |-
-    Busy is not the same as meaningful.
+    व्यस्त रहना और सार्थक होना एक बात नहीं।
 
-    “Whatever you do, whatever you eat, whatever you give, whatever you strive for, do it as an offering to me.”
-    — Bhagavad Gita 9.27
+    “तुम जो भी करो, जो भी खाओ, जो भी दो, जिसके लिए भी प्रयास करो, उसे मुझे अर्पण करके करो।”
+    — भगवद्गीता 9.27
 
-    Where is your life heading?
+    तुम्हारी ज़िंदगी किस ओर जा रही है?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #purpose #meaning #dharma #hinduism
+    #bhagavadgita #gita #purpose #meaning #dharma #sanatandharma
 - id: '0675'
   quote_id: g4-10
   format: hook_quote
   theme: ocean
-  duration: 11.9
+  duration: 12.62
   segments:
   - role: hook
-    text: Breathe. Then read this.
+    text: साँस लो। फिर यह पढ़ो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Free from attachment, fear and anger, many have been purified by the fire of knowledge.”
+    text: “आसक्ति, भय और क्रोध से मुक्त होकर, बहुत से लोग ज्ञान की अग्नि में पवित्र हुए हैं।”
     start: 3.2
-    end: 11.9
+    end: 12.62
   - role: author
-    text: — Bhagavad Gita 4.10
+    text: — भगवद्गीता 4.10
     start: 4.0
-    end: 11.9
-  voiceover_text: Free from attachment, fear and anger, many have been purified by the fire of knowledge.
+    end: 12.62
+  voiceover_text: आसक्ति, भय और क्रोध से मुक्त होकर, बहुत से लोग ज्ञान की अग्नि में पवित्र हुए हैं।
   voiceover_start: 3.5
   caption: |-
-    Breathe. Then read this.
+    साँस लो। फिर यह पढ़ो।
 
-    “Free from attachment, fear and anger, many have been purified by the fire of knowledge.”
-    — Bhagavad Gita 4.10
+    “आसक्ति, भय और क्रोध से मुक्त होकर, बहुत से लोग ज्ञान की अग्नि में पवित्र हुए हैं।”
+    — भगवद्गीता 4.10
 
-    What is actually happening right now?
+    अभी सच में क्या हो रहा है?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #anxiety #calm #krishna #wisdom
+    #bhagavadgita #gita #anxiety #calm #hinduism #wisdom
 - id: '0676'
   quote_id: g2-38
   format: hook_quote
   theme: midnight
-  duration: 12.26
+  duration: 11.18
   segments:
   - role: hook
-    text: Good things take time.
+    text: अच्छी चीज़ों में समय लगता है।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Treat pleasure and pain, gain and loss, victory and defeat alike. Then rise to the battle.”
+    text: “सुख-दुख, लाभ-हानि और जीत-हार को एक समान समझो। फिर युद्ध के लिए उठो।”
     start: 3.2
-    end: 12.26
+    end: 11.18
   - role: author
-    text: — Bhagavad Gita 2.38
+    text: — भगवद्गीता 2.38
     start: 4.0
-    end: 12.26
-  voiceover_text: Treat pleasure and pain, gain and loss, victory and defeat alike. Then rise to the battle.
+    end: 11.18
+  voiceover_text: सुख-दुख, लाभ-हानि और जीत-हार को एक समान समझो। फिर युद्ध के लिए उठो।
   voiceover_start: 3.5
   caption: |-
-    Good things take time.
+    अच्छी चीज़ों में समय लगता है।
 
-    “Treat pleasure and pain, gain and loss, victory and defeat alike. Then rise to the battle.”
-    — Bhagavad Gita 2.38
+    “सुख-दुख, लाभ-हानि और जीत-हार को एक समान समझो। फिर युद्ध के लिए उठो।”
+    — भगवद्गीता 2.38
 
-    What deserves more patience from you?
+    किस चीज़ को तुम्हारे धैर्य की ज़्यादा ज़रूरत है?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #patience #calm #krishna #karma
+    #bhagavadgita #gita #patience #calm #gitagyan #श्रीकृष्ण
 - id: '0677'
   quote_id: g4-40
   format: quote_reflection
   theme: dusk
-  duration: 12.18
+  duration: 13.62
   segments:
   - role: quote
-    text: “The one who doubts finds happiness neither in this world nor the next.”
+    text: “जो संदेह में डूबा रहता है, उसे न इस दुनिया में सुख मिलता है, न अगली में।”
     start: 0.4
-    end: 7.78
+    end: 9.22
   - role: author
-    text: — Bhagavad Gita 4.40
+    text: — भगवद्गीता 4.40
     start: 1.2
-    end: 7.78
+    end: 9.22
   - role: reflection
-    text: Where do you need courage right now?
-    start: 7.98
-    end: 12.18
-  voiceover_text: The one who doubts finds happiness neither in this world nor the next.
+    text: अभी तुम्हें कहाँ हिम्मत की ज़रूरत है?
+    start: 9.42
+    end: 13.62
+  voiceover_text: जो संदेह में डूबा रहता है, उसे न इस दुनिया में सुख मिलता है, न अगली में।
   voiceover_start: 0.7
   caption: |-
-    “The one who doubts finds happiness neither in this world nor the next.”
-    — Bhagavad Gita 4.40
+    “जो संदेह में डूबा रहता है, उसे न इस दुनिया में सुख मिलता है, न अगली में।”
+    — भगवद्गीता 4.40
 
-    Where do you need courage right now?
+    अभी तुम्हें कहाँ हिम्मत की ज़रूरत है?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #courage #bravery #krishna #hinduism
+    #bhagavadgita #gita #courage #bravery #krishna #karma
 - id: 0678
   quote_id: g3-30
   format: quote_reflection
   theme: sand
-  duration: 12.9
+  duration: 14.34
   segments:
   - role: quote
-    text: “Offer all your actions to me. Free from desire and from 'mine', fight without anxiety.”
+    text: “अपने सारे कर्म मुझे अर्पित करो। इच्छा और ‘मेरा’ के भाव से मुक्त होकर, बिना चिंता के युद्ध करो।”
     start: 0.4
-    end: 8.5
+    end: 9.94
   - role: author
-    text: — Bhagavad Gita 3.30
+    text: — भगवद्गीता 3.30
     start: 1.2
-    end: 8.5
+    end: 9.94
   - role: reflection
-    text: What is actually happening right now?
-    start: 8.7
-    end: 12.9
-  voiceover_text: Offer all your actions to me. Free from desire and from 'mine', fight without anxiety.
+    text: अभी सच में क्या हो रहा है?
+    start: 10.14
+    end: 14.34
+  voiceover_text: अपने सारे कर्म मुझे अर्पित करो। इच्छा और ‘मेरा’ के भाव से मुक्त होकर, बिना चिंता के
+    युद्ध करो।
   voiceover_start: 0.7
   caption: |-
-    “Offer all your actions to me. Free from desire and from 'mine', fight without anxiety.”
-    — Bhagavad Gita 3.30
+    “अपने सारे कर्म मुझे अर्पित करो। इच्छा और ‘मेरा’ के भाव से मुक्त होकर, बिना चिंता के युद्ध करो।”
+    — भगवद्गीता 3.30
 
-    What is actually happening right now?
+    अभी सच में क्या हो रहा है?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #anxiety #calm #krishna #dharma
+    #bhagavadgita #gita #anxiety #calm #gitagyan #hindiquotes
 - id: 0679
   quote_id: g4-20
   format: hook_quote_cta
   theme: ember
-  duration: 16.66
+  duration: 17.38
   segments:
   - role: hook
-    text: Start before you're ready.
+    text: तैयार होने से पहले शुरू करो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “Letting go of attachment to results, always content and depending on nothing, such a person
-      acts, yet is untouched by action.”
+    text: “फल की आसक्ति छोड़कर, सदा संतुष्ट और किसी पर निर्भर न रहकर, ऐसा इंसान कर्म करता है, फिर भी कर्म
+      उसे छूता नहीं।”
     start: 3.2
-    end: 13.46
+    end: 14.18
   - role: author
-    text: — Bhagavad Gita 4.20
+    text: — भगवद्गीता 4.20
     start: 4.0
-    end: 13.46
+    end: 14.18
   - role: cta
-    text: Save this for a hard day.
-    start: 13.66
-    end: 16.66
-  voiceover_text: Letting go of attachment to results, always content and depending on nothing, such a
-    person acts, yet is untouched by action.
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
+    start: 14.38
+    end: 17.38
+  voiceover_text: फल की आसक्ति छोड़कर, सदा संतुष्ट और किसी पर निर्भर न रहकर, ऐसा इंसान कर्म करता है, फिर
+    भी कर्म उसे छूता नहीं।
   voiceover_start: 3.5
   caption: |-
-    Start before you're ready.
+    तैयार होने से पहले शुरू करो।
 
-    “Letting go of attachment to results, always content and depending on nothing, such a person acts, yet is untouched by action.”
-    — Bhagavad Gita 4.20
+    “फल की आसक्ति छोड़कर, सदा संतुष्ट और किसी पर निर्भर न रहकर, ऐसा इंसान कर्म करता है, फिर भी कर्म उसे छूता नहीं।”
+    — भगवद्गीता 4.20
 
-    What have you been putting off?
+    तुम क्या टालते आ रहे हो?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #discipline #motivation #sanatandharma #karma
+    #bhagavadgita #gita #discipline #motivation #karma #gitagyan
 - id: 0680
   quote_id: g3-27
   format: hook_quote_cta
@@ -2483,95 +2472,93 @@
   duration: 15.94
   segments:
   - role: hook
-    text: Read this if you feel lost.
+    text: खोया-खोया महसूस कर रहे हो? यह पढ़ो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “All actions are done by the forces of nature, but one confused by ego thinks, 'I am the doer.'”
+    text: “सारे कर्म प्रकृति के गुणों से होते हैं, पर अहंकार में उलझा इंसान सोचता है, ‘मैं करने वाला हूँ।’”
     start: 3.2
     end: 12.74
   - role: author
-    text: — Bhagavad Gita 3.27
+    text: — भगवद्गीता 3.27
     start: 4.0
     end: 12.74
   - role: cta
-    text: Send this to someone who needs it.
+    text: उसे भेजो जिसे आज इसकी ज़रूरत है।
     start: 12.94
     end: 15.94
-  voiceover_text: All actions are done by the forces of nature, but one confused by ego thinks, 'I am
-    the doer.'
+  voiceover_text: सारे कर्म प्रकृति के गुणों से होते हैं, पर अहंकार में उलझा इंसान सोचता है, ‘मैं करने
+    वाला हूँ।’
   voiceover_start: 3.5
   caption: |-
-    Read this if you feel lost.
+    खोया-खोया महसूस कर रहे हो? यह पढ़ो।
 
-    “All actions are done by the forces of nature, but one confused by ego thinks, 'I am the doer.'”
-    — Bhagavad Gita 3.27
+    “सारे कर्म प्रकृति के गुणों से होते हैं, पर अहंकार में उलझा इंसान सोचता है, ‘मैं करने वाला हूँ।’”
+    — भगवद्गीता 3.27
 
-    What would the best version of you do now?
+    तुम्हारा सबसे अच्छा रूप अभी क्या करता?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #selfmastery #selfawareness #karma #wisdom
+    #bhagavadgita #gita #selfmastery #selfawareness #श्रीकृष्ण #hinduism
 - id: 0681
   quote_id: g18-38
   format: lesson
   theme: marble
-  duration: 15.38
+  duration: 14.66
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “What feels like nectar at first but turns to poison in the end is the happiness of passion.”
+    text: “जो शुरू में अमृत जैसा लगे पर अंत में ज़हर बन जाए, वह राजसिक सुख है।”
     start: 3.0
-    end: 12.18
+    end: 11.46
   - role: author
-    text: — Bhagavad Gita 18.38
+    text: — भगवद्गीता 18.38
     start: 3.8
-    end: 12.18
+    end: 11.46
   - role: cta
-    text: Send this to someone who needs it.
-    start: 12.38
-    end: 15.38
-  voiceover_text: What feels like nectar at first but turns to poison in the end is the happiness of passion.
+    text: उसे भेजो जिसे आज इसकी ज़रूरत है।
+    start: 11.66
+    end: 14.66
+  voiceover_text: जो शुरू में अमृत जैसा लगे पर अंत में ज़हर बन जाए, वह राजसिक सुख है।
   voiceover_start: 3.3
   caption: |-
-    “What feels like nectar at first but turns to poison in the end is the happiness of passion.”
-    — Bhagavad Gita 18.38
+    “जो शुरू में अमृत जैसा लगे पर अंत में ज़हर बन जाए, वह राजसिक सुख है।”
+    — भगवद्गीता 18.38
 
-    What do you own that owns you?
+    तुम्हारी कौन-सी चीज़ तुम पर हुकूमत करती है?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #minimalism #contentment #krishna #sanatandharma
+    #bhagavadgita #gita #minimalism #contentment #gitagyan #hinduism
 - id: 0682
   quote_id: g5-23
   format: quote
   theme: forest
-  duration: 10.18
+  duration: 10.9
   segments:
   - role: quote
-    text: “One who can withstand the force of desire and anger, here in this life, is disciplined and
-      happy.”
+    text: “जो इसी जीवन में इच्छा और क्रोध के वेग को सह सकता है, वही संयमी है और वही सुखी है।”
     start: 0.4
-    end: 10.18
+    end: 10.9
   - role: author
-    text: — Bhagavad Gita 5.23
+    text: — भगवद्गीता 5.23
     start: 1.2
-    end: 10.18
-  voiceover_text: One who can withstand the force of desire and anger, here in this life, is disciplined
-    and happy.
+    end: 10.9
+  voiceover_text: जो इसी जीवन में इच्छा और क्रोध के वेग को सह सकता है, वही संयमी है और वही सुखी है।
   voiceover_start: 0.7
   caption: |-
-    “One who can withstand the force of desire and anger, here in this life, is disciplined and happy.”
-    — Bhagavad Gita 5.23
+    “जो इसी जीवन में इच्छा और क्रोध के वेग को सह सकता है, वही संयमी है और वही सुखी है।”
+    — भगवद्गीता 5.23
 
-    What are you trying to control that you can't?
+    तुम किस चीज़ को कंट्रोल करना चाहते हो जो तुम्हारे बस में नहीं?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #selfcontrol #innerpeace #dharma #sanatandharma
+    #bhagavadgita #gita #selfcontrol #innerpeace #karma #spirituality
 - id: 0683
   quote_id: g8-06
   format: quote
@@ -2579,480 +2566,482 @@
   duration: 8.74
   segments:
   - role: quote
-    text: “Whatever a person keeps in mind at the end of life, that they become.”
+    text: “जीवन के अंत में इंसान जिसे याद करता है, वह वही बन जाता है।”
     start: 0.4
     end: 8.74
   - role: author
-    text: — Bhagavad Gita 8.6
+    text: — भगवद्गीता 8.6
     start: 1.2
     end: 8.74
-  voiceover_text: Whatever a person keeps in mind at the end of life, that they become.
+  voiceover_text: जीवन के अंत में इंसान जिसे याद करता है, वह वही बन जाता है।
   voiceover_start: 0.7
   caption: |-
-    “Whatever a person keeps in mind at the end of life, that they become.”
-    — Bhagavad Gita 8.6
+    “जीवन के अंत में इंसान जिसे याद करता है, वह वही बन जाता है।”
+    — भगवद्गीता 8.6
 
-    What story are you telling yourself?
+    तुम खुद को कौन-सी कहानी सुना रहे हो?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #mindset #overthinking #wisdom #spirituality
+    #bhagavadgita #gita #mindset #overthinking #hindiquotes #karma
 - id: 0684
   quote_id: g5-10
   format: quote
   theme: midnight
-  duration: 11.98
+  duration: 12.34
   segments:
   - role: quote
-    text: “One who acts without attachment, offering every action to the divine, is untouched by wrong,
-      as a lotus leaf is untouched by water.”
+    text: “जो आसक्ति छोड़कर, हर कर्म ईश्वर को अर्पित करके कर्म करता है, उसे पाप वैसे ही नहीं छूता जैसे
+      कमल के पत्ते को पानी।”
     start: 0.4
-    end: 11.98
+    end: 12.34
   - role: author
-    text: — Bhagavad Gita 5.10
+    text: — भगवद्गीता 5.10
     start: 1.2
-    end: 11.98
-  voiceover_text: One who acts without attachment, offering every action to the divine, is untouched by
-    wrong, as a lotus leaf is untouched by water.
+    end: 12.34
+  voiceover_text: जो आसक्ति छोड़कर, हर कर्म ईश्वर को अर्पित करके कर्म करता है, उसे पाप वैसे ही नहीं छूता
+    जैसे कमल के पत्ते को पानी।
   voiceover_start: 0.7
   caption: |-
-    “One who acts without attachment, offering every action to the divine, is untouched by wrong, as a lotus leaf is untouched by water.”
-    — Bhagavad Gita 5.10
+    “जो आसक्ति छोड़कर, हर कर्म ईश्वर को अर्पित करके कर्म करता है, उसे पाप वैसे ही नहीं छूता जैसे कमल के पत्ते को पानी।”
+    — भगवद्गीता 5.10
 
-    Where are you cutting corners?
+    तुम कहाँ शॉर्टकट ले रहे हो?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #integrity #character #spirituality #dharma
+    #bhagavadgita #gita #integrity #character #श्रीकृष्ण #hindiquotes
 - id: 0685
   quote_id: g2-31
   format: quote_reflection
   theme: dusk
-  duration: 10.74
+  duration: 10.02
   segments:
   - role: quote
-    text: “Think of your own duty, and do not waver.”
+    text: “अपने कर्तव्य को देखो, और डगमगाओ मत।”
     start: 0.4
-    end: 6.34
+    end: 5.62
   - role: author
-    text: — Bhagavad Gita 2.31
+    text: — भगवद्गीता 2.31
     start: 1.2
-    end: 6.34
+    end: 5.62
   - role: reflection
-    text: Where is your life heading?
-    start: 6.54
-    end: 10.74
-  voiceover_text: Think of your own duty, and do not waver.
+    text: तुम्हारी ज़िंदगी किस ओर जा रही है?
+    start: 5.82
+    end: 10.02
+  voiceover_text: अपने कर्तव्य को देखो, और डगमगाओ मत।
   voiceover_start: 0.7
   caption: |-
-    “Think of your own duty, and do not waver.”
-    — Bhagavad Gita 2.31
+    “अपने कर्तव्य को देखो, और डगमगाओ मत।”
+    — भगवद्गीता 2.31
 
-    Where is your life heading?
+    तुम्हारी ज़िंदगी किस ओर जा रही है?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #purpose #meaning #krishna #hinduism
+    #bhagavadgita #gita #purpose #meaning #hinduism #hindiquotes
 - id: 0686
   quote_id: g14-17
   format: quote_reflection
   theme: sand
-  duration: 11.82
+  duration: 13.98
   segments:
   - role: quote
-    text: “From goodness comes knowledge. From passion comes greed. From darkness comes ignorance.”
+    text: “सत्त्व से ज्ञान पैदा होता है। रज से लोभ पैदा होता है। तम से अज्ञान पैदा होता है।”
     start: 0.4
-    end: 7.42
+    end: 9.58
   - role: author
-    text: — Bhagavad Gita 14.17
+    text: — भगवद्गीता 14.17
     start: 1.2
-    end: 7.42
+    end: 9.58
   - role: reflection
-    text: Where do you pretend to know?
-    start: 7.62
-    end: 11.82
-  voiceover_text: From goodness comes knowledge. From passion comes greed. From darkness comes ignorance.
+    text: तुम कहाँ जानने का दिखावा करते हो?
+    start: 9.78
+    end: 13.98
+  voiceover_text: सत्त्व से ज्ञान पैदा होता है। रज से लोभ पैदा होता है। तम से अज्ञान पैदा होता है।
   voiceover_start: 0.7
   caption: |-
-    “From goodness comes knowledge. From passion comes greed. From darkness comes ignorance.”
-    — Bhagavad Gita 14.17
+    “सत्त्व से ज्ञान पैदा होता है। रज से लोभ पैदा होता है। तम से अज्ञान पैदा होता है।”
+    — भगवद्गीता 14.17
 
-    Where do you pretend to know?
+    तुम कहाँ जानने का दिखावा करते हो?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #learning #growth #spirituality #dharma
+    #bhagavadgita #gita #learning #growth #spirituality #karma
 - id: 0687
   quote_id: g18-20
   format: lesson
   theme: ember
-  duration: 15.02
+  duration: 16.82
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “The knowledge that sees one undivided reality in all beings, however divided they seem, is
-      true knowledge.”
+    text: “जो ज्ञान सभी प्राणियों में, चाहे वे कितने ही अलग दिखें, एक ही अखंड सत्य को देखता है, वही सच्चा
+      ज्ञान है।”
     start: 3.0
-    end: 11.82
+    end: 13.62
   - role: author
-    text: — Bhagavad Gita 18.20
+    text: — भगवद्गीता 18.20
     start: 3.8
-    end: 11.82
+    end: 13.62
   - role: cta
-    text: Save this for a hard day.
-    start: 12.02
-    end: 15.02
-  voiceover_text: The knowledge that sees one undivided reality in all beings, however divided they seem,
-    is true knowledge.
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
+    start: 13.82
+    end: 16.82
+  voiceover_text: जो ज्ञान सभी प्राणियों में, चाहे वे कितने ही अलग दिखें, एक ही अखंड सत्य को देखता है,
+    वही सच्चा ज्ञान है।
   voiceover_start: 3.3
   caption: |-
-    “The knowledge that sees one undivided reality in all beings, however divided they seem, is true knowledge.”
-    — Bhagavad Gita 18.20
+    “जो ज्ञान सभी प्राणियों में, चाहे वे कितने ही अलग दिखें, एक ही अखंड सत्य को देखता है, वही सच्चा ज्ञान है।”
+    — भगवद्गीता 18.20
 
-    What does the bigger picture show you?
+    बड़ी तस्वीर तुम्हें क्या दिखाती है?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #perspective #divine #spirituality #krishna
+    #bhagavadgita #gita #perspective #divine #श्रीकृष्ण #krishna
 - id: 0688
   quote_id: g4-18
   format: lesson
   theme: ink
-  duration: 13.94
+  duration: 14.3
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “One who sees inaction in action, and action in inaction, is wise among people.”
+    text: “जो कर्म में अकर्म और अकर्म में कर्म देखता है, वही लोगों में बुद्धिमान है।”
     start: 3.0
-    end: 10.74
+    end: 11.1
   - role: author
-    text: — Bhagavad Gita 4.18
+    text: — भगवद्गीता 4.18
     start: 3.8
-    end: 10.74
+    end: 11.1
   - role: cta
-    text: Save this for a hard day.
-    start: 10.94
-    end: 13.94
-  voiceover_text: One who sees inaction in action, and action in inaction, is wise among people.
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
+    start: 11.3
+    end: 14.3
+  voiceover_text: जो कर्म में अकर्म और अकर्म में कर्म देखता है, वही लोगों में बुद्धिमान है।
   voiceover_start: 3.3
   caption: |-
-    “One who sees inaction in action, and action in inaction, is wise among people.”
-    — Bhagavad Gita 4.18
+    “जो कर्म में अकर्म और अकर्म में कर्म देखता है, वही लोगों में बुद्धिमान है।”
+    — भगवद्गीता 4.18
 
-    Where do you pretend to know?
+    तुम कहाँ जानने का दिखावा करते हो?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
     #bhagavadgita #gita #learning #growth #sanatandharma #krishna
 - id: 0689
   quote_id: g2-11
   format: hook_quote
   theme: marble
-  duration: 10.46
+  duration: 11.18
   segments:
   - role: hook
-    text: One day you won't wake up. Today you did.
+    text: एक दिन तुम नहीं जागोगे। आज तुम जागे हो।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “The wise grieve neither for the living nor for the dead.”
+    text: “ज्ञानी लोग न जीवितों के लिए शोक करते हैं, न मृतकों के लिए।”
     start: 3.2
-    end: 10.46
+    end: 11.18
   - role: author
-    text: — Bhagavad Gita 2.11
+    text: — भगवद्गीता 2.11
     start: 4.0
-    end: 10.46
-  voiceover_text: The wise grieve neither for the living nor for the dead.
+    end: 11.18
+  voiceover_text: ज्ञानी लोग न जीवितों के लिए शोक करते हैं, न मृतकों के लिए।
   voiceover_start: 3.5
   caption: |-
-    One day you won't wake up. Today you did.
+    एक दिन तुम नहीं जागोगे। आज तुम जागे हो।
 
-    “The wise grieve neither for the living nor for the dead.”
-    — Bhagavad Gita 2.11
+    “ज्ञानी लोग न जीवितों के लिए शोक करते हैं, न मृतकों के लिए।”
+    — भगवद्गीता 2.11
 
-    What are you saving for later?
+    तुम किस चीज़ को बाद के लिए बचाकर रख रहे हो?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #life #soul #karma #sanatandharma
+    #bhagavadgita #gita #life #soul #hinduism #wisdom
 - id: 0690
   quote_id: g5-12
   format: lesson
   theme: forest
-  duration: 13.22
+  duration: 12.5
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “Giving up the fruit of action, the disciplined person finds lasting peace.”
+    text: “कर्म का फल छोड़कर, संयमी इंसान स्थायी शांति पाता है।”
     start: 3.0
-    end: 10.02
+    end: 9.3
   - role: author
-    text: — Bhagavad Gita 5.12
+    text: — भगवद्गीता 5.12
     start: 3.8
-    end: 10.02
+    end: 9.3
   - role: cta
-    text: Which line stays with you?
-    start: 10.22
-    end: 13.22
-  voiceover_text: Giving up the fruit of action, the disciplined person finds lasting peace.
+    text: कौन-सी पंक्ति तुम्हारे दिल में रह गई?
+    start: 9.5
+    end: 12.5
+  voiceover_text: कर्म का फल छोड़कर, संयमी इंसान स्थायी शांति पाता है।
   voiceover_start: 3.3
   caption: |-
-    “Giving up the fruit of action, the disciplined person finds lasting peace.”
-    — Bhagavad Gita 5.12
+    “कर्म का फल छोड़कर, संयमी इंसान स्थायी शांति पाता है।”
+    — भगवद्गीता 5.12
 
-    Where is your mind right now?
+    तुम्हारा मन अभी कहाँ है?
 
-    Which line stays with you?
+    कौन-सी पंक्ति तुम्हारे दिल में रह गई?
 
-    #bhagavadgita #gita #presentmoment #mindfulness #wisdom #sanatandharma
+    #bhagavadgita #gita #presentmoment #mindfulness #gitagyan #श्रीकृष्ण
 - id: 0691
   quote_id: g2-60
   format: lesson
   theme: ocean
-  duration: 14.66
+  duration: 13.94
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: “The restless senses can carry away the mind of even a wise person who is striving.”
+    text: “बेचैन इंद्रियाँ प्रयास करते हुए ज्ञानी के मन को भी बहा ले जाती हैं।”
     start: 3.0
-    end: 11.46
+    end: 10.74
   - role: author
-    text: — Bhagavad Gita 2.60
+    text: — भगवद्गीता 2.60
     start: 3.8
-    end: 11.46
+    end: 10.74
   - role: cta
-    text: Save this for a hard day.
-    start: 11.66
-    end: 14.66
-  voiceover_text: The restless senses can carry away the mind of even a wise person who is striving.
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
+    start: 10.94
+    end: 13.94
+  voiceover_text: बेचैन इंद्रियाँ प्रयास करते हुए ज्ञानी के मन को भी बहा ले जाती हैं।
   voiceover_start: 3.3
   caption: |-
-    “The restless senses can carry away the mind of even a wise person who is striving.”
-    — Bhagavad Gita 2.60
+    “बेचैन इंद्रियाँ प्रयास करते हुए ज्ञानी के मन को भी बहा ले जाती हैं।”
+    — भगवद्गीता 2.60
 
-    What are you trying to control that you can't?
+    तुम किस चीज़ को कंट्रोल करना चाहते हो जो तुम्हारे बस में नहीं?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #selfcontrol #innerpeace #hinduism #sanatandharma
+    #bhagavadgita #gita #selfcontrol #innerpeace #gitagyan #karma
 - id: 0692
   quote_id: g4-34
   format: quote
   theme: midnight
-  duration: 9.1
+  duration: 10.18
   segments:
   - role: quote
-    text: “Learn the truth by going humbly to the wise, asking them questions and serving them.”
+    text: “ज्ञानियों के पास विनम्रता से जाओ, उनसे प्रश्न पूछो और उनकी सेवा करो। इसी तरह सत्य को जानो।”
     start: 0.4
-    end: 9.1
+    end: 10.18
   - role: author
-    text: — Bhagavad Gita 4.34
+    text: — भगवद्गीता 4.34
     start: 1.2
-    end: 9.1
-  voiceover_text: Learn the truth by going humbly to the wise, asking them questions and serving them.
+    end: 10.18
+  voiceover_text: ज्ञानियों के पास विनम्रता से जाओ, उनसे प्रश्न पूछो और उनकी सेवा करो। इसी तरह सत्य को
+    जानो।
   voiceover_start: 0.7
   caption: |-
-    “Learn the truth by going humbly to the wise, asking them questions and serving them.”
-    — Bhagavad Gita 4.34
+    “ज्ञानियों के पास विनम्रता से जाओ, उनसे प्रश्न पूछो और उनकी सेवा करो। इसी तरह सत्य को जानो।”
+    — भगवद्गीता 4.34
 
-    Where do you pretend to know?
+    तुम कहाँ जानने का दिखावा करते हो?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #learning #growth #karma #wisdom
+    #bhagavadgita #gita #learning #growth #gitagyan #wisdom
 - id: 0693
   quote_id: g5-20
   format: quote
   theme: dusk
-  duration: 9.46
+  duration: 9.82
   segments:
   - role: quote
-    text: “Do not rejoice too much at what pleases you, nor be troubled by what does not.”
+    text: “जो अच्छा लगे उस पर बहुत खुश मत हो, और जो बुरा लगे उससे परेशान मत हो।”
     start: 0.4
-    end: 9.46
+    end: 9.82
   - role: author
-    text: — Bhagavad Gita 5.20
+    text: — भगवद्गीता 5.20
     start: 1.2
-    end: 9.46
-  voiceover_text: Do not rejoice too much at what pleases you, nor be troubled by what does not.
+    end: 9.82
+  voiceover_text: जो अच्छा लगे उस पर बहुत खुश मत हो, और जो बुरा लगे उससे परेशान मत हो।
   voiceover_start: 0.7
   caption: |-
-    “Do not rejoice too much at what pleases you, nor be troubled by what does not.”
-    — Bhagavad Gita 5.20
+    “जो अच्छा लगे उस पर बहुत खुश मत हो, और जो बुरा लगे उससे परेशान मत हो।”
+    — भगवद्गीता 5.20
 
-    What deserves more patience from you?
+    किस चीज़ को तुम्हारे धैर्य की ज़्यादा ज़रूरत है?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #patience #calm #wisdom #hinduism
+    #bhagavadgita #gita #patience #calm #gitagyan #karma
 - id: 0694
   quote_id: g3-25
   format: quote
   theme: sand
-  duration: 10.54
+  duration: 10.9
   segments:
   - role: quote
-    text: “As the unwise act out of attachment, let the wise act without attachment, for the good of the
-      world.”
+    text: “जैसे अज्ञानी आसक्ति से कर्म करते हैं, वैसे ही ज्ञानी दुनिया की भलाई के लिए बिना आसक्ति के कर्म
+      करें।”
     start: 0.4
-    end: 10.54
+    end: 10.9
   - role: author
-    text: — Bhagavad Gita 3.25
+    text: — भगवद्गीता 3.25
     start: 1.2
-    end: 10.54
-  voiceover_text: As the unwise act out of attachment, let the wise act without attachment, for the good
-    of the world.
+    end: 10.9
+  voiceover_text: जैसे अज्ञानी आसक्ति से कर्म करते हैं, वैसे ही ज्ञानी दुनिया की भलाई के लिए बिना आसक्ति
+    के कर्म करें।
   voiceover_start: 0.7
   caption: |-
-    “As the unwise act out of attachment, let the wise act without attachment, for the good of the world.”
-    — Bhagavad Gita 3.25
+    “जैसे अज्ञानी आसक्ति से कर्म करते हैं, वैसे ही ज्ञानी दुनिया की भलाई के लिए बिना आसक्ति के कर्म करें।”
+    — भगवद्गीता 3.25
 
-    When did someone's kindness change your day?
+    कब किसी की दयालुता ने तुम्हारा दिन बदल दिया था?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #kindness #compassion #spirituality #karma
+    #bhagavadgita #gita #kindness #compassion #karma #gitagyan
 - id: 0695
   quote_id: g17-15
   format: lesson
   theme: ember
-  duration: 15.02
+  duration: 15.74
   segments:
   - role: header
-    text: A lesson from the Bhagavad Gita
+    text: भगवद्गीता की एक सीख
     start: 0.4
     end: 2.8
   - role: quote
-    text: '“Words that cause no pain, that are true, kind and helpful: this is the discipline of speech.”'
+    text: '“ऐसे शब्द जो किसी को दुख न दें, जो सच्चे, प्रिय और हितकारी हों: यही वाणी का तप है।”'
     start: 3.0
-    end: 11.82
+    end: 12.54
   - role: author
-    text: — Bhagavad Gita 17.15
+    text: — भगवद्गीता 17.15
     start: 3.8
-    end: 11.82
+    end: 12.54
   - role: cta
-    text: Save this for a hard day.
-    start: 12.02
-    end: 15.02
-  voiceover_text: 'Words that cause no pain, that are true, kind and helpful: this is the discipline of
-    speech.'
+    text: किसी मुश्किल दिन के लिए इसे सेव कर लो।
+    start: 12.74
+    end: 15.74
+  voiceover_text: 'ऐसे शब्द जो किसी को दुख न दें, जो सच्चे, प्रिय और हितकारी हों: यही वाणी का तप है।'
   voiceover_start: 3.3
   caption: |-
-    “Words that cause no pain, that are true, kind and helpful: this is the discipline of speech.”
-    — Bhagavad Gita 17.15
+    “ऐसे शब्द जो किसी को दुख न दें, जो सच्चे, प्रिय और हितकारी हों: यही वाणी का तप है।”
+    — भगवद्गीता 17.15
 
-    What could you leave unsaid today?
+    आज तुम क्या अनकहा छोड़ सकते हो?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #silence #wisdom #sanatandharma
+    #bhagavadgita #gita #silence #wisdom #gitagyan #karma
 - id: 0696
   quote_id: g18-73
   format: hook_quote
   theme: ink
-  duration: 12.62
+  duration: 14.42
   segments:
   - role: hook
-    text: Be brave today.
+    text: आज हिम्मत दिखाओ।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “My confusion is gone. I stand firm, my doubts are cleared. I will do as you say.”
+    text: “मेरा मोह दूर हो गया। मैं दृढ़ खड़ा हूँ, मेरे संदेह मिट गए हैं। मैं वैसा ही करूँगा जैसा आप कहते
+      हैं।”
     start: 3.2
-    end: 12.62
+    end: 14.42
   - role: author
-    text: — Bhagavad Gita 18.73
+    text: — भगवद्गीता 18.73
     start: 4.0
-    end: 12.62
-  voiceover_text: My confusion is gone. I stand firm, my doubts are cleared. I will do as you say.
+    end: 14.42
+  voiceover_text: मेरा मोह दूर हो गया। मैं दृढ़ खड़ा हूँ, मेरे संदेह मिट गए हैं। मैं वैसा ही करूँगा जैसा
+    आप कहते हैं।
   voiceover_start: 3.5
   caption: |-
-    Be brave today.
+    आज हिम्मत दिखाओ।
 
-    “My confusion is gone. I stand firm, my doubts are cleared. I will do as you say.”
-    — Bhagavad Gita 18.73, spoken by Arjuna
+    “मेरा मोह दूर हो गया। मैं दृढ़ खड़ा हूँ, मेरे संदेह मिट गए हैं। मैं वैसा ही करूँगा जैसा आप कहते हैं।”
+    — भगवद्गीता 18.73, spoken by Arjuna
 
-    Where do you need courage right now?
+    अभी तुम्हें कहाँ हिम्मत की ज़रूरत है?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #courage #bravery #sanatandharma #karma
+    #bhagavadgita #gita #courage #bravery #sanatandharma #hinduism
 - id: 0697
   quote_id: g14-24
   format: hook_quote
   theme: marble
-  duration: 16.58
+  duration: 15.86
   segments:
   - role: hook
-    text: The richest people want the least.
+    text: सबसे अमीर लोग सबसे कम चाहते हैं।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “One who sees a lump of earth, a stone and a piece of gold as equal, and stays steady in praise
-      and blame, has risen above the world.”
+    text: “जो मिट्टी के ढेले, पत्थर और सोने को समान देखता है, और प्रशंसा और निंदा में स्थिर रहता है, वह
+      संसार से ऊपर उठ गया है।”
     start: 3.2
-    end: 16.58
+    end: 15.86
   - role: author
-    text: — Bhagavad Gita 14.24
+    text: — भगवद्गीता 14.24
     start: 4.0
-    end: 16.58
-  voiceover_text: One who sees a lump of earth, a stone and a piece of gold as equal, and stays steady
-    in praise and blame, has risen above the world.
+    end: 15.86
+  voiceover_text: जो मिट्टी के ढेले, पत्थर और सोने को समान देखता है, और प्रशंसा और निंदा में स्थिर रहता
+    है, वह संसार से ऊपर उठ गया है।
   voiceover_start: 3.5
   caption: |-
-    The richest people want the least.
+    सबसे अमीर लोग सबसे कम चाहते हैं।
 
-    “One who sees a lump of earth, a stone and a piece of gold as equal, and stays steady in praise and blame, has risen above the world.”
-    — Bhagavad Gita 14.24
+    “जो मिट्टी के ढेले, पत्थर और सोने को समान देखता है, और प्रशंसा और निंदा में स्थिर रहता है, वह संसार से ऊपर उठ गया है।”
+    — भगवद्गीता 14.24
 
-    What do you own that owns you?
+    तुम्हारी कौन-सी चीज़ तुम पर हुकूमत करती है?
 
-    Save this for a hard day.
+    किसी मुश्किल दिन के लिए इसे सेव कर लो।
 
-    #bhagavadgita #gita #minimalism #contentment #wisdom #spirituality
+    #bhagavadgita #gita #minimalism #contentment #hindiquotes #श्रीकृष्ण
 - id: 0698
   quote_id: g4-07
   format: quote_reflection
   theme: forest
-  duration: 14.7
+  duration: 17.22
   segments:
   - role: quote
-    text: “Whenever goodness declines and wrong rises, I come. To protect the good and end evil, I appear
-      in every age.”
+    text: “जब-जब धर्म घटता है और अधर्म बढ़ता है, मैं आता हूँ। अच्छों की रक्षा और बुराई के अंत के लिए मैं
+      हर युग में प्रकट होता हूँ।”
     start: 0.4
-    end: 10.3
+    end: 12.82
   - role: author
-    text: — Bhagavad Gita 4.7-8
+    text: — भगवद्गीता 4.7-8
     start: 1.2
-    end: 10.3
+    end: 12.82
   - role: reflection
-    text: Where is your life heading?
-    start: 10.5
-    end: 14.7
-  voiceover_text: Whenever goodness declines and wrong rises, I come. To protect the good and end evil,
-    I appear in every age.
+    text: तुम्हारी ज़िंदगी किस ओर जा रही है?
+    start: 13.02
+    end: 17.22
+  voiceover_text: जब-जब धर्म घटता है और अधर्म बढ़ता है, मैं आता हूँ। अच्छों की रक्षा और बुराई के अंत के
+    लिए मैं हर युग में प्रकट होता हूँ।
   voiceover_start: 0.7
   caption: |-
-    “Whenever goodness declines and wrong rises, I come. To protect the good and end evil, I appear in every age.”
-    — Bhagavad Gita 4.7-8
+    “जब-जब धर्म घटता है और अधर्म बढ़ता है, मैं आता हूँ। अच्छों की रक्षा और बुराई के अंत के लिए मैं हर युग में प्रकट होता हूँ।”
+    — भगवद्गीता 4.7-8
 
-    Where is your life heading?
+    तुम्हारी ज़िंदगी किस ओर जा रही है?
 
-    Send this to someone who needs it.
+    उसे भेजो जिसे आज इसकी ज़रूरत है।
 
-    #bhagavadgita #gita #purpose #meaning #dharma #spirituality
+    #bhagavadgita #gita #purpose #meaning #dharma #hindiquotes
 - id: 0699
   quote_id: g11-32
   format: quote
@@ -3060,52 +3049,52 @@
   duration: 7.0
   segments:
   - role: quote
-    text: “I am Time, the mighty destroyer of worlds.”
+    text: “मैं काल हूँ, लोकों का नाश करने वाला महाकाल।”
     start: 0.4
     end: 7.0
   - role: author
-    text: — Bhagavad Gita 11.32
+    text: — भगवद्गीता 11.32
     start: 1.2
     end: 7.0
-  voiceover_text: I am Time, the mighty destroyer of worlds.
+  voiceover_text: मैं काल हूँ, लोकों का नाश करने वाला महाकाल।
   voiceover_start: 0.7
   caption: |-
-    “I am Time, the mighty destroyer of worlds.”
-    — Bhagavad Gita 11.32
+    “मैं काल हूँ, लोकों का नाश करने वाला महाकाल।”
+    — भगवद्गीता 11.32
 
-    What are you postponing?
+    तुम क्या टाल रहे हो?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #time #productivity #sanatandharma #krishna
+    #bhagavadgita #gita #time #productivity #wisdom #श्रीकृष्ण
 - id: '0700'
   quote_id: g6-32
   format: hook_quote
   theme: midnight
-  duration: 11.18
+  duration: 10.82
   segments:
   - role: hook
-    text: Kindness is not weakness.
+    text: दयालुता कमज़ोरी नहीं है।
     start: 0.4
     end: 3.0
   - role: quote
-    text: “The highest yogi feels the joy and sorrow of others as their own.”
+    text: “सबसे श्रेष्ठ योगी दूसरों के सुख-दुख को अपना ही सुख-दुख समझता है।”
     start: 3.2
-    end: 11.18
+    end: 10.82
   - role: author
-    text: — Bhagavad Gita 6.32
+    text: — भगवद्गीता 6.32
     start: 4.0
-    end: 11.18
-  voiceover_text: The highest yogi feels the joy and sorrow of others as their own.
+    end: 10.82
+  voiceover_text: सबसे श्रेष्ठ योगी दूसरों के सुख-दुख को अपना ही सुख-दुख समझता है।
   voiceover_start: 3.5
   caption: |-
-    Kindness is not weakness.
+    दयालुता कमज़ोरी नहीं है।
 
-    “The highest yogi feels the joy and sorrow of others as their own.”
-    — Bhagavad Gita 6.32
+    “सबसे श्रेष्ठ योगी दूसरों के सुख-दुख को अपना ही सुख-दुख समझता है।”
+    — भगवद्गीता 6.32
 
-    When did someone's kindness change your day?
+    कब किसी की दयालुता ने तुम्हारा दिन बदल दिया था?
 
-    Read it twice.
+    इसे दोबारा पढ़ो।
 
-    #bhagavadgita #gita #kindness #compassion #krishna #spirituality
+    #bhagavadgita #gita #kindness #compassion #hindiquotes #wisdom

@@ -1,24 +1,27 @@
-"""Download public-domain background pictures for the reels.
+"""Download free background pictures for the reels.
 
-Two free sources are searched, and only images that are explicitly public
-domain or CC0 are kept, so no credit or licence fee is ever owed:
+Only pictures that need no permission, credit or fee are kept:
 
-- The Metropolitan Museum of Art Open Access collection (CC0), which has many
-  Indian paintings of Krishna and scenes from the Mahabharata.
-- Wikimedia Commons, filtered to "Public domain" / CC0 files only.
+- Openverse (openverse.org): photos and illustrations marked CC0 or public domain.
+- Wikimedia Commons, filtered to "Public domain" / CC0 files.
+- Pixabay (Pixabay Content License), when PIXABAY_API_KEY is set in .env.
+- The Met Open Access collection (CC0), for paintings (not used by default).
 
-Pictures are saved to assets/backgrounds/ on this machine with a CREDITS.md
-listing where each one came from. Delete any you don't like; reels pick from
-whatever is left.
+What to search for is set under `images:` in config.yaml. Pictures with a
+human face in them are dropped (see faces.py). Everything is saved to
+assets/backgrounds/ with a CREDITS.md listing where each picture came from.
+Delete any you don't like; reels pick from whatever is left.
 """
 from __future__ import annotations
 
 import hashlib
 import io
+import os
 import re
 import time
 from dataclasses import dataclass
 from pathlib import Path
+from itertools import zip_longest
 from typing import Any, Iterable
 
 import requests
@@ -147,6 +150,57 @@ class Fetcher:
                 ))
         return out
 
+    # -- Openverse ---------------------------------------------------------------
+    def openverse(self, queries: Iterable[str], per_query: int = 20) -> list[Picture]:
+        api = "https://api.openverse.org/v1/images/"
+        out: list[Picture] = []
+        seen: set[str] = set()
+        for q in queries:
+            r = self.http.get(api, params={"q": q, "license": "cc0,pdm", "page_size": per_query, "mature": "false"},
+                              timeout=60)
+            if r.status_code != 200:
+                continue
+            for item in r.json().get("results", []):
+                key = item.get("id", "")
+                if not key or key in seen or item.get("mature"):
+                    continue
+                if min(item.get("width") or 0, item.get("height") or 0) and \
+                        min(item.get("width") or 0, item.get("height") or 0) < MIN_SIDE:
+                    continue
+                seen.add(key)
+                lic = (item.get("license") or "").lower()
+                out.append(Picture(
+                    source="openverse", key=key, title=item.get("title") or q,
+                    artist=item.get("creator") or "Unknown",
+                    license="CC0" if lic == "cc0" else "Public domain",
+                    page_url=item.get("foreign_landing_url") or "", image_url=item["url"],
+                ))
+        return out
+
+    # -- Pixabay -------------------------------------------------------------------
+    def pixabay(self, queries: Iterable[str], per_query: int = 20, key: str | None = None) -> list[Picture]:
+        key = key or os.environ.get("PIXABAY_API_KEY")
+        if not key:
+            return []
+        out: list[Picture] = []
+        seen: set[int] = set()
+        for q in queries:
+            r = self.http.get("https://pixabay.com/api/", params={
+                "key": key, "q": q, "safesearch": "true", "per_page": max(3, min(per_query, 200)),
+                "min_width": MIN_SIDE, "min_height": MIN_SIDE}, timeout=60)
+            if r.status_code != 200:
+                continue
+            for hit in r.json().get("hits", []):
+                if hit["id"] in seen:
+                    continue
+                seen.add(hit["id"])
+                out.append(Picture(
+                    source="pixabay", key=str(hit["id"]), title=hit.get("tags") or q,
+                    artist=hit.get("user") or "Unknown", license="Pixabay Content License",
+                    page_url=hit.get("pageURL", ""), image_url=hit.get("largeImageURL") or hit["webformatURL"],
+                ))
+        return out
+
     # -- download -----------------------------------------------------------------
     def download(self, pic: Picture, folder: Path) -> Path | None:
         path = folder / pic.filename
@@ -168,7 +222,8 @@ class Fetcher:
 
 def write_credits(folder: Path, pics: list[tuple[Picture, Path]]) -> Path:
     lines = ["# Background picture credits", "",
-             "Every picture here is public domain or CC0. No credit is required, but this list records the sources.", "",
+             "Every picture here is public domain, CC0 or under the Pixabay Content License. No credit is required, "
+             "but this list records the sources.", "",
              "| File | Title | Artist | Licence | Source |", "| --- | --- | --- | --- | --- |"]
     for pic, path in pics:
         lines.append(f"| {path.name} | {pic.title} | {pic.artist} | {pic.license} | {pic.page_url} |")
@@ -177,30 +232,89 @@ def write_credits(folder: Path, pics: list[tuple[Picture, Path]]) -> Path:
     return out
 
 
-def fetch(folder: Path, limit: int = 40, fetcher: Fetcher | None = None, log=print) -> list[Path]:
+DEFAULT_QUERIES = ["Indian village", "rural India landscape", "paddy field India", "village road India"]
+
+
+def fetch(folder: Path, limit: int = 40, fetcher: Fetcher | None = None, log=print,
+          sources: Iterable[str] = ("openverse", "commons", "pixabay"), queries: Iterable[str] | None = None,
+          reject_faces: bool = True, face_counter=None) -> list[Path]:
     folder.mkdir(parents=True, exist_ok=True)
     f = fetcher or Fetcher()
+    queries = list(queries or DEFAULT_QUERIES)
+    getters = {
+        "openverse": lambda: f.openverse(queries),
+        "commons": lambda: f.commons(queries),
+        "pixabay": lambda: f.pixabay(queries),
+        "met": lambda: f.met(),
+    }
     candidates: list[Picture] = []
-    for name, getter in (("The Met", f.met), ("Wikimedia Commons", f.commons)):
+    for name in sources:
         try:
-            got = getter()
-            log(f"{name}: {len(got)} public-domain candidates")
+            got = getters[name]()
+            log(f"{name}: {len(got)} free candidates")
             candidates += got
         except (requests.RequestException, ValueError) as e:
             log(f"{name}: skipped ({e})")
-    saved: list[tuple[Picture, Path]] = []
+    # Take turns between sources and queries so one source doesn't fill the folder.
+    by_source: dict[str, list[Picture]] = {}
     for pic in candidates:
+        by_source.setdefault(pic.source, []).append(pic)
+    mixed = [p for group in zip_longest(*by_source.values()) for p in group if p]
+
+    from . import faces
+    count_faces = face_counter or faces.count_faces
+    saved: list[tuple[Picture, Path]] = []
+    rejected = 0
+    for start in range(0, len(mixed), 12):
         if len(saved) >= limit:
             break
-        try:
-            path = f.download(pic, folder)
-        except requests.RequestException:
-            path = None
-        if path:
+        batch: list[tuple[Picture, Path]] = []
+        for pic in mixed[start:start + 12]:
+            try:
+                path = f.download(pic, folder)
+            except requests.RequestException:
+                path = None
+            if path:
+                batch.append((pic, path))
+        if reject_faces and batch:
+            counts = count_faces([p for _, p in batch])
+            if counts is None:
+                log("  face check unavailable on this machine; review the pictures by eye")
+                reject_faces = False
+            else:
+                kept = []
+                for pic, path in batch:
+                    if counts.get(str(path), 0) != 0:
+                        path.unlink(missing_ok=True)
+                        rejected += 1
+                    else:
+                        kept.append((pic, path))
+                batch = kept
+        for pic, path in batch:
+            if len(saved) >= limit:
+                path.unlink(missing_ok=True)
+                continue
             saved.append((pic, path))
             log(f"  saved {path.name}")
-    write_credits(folder, saved)
+    if rejected:
+        log(f"Dropped {rejected} pictures that show a face.")
+    existing = _read_credits(folder)
+    write_credits(folder, existing + [s for s in saved if s[1].name not in {e[1].name for e in existing}])
     return [p for _, p in saved]
+
+
+def _read_credits(folder: Path) -> list[tuple[Picture, Path]]:
+    """Keep credit rows for pictures from earlier runs that are still in the folder."""
+    path = folder / "CREDITS.md"
+    rows: list[tuple[Picture, Path]] = []
+    if not path.exists():
+        return rows
+    for line in path.read_text().splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) == 5 and (folder / cells[0]).exists() and cells[0] != "File":
+            name, title, artist, lic, url = cells
+            rows.append((Picture("", name, title, artist, lic, url, ""), folder / name))
+    return rows
 
 
 def contact_sheet(folder: Path, out: Path, thumb: int = 240, cols: int = 6) -> Path:

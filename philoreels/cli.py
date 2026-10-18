@@ -20,15 +20,20 @@ LAUNCHD_LABEL = "com.dailyphilosophyforyou.reels"
 
 
 def cmd_generate(cfg, args):
-    recipes = generate_recipes(cfg.root, count=args.count, seed=args.seed)
+    recipes = generate_recipes(cfg.root, count=args.count, seed=args.seed, language=_lang(cfg))
     paths = write_recipes(cfg.root, recipes)
     print(f"Wrote {len(recipes)} reels into {len(paths)} files under reels/.")
+
+
+def _lang(cfg) -> str:
+    return cfg.get("content.language", "en")
 
 
 def quotes_markdown(cfg) -> str:
     """The whole quote bank as one readable table, grouped by author (or chapter)."""
     from collections import Counter
-    quotes = load_quotes(cfg.root)
+    lang = _lang(cfg)
+    quotes = load_quotes(cfg.root, lang)
     uses = Counter(r.quote_id for r in load_recipes(cfg.root))
     lines = [
         "# Quote index",
@@ -42,13 +47,17 @@ def quotes_markdown(cfg) -> str:
     ]
     groups: dict[str, list] = {}
     for q in quotes:
-        title = f"{q.author}, chapter {q.ref.split('.')[0]}" if q.ref else q.author
+        title = f"Bhagavad Gita, chapter {q.ref.split('.')[0]}" if q.ref else q.author
         groups.setdefault(title, []).append(q)
     for title, group in groups.items():
-        lines += [f"## {title} ({len(group)})", "", "| ID | Quote | Source | Topic | Checked | Reels |",
-                  "| --- | --- | --- | --- | --- | --- |"]
+        both = lang != "en"
+        lines += [f"## {title} ({len(group)})", "",
+                  "| ID | Quote | English | Source | Topic | Checked | Reels |" if both else "| ID | Quote | Source | Topic | Checked | Reels |",
+                  "| --- | --- | --- | --- | --- | --- | --- |" if both else "| --- | --- | --- | --- | --- | --- |"]
         for q in group:
             text = q.text.replace("|", "\\|")
+            if both:
+                text += " | " + q.text_en.replace("|", "\\|")
             src = q.ref or q.work
             if q.speaker:
                 src += f" ({q.speaker})"
@@ -63,7 +72,7 @@ def cmd_quotes(cfg, args):
         out.write_text(quotes_markdown(cfg))
         print(f"Wrote {out}")
         return
-    quotes = load_quotes(cfg.root)
+    quotes = load_quotes(cfg.root, _lang(cfg))
     shown = [q for q in quotes if not q.checked] if args.unchecked else quotes
     for q in shown:
         mark = "ok " if q.checked else "?? "
@@ -213,10 +222,26 @@ def cmd_status(cfg, args):
 def cmd_fetch_images(cfg, args):
     from .images import contact_sheet, fetch
     folder = cfg.resolve("assets/backgrounds")
-    saved = fetch(folder, limit=args.limit)
+    saved = fetch(folder, limit=args.limit, sources=cfg.get("images.sources", ["openverse", "commons", "pixabay"]),
+                  queries=cfg.get("images.queries"), reject_faces=cfg.get("images.reject_faces", True))
     sheet = contact_sheet(folder, cfg.data_dir / "backgrounds_contact_sheet.jpg")
     print(f"\nSaved {len(saved)} pictures in {folder} (credits in CREDITS.md).")
     print(f"Review them at a glance: {sheet}. Delete any you don't want.")
+
+
+def cmd_voices(cfg, args):
+    from .voice import list_elevenlabs_voices
+    for v in list_elevenlabs_voices():
+        print(f"{v['voice_id']}  {v['name']}  ({v['category']})")
+    print("\nPut the id of the voice you want in render.elevenlabs.voice_id and set render.tts: elevenlabs.")
+
+
+def cmd_voice_test(cfg, args):
+    from . import voice
+    out = voice.speak(cfg, args.text, cfg.data_dir / "voice-test.aiff")
+    print(f"{voice.engine(cfg)} voice written to {out}")
+    if args.play and sys.platform == "darwin":
+        subprocess.run(["afplay", str(out)])
 
 
 def cmd_make_music(cfg, args):
@@ -313,7 +338,15 @@ def main(argv=None):
     s.set_defaults(fn=cmd_cap)
 
     sub.add_parser("status", help="Show today's plan, backlog and recent posts").set_defaults(fn=cmd_status)
-    s = sub.add_parser("fetch-images", help="Download public-domain Gita/Krishna paintings into assets/backgrounds")
+    s = sub.add_parser("voices", help="List your ElevenLabs voices and their ids")
+    s.set_defaults(fn=cmd_voices)
+
+    s = sub.add_parser("voice-test", help="Speak a line with the configured voice")
+    s.add_argument("text", nargs="?", default="तुम्हारा अधिकार केवल कर्म पर है, उसके फल पर कभी नहीं।")
+    s.add_argument("--play", action="store_true")
+    s.set_defaults(fn=cmd_voice_test)
+
+    s = sub.add_parser("fetch-images", help="Download free, face-free background pictures into assets/backgrounds")
     s.add_argument("--limit", type=int, default=40)
     s.set_defaults(fn=cmd_fetch_images)
 

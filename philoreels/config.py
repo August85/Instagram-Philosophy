@@ -36,10 +36,12 @@ class Config:
         return p if p.is_absolute() else self.root / p
 
     def font(self, kind: str) -> str:
+        # An entry may name a face inside a font collection: "Kohinoor.ttc#1".
         for candidate in self.get(f"render.fonts.{kind}", []) or []:
-            p = self.resolve(candidate)
+            path, _, index = str(candidate).partition("#")
+            p = self.resolve(path)
             if p.exists():
-                return str(p)
+                return f"{p}#{index}" if index else str(p)
         raise FileNotFoundError(
             f"No font found for '{kind}'. Add a font file to assets/fonts or edit render.fonts in config.yaml."
         )

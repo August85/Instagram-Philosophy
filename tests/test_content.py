@@ -27,7 +27,7 @@ def test_order_spreads_repeats_and_chapters():
 
 
 def test_generated_recipes_are_complete():
-    recipes = generate_recipes(ROOT, count=200)
+    recipes = generate_recipes(ROOT, count=200, language="hi")
     assert [r.id for r in recipes[:3]] == ["0001", "0002", "0003"]
     assert {r.format for r in recipes} == set(FORMATS)
     for r in recipes:
@@ -43,6 +43,25 @@ def test_committed_backlog_has_1000_reels():
     recipes = load_recipes(ROOT)
     assert len(recipes) == 1000
     assert len({r.id for r in recipes}) == 1000
+
+
+def test_hindi_bank_covers_every_verse():
+    quotes = load_quotes(ROOT, "hi")
+    assert {q.author for q in quotes} == {"भगवद्गीता"}
+    q = next(q for q in quotes if q.ref == "2.47")
+    assert q.text.startswith("तुम्हारा अधिकार") and q.text_en.startswith("You have a right")
+    assert q.credit == "भगवद्गीता 2.47"
+    topics_en, topics_hi = load_topics(ROOT), load_topics(ROOT, "hi")
+    for name, t in topics_en["topics"].items():
+        assert len(topics_hi["topics"][name]["hooks"]) == len(t["hooks"])
+        assert any("\u0900" <= ch <= "\u097f" for ch in topics_hi["topics"][name]["hooks"][0])
+
+
+def test_committed_reels_are_in_hindi():
+    r = load_recipes(ROOT)[0]
+    quote = next(s for s in r.segments if s.role == "quote")
+    assert any("\u0900" <= ch <= "\u097f" for ch in quote.text)
+    assert "#bhagavadgita" in r.caption and "भगवद्गीता" in r.caption
 
 
 def test_gita_bank_uses_defaults():

@@ -1,6 +1,6 @@
 # Daily Philosophy reels
 
-Automatic Bhagavad Gita reels for [@dailyphilosophyforyou](https://www.instagram.com/dailyphilosophyforyou/).
+Automatic Bhagavad Gita reels in Hindi for [@dailyphilosophyforyou](https://www.instagram.com/dailyphilosophyforyou/).
 Everything runs on your own Mac: it renders the videos, keeps them in a local
 folder, and posts them through Instagram's official API on a schedule that
 starts at **2 reels a day** and steps up to **10 a day** by week 7.
@@ -10,7 +10,9 @@ GitHub holds the backlog of **1000 reel recipes** (`reels/batch-01.yaml` to
 The MP4 files are made on your Mac from those recipes and never go into git.
 
 ```
-content/quotes.yaml     121 Bhagavad Gita verses in plain modern English
+content/quotes.yaml     121 Bhagavad Gita verses (English) with ids and verse numbers
+content/quotes_hi.yaml  the same verses in simple modern Hindi (what the reels show)
+content/topics_hi.yaml  Hindi hooks, reflection questions and calls to action
 content/archive/        the earlier mixed-philosophy quote bank (not used)
 content/topics.yaml     hooks, reflection questions and hashtags per topic
 reels/batch-*.yaml      1000 reels: on-screen text, timing, colour theme, caption
@@ -43,7 +45,7 @@ git clone https://github.com/August85/Instagram-Philosophy.git ~/code/Instagram-
 cd ~/code/Instagram-Philosophy
 python3 -m venv .venv
 .venv/bin/pip install -e .
-.venv/bin/philoreels fetch-images        # downloads ~40 public-domain Krishna/Gita paintings
+.venv/bin/philoreels fetch-images        # downloads ~40 free rural India pictures with no faces
 .venv/bin/philoreels make-music          # makes 8 flute-and-tanpura tracks
 .venv/bin/philoreels preview --open      # renders reel 0001 and opens it
 ```
@@ -108,27 +110,39 @@ Check reach every Monday. If views per reel fall for two weeks after a step up, 
 
 ## Making the reels better
 
-- **Pictures:** `philoreels fetch-images` downloads public-domain and CC0 paintings of Krishna, Arjuna and the Gita
-  from The Met and Wikimedia Commons into `assets/backgrounds/`, with their sources in `CREDITS.md` there. Delete any you don't like; you can also add your own pictures or
-  clips. A contact sheet of all pictures is saved to `~/PhiloReels/backgrounds_contact_sheet.jpg`. Each picture is shown whole over a blurred copy of itself with a slow zoom. With an empty folder reels
-  use a moving colour gradient.
+- **Pictures:** `philoreels fetch-images` downloads free pictures and illustrations of rural India (villages,
+  fields, rivers) from Openverse and Wikimedia Commons, plus Pixabay if `PIXABAY_API_KEY` is in `.env`. Only CC0,
+  public-domain and Pixabay-licence pictures are kept, so no credit or fee is owed, and the Mac's built-in face
+  detection drops any picture that shows a human face. Sources are listed in `assets/backgrounds/CREDITS.md`, and a
+  contact sheet of all pictures is saved to `~/PhiloReels/backgrounds_contact_sheet.jpg`. Change what is searched
+  for under `images.queries` in `config.yaml`. Delete any picture you don't like, or add your own. Each picture is
+  shown whole over a blurred copy of itself with a slow zoom.
 - **Music:** `philoreels make-music` writes 8 calm flute-and-tanpura tracks to `assets/music/`. They are made on
   your Mac, so there is no copyright claim on them. You can add or swap in royalty-free tracks (for example
   from Pixabay Music). Reels posted through the API cannot use Instagram's music library, so music is part of
   the video. Volume is `render.music_volume` in `config.yaml`.
-- **Voiceover:** on by default. The Mac reads every line on screen aloud with its built-in `say` voices, and each
-  line stays up until it has been read. The first voice in `render.voice` that the Mac has is used (Rishi, an
-  Indian English voice, then Daniel). For a more natural sound, download an "Enhanced" or "Premium" voice in
-  System Settings > Accessibility > Spoken Content > System voice > Manage Voices. Speed is `render.voice_rate`;
-  music drops to `render.music_volume_with_voice` under the voice. Set `render.voiceover: false` to turn it off.
-- **Quotes:** edit `content/quotes.yaml`, set `checked: true` once a quote's wording is verified, then run
+- **Language:** `content.language: hi` in `config.yaml` puts the text, caption and voice in Hindi; `en` switches
+  back to English. Run `philoreels generate` after changing it.
+- **Voiceover:** on by default. Every line on screen is read aloud except the verse reference, which is only
+  shown (`render.voice_reads_reference: true` reads it too). Each line stays up until it has been read, and the
+  music drops to `render.music_volume_with_voice` under the voice. The default engine is the Mac's own Hindi voice,
+  Lekha; download "Lekha (Enhanced)" in System Settings > Accessibility > Spoken Content > System voice > Manage
+  Voices for a more natural sound. Try a voice with `philoreels voice-test --play`.
+- **Your own voice (ElevenLabs):** make a voice clone in ElevenLabs, then on the Mac:
+  1. Put `ELEVENLABS_API_KEY=...` in `.env` (ElevenLabs > Developers > API keys).
+  2. Run `philoreels voices` and copy your clone's id into `render.elevenlabs.voice_id` in `config.yaml`.
+  3. Set `render.tts: elevenlabs`, then run `philoreels voice-test --play` to hear it.
+  The `eleven_multilingual_v2` model speaks Hindi. Each line's audio is saved in `~/PhiloReels/voice-cache`, so a
+  verse is only paid for once even though it appears in several reels. All 1000 reels need only about 15,000 characters
+  in total (244 different lines). Delete already rendered videos (`~/PhiloReels/videos`) so they are made again with the new voice.
+- **Quotes:** edit `content/quotes_hi.yaml` (and `content/quotes.yaml` for new verses), set `checked: true` once a quote's wording is verified, then run
   `philoreels generate` and `philoreels quotes --markdown`. Reels already posted are tracked by id in
   `~/PhiloReels/posted.jsonl`, so regenerate only before going live or add new reels after the last id.
 - To skip a single reel, add `skip: true` to it in its batch file.
 
 ## Notes
 
-- The verses are plain modern-English renderings, not a published translation, so they carry no copyright.
-  Each is marked `checked: false` until you have compared it with a translation you trust.
+- The verses are our own simple Hindi and English renderings, not a published translation, so they carry no
+  copyright. Each is marked `checked: false` until you have compared it with a translation you trust.
 - Instagram allows up to 100 API posts per 24 hours; this pipeline never posts more than 25 a day.
 - Run the tests with `.venv/bin/pip install -e ".[dev]" && .venv/bin/pytest -q`.

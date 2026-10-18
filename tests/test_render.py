@@ -59,10 +59,10 @@ def test_prepare_background_shows_whole_picture(cfg, tmp_path):
     assert render.prepare_background(cfg, src) == out  # cached
 
 
-def test_spoken_text_reads_the_reference():
+def test_spoken_text_can_read_the_reference():
     from philoreels.content import Segment
-    assert render.spoken_text(Segment("author", "— Bhagavad Gita 2.47", 0, 1)) == "Bhagavad Gita, chapter 2, verse 47"
-    assert render.spoken_text(Segment("author", "— Bhagavad Gita 4.7-8", 0, 1)) == "Bhagavad Gita, chapter 4, verses 7 to 8"
+    assert render.spoken_text(Segment("author", "— Bhagavad Gita 2.47", 0, 1), read_reference=True) == "Bhagavad Gita, chapter 2, verse 47"
+    assert render.spoken_text(Segment("author", "— Bhagavad Gita 4.7-8", 0, 1), read_reference=True) == "Bhagavad Gita, chapter 4, verses 7 to 8"
     assert render.spoken_text(Segment("quote", "“Act, and let go.”", 0, 1)) == "Act, and let go."
 
 
@@ -84,8 +84,9 @@ def test_voiceover_reads_every_line_and_stretches_timing(cfg, monkeypatch):
     # Retiming keeps lines in order, each on screen until its words are read.
     clips = [(None, 0.66 * len(render.spoken_text(s).split())) for s in recipe.segments]
     new, placed = render.retime(recipe, clips)
-    for seg, (_, start), (_, length) in zip(new.segments, placed, clips):
+    spoken = [(seg, start, length) for seg, (_, start), (_, length) in zip(new.segments, placed, clips) if length]
+    assert len(spoken) == len(recipe.segments) - 1  # everything but the verse reference
+    for seg, start, length in spoken:
         assert seg.start <= start and start + length < seg.end <= new.duration
-    starts = [s for _, s in placed]
-    assert starts == sorted(starts)
-    assert all(b >= a + l for (_, a), (_, l), b in zip(placed, clips, starts[1:]))
+    for (_, a, la), (_, b, _) in zip(spoken, spoken[1:]):
+        assert b >= a + la

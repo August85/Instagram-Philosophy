@@ -20,6 +20,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from .config import Config
+from . import voice as voice_mod
 from .content import THEMES, Recipe, Segment
 
 VIDEO_EXT = {".mp4", ".mov", ".m4v", ".webm"}
@@ -66,10 +67,16 @@ def _wrap(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont, ma
     return lines
 
 
+def load_font(spec: str, size: int) -> ImageFont.FreeTypeFont:
+    """Open a font file; "file.ttc#2" picks the third face of a collection."""
+    path, _, index = spec.partition("#")
+    return ImageFont.truetype(path, size, index=int(index or 0))
+
+
 def _fit(text: str, font_path: str, size: int, min_size: int, max_width: int, max_height: int):
     probe = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
     while True:
-        font = ImageFont.truetype(font_path, size)
+        font = load_font(font_path, size)
         lines = _wrap(probe, text, font, max_width)
         line_h = int(size * 1.32)
         height = line_h * len(lines)
@@ -156,7 +163,12 @@ def build_layers(cfg: Config, recipe: Recipe, workdir: Path) -> list[tuple[Path,
     """Draw one PNG per segment. Returns (png, start, end, x, y) tuples."""
     w, h = cfg.get("render.width", 1080), cfg.get("render.height", 1920)
     theme = THEMES.get(recipe.theme, THEMES["ink"])
-    serif_i, sans = cfg.font("serif_italic"), cfg.font("sans")
+    latin_sans = cfg.font("sans")
+    if cfg.get("content.language", "en") == "hi":
+        # Devanagari has no italic; the quote uses the regular face and the rest the bold one.
+        serif_i, sans = cfg.font("hindi"), cfg.font("hindi_bold")
+    else:
+        serif_i, sans = cfg.font("serif_italic"), latin_sans
     layers: list[tuple[Path, float, float, int, int]] = []
     quote_bottom = h // 2
     for i, seg in enumerate(recipe.segments):
@@ -174,17 +186,20 @@ def build_layers(cfg: Config, recipe: Recipe, workdir: Path) -> list[tuple[Path,
 
     handle = cfg.get("account.handle")
     if handle:
-        img, _ = draw_text_layer((w, h), handle, sans, 34, theme["accent"], center_y=int(h * 0.88), max_height=80)
+        img, _ = draw_text_layer((w, h), handle, latin_sans, 34, theme["accent"], center_y=int(h * 0.88), max_height=80)
         path = workdir / "handle.png"
         x, y = _save_cropped(img, path)
         layers.append((path, 0.0, recipe.duration, x, y))
     return layers
 
 
-def spoken_text(seg) -> str:
-    """What the voice says for one on-screen line."""
+def spoken_text(seg, read_reference: bool = False) -> str:
+    """What the voice says for one on-screen line. The verse reference under
+    the quote is shown but not read out, unless read_reference is set."""
     text = seg.text.strip().strip("“”\"").strip()
     if seg.role == "author":
+        if not read_reference:
+            return ""
         text = text.lstrip("—–- ").strip()
         # "Bhagavad Gita 2.47" -> "Bhagavad Gita, chapter 2, verse 47"
         text = re.sub(r"\s*\b(\d+)\.(\d+)-(\d+)\b", r", chapter \1, verses \2 to \3", text)
@@ -192,33 +207,12 @@ def spoken_text(seg) -> str:
     return text
 
 
-_VOICE_CACHE: dict[str, str] = {}
-
-
-def pick_voice(cfg: Config) -> str:
-    """First voice from render.voice (a name or a list) that this Mac has."""
-    wanted = cfg.get("render.voice", "Daniel")
-    wanted = [wanted] if isinstance(wanted, str) else list(wanted)
-    key = "|".join(wanted)
-    if key not in _VOICE_CACHE:
-        try:
-            out = subprocess.run(["say", "-v", "?"], capture_output=True, text=True, check=True).stdout
-            have = {re.split(r"\s{2,}", line.strip())[0] for line in out.splitlines() if line.strip()}
-        except (OSError, subprocess.CalledProcessError):
-            have = set()
-        _VOICE_CACHE[key] = next((v for v in wanted if v in have), wanted[-1])
-    return _VOICE_CACHE[key]
-
-
 def speak(cfg: Config, text: str, out: Path) -> Path:
-    """Turn text into speech with the macOS `say` command."""
-    rate = str(cfg.get("render.voice_rate", 160))
-    subprocess.run(["say", "-v", pick_voice(cfg), "-r", rate, "-o", str(out), text], check=True)
-    return out
+    return voice_mod.speak(cfg, text, out)
 
 
 def voiceover_enabled(cfg: Config) -> bool:
-    return bool(cfg.get("render.voiceover")) and shutil.which("say") is not None
+    return bool(cfg.get("render.voiceover")) and voice_mod.available(cfg)
 
 
 def _voiceover(cfg: Config, recipe: Recipe, workdir: Path) -> tuple[Recipe, list[tuple[Path, float]]]:
@@ -226,11 +220,17 @@ def _voiceover(cfg: Config, recipe: Recipe, workdir: Path) -> tuple[Recipe, list
     until it has been read. Returns the retimed recipe and (clip, start) pairs."""
     if not voiceover_enabled(cfg):
         return recipe, []
-    lengths = []
+    lengths: list[tuple[Path | None, float]] = []
+    read_ref = bool(cfg.get("render.voice_reads_reference", False))
     for n, seg in enumerate(recipe.segments):
-        clip = speak(cfg, spoken_text(seg), workdir / f"voice-{n}.aiff")
+        text = spoken_text(seg, read_ref)
+        if not text:
+            lengths.append((None, 0.0))
+            continue
+        clip = speak(cfg, text, workdir / f"voice-{n}.aiff")
         lengths.append((clip, _duration(clip)))
-    return retime(recipe, lengths)
+    recipe, placed = retime(recipe, lengths)
+    return recipe, [(c, t) for c, t in placed if c is not None]
 
 
 def retime(recipe: Recipe, clips: list[tuple[Path, float]], lead: float = 0.3, tail: float = 0.7
@@ -248,6 +248,11 @@ def retime(recipe: Recipe, clips: list[tuple[Path, float]], lead: float = 0.3, t
     for seg, (clip, length) in zip(segs, clips):
         seg.start += shift
         seg.end += shift
+        if clip is None and length == 0:
+            placed.append((None, seg.start))
+            if seg.role == "quote":
+                quote = seg
+            continue
         if seg.role == "author" and quote is not None:
             v_start = max(seg.start, voice_end + 0.25)
         else:

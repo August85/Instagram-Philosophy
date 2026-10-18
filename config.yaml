@@ -5,6 +5,12 @@ account:
   # Shown small at the bottom of every reel. Set this to your real handle.
   handle: "@dailyphilosophyforyou"
 
+content:
+  # Language of the on-screen text, caption and voice. "hi" uses
+  # content/quotes_hi.yaml and content/topics_hi.yaml; "en" uses the English.
+  # Run `philoreels generate` after changing it.
+  language: hi
+
 paths:
   # Where rendered videos, the posting log and the access token are kept.
   # This is on your own machine and is never committed to GitHub.
@@ -43,6 +49,32 @@ schedule:
   # Stop and alert after this many failed posts in a row.
   max_consecutive_failures: 3
 
+images:
+  # What `philoreels fetch-images` downloads into assets/backgrounds. Only
+  # free pictures (CC0, public domain, Pixabay licence) are kept, and any
+  # picture with a human face in it is dropped.
+  sources: [openverse, commons, pixabay]   # pixabay needs PIXABAY_API_KEY in .env; "met" adds museum paintings
+  reject_faces: true
+  queries:
+    - "Indian village"
+    - "rural India landscape"
+    - "village India hut"
+    - "mud house India village"
+    - "paddy field India"
+    - "rice terraces India"
+    - "mustard field India"
+    - "village pond India"
+    - "bullock cart India"
+    - "cows village India"
+    - "Rajasthan village desert"
+    - "Kerala backwaters"
+    - "Himalayan village India"
+    - "village temple India"
+    - "banyan tree village India"
+    - "sunrise village India"
+    - "Indian village illustration"
+    - "Warli painting village"
+
 render:
   width: 1080
   height: 1920
@@ -51,13 +83,26 @@ render:
   preset: medium
   # Keep this many rendered reels ready ahead of the schedule.
   render_ahead: 12
-  # Read every line on screen aloud with the macOS `say` command. The first
-  # voice in the list that the Mac has is used. Better-sounding voices can be
-  # added in System Settings > Accessibility > Spoken Content > System voice >
-  # Manage Voices (for example Rishi or Daniel "Enhanced"/"Premium").
+  # Read every line on screen aloud. The verse reference is shown but not
+  # read unless voice_reads_reference is true.
   voiceover: true
-  voice: ["Rishi (Premium)", "Rishi (Enhanced)", "Rishi", "Daniel (Enhanced)", "Daniel"]
+  voice_reads_reference: false
+  # Voice engine: "say" (the Mac's built-in voices, free) or "elevenlabs"
+  # (for example a clone of your own voice; see README).
+  tts: say
+  # say: the first voice in this list that the Mac has is used. Lekha is the
+  # Mac's Hindi voice. A better-sounding "Enhanced"/"Premium" version can be
+  # downloaded in System Settings > Accessibility > Spoken Content > System
+  # voice > Manage Voices. For English text use e.g. ["Rishi", "Daniel"].
+  voice: ["Lekha (Premium)", "Lekha (Enhanced)", "Lekha"]
   voice_rate: 160  # words per minute; the Mac default is about 180
+  elevenlabs:
+    voice_id: null          # your voice's id (`philoreels voices` lists them), or ELEVENLABS_VOICE_ID in .env
+    model: eleven_multilingual_v2   # speaks Hindi
+    stability: 0.5
+    similarity_boost: 0.8
+    style: 0.0
+    speed: 0.95
   music_volume: 0.35
   # How much background pictures are darkened behind the text (0 = not at all, 1 = black).
   picture_dim: 0.25
@@ -76,6 +121,18 @@ render:
       - "/System/Library/Fonts/Supplemental/Times New Roman Italic.ttf"
       - "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf"
       - "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+    # Devanagari fonts for Hindi text. Kohinoor Devanagari and Devanagari
+    # Sangam MN come with macOS; FreeSerif/FreeSans are the Linux fallbacks.
+    hindi:
+      - "assets/fonts/hindi.ttf"
+      - "/System/Library/Fonts/Kohinoor.ttc#0"
+      - "/System/Library/Fonts/Supplemental/Devanagari Sangam MN.ttc#0"
+      - "/usr/share/fonts/truetype/freefont/FreeSerif.ttf"
+    hindi_bold:
+      - "assets/fonts/hindi-bold.ttf"
+      - "/System/Library/Fonts/Kohinoor.ttc#2"
+      - "/System/Library/Fonts/Supplemental/Devanagari Sangam MN.ttc#1"
+      - "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf"
     sans:
       - "assets/fonts/sans.ttf"
       - "/System/Library/Fonts/Supplemental/Arial Bold.ttf"

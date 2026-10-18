@@ -45,6 +45,7 @@ class Quote:
     header: str = ""  # title for the "lesson" format
     hashtags: list[str] = field(default_factory=list)
     checked: bool = False
+    text_en: str = ""  # the English rendering, kept when the reel text is in another language
 
     @property
     def credit(self) -> str:
@@ -121,19 +122,45 @@ class Recipe:
         )
 
 
-def load_quotes(root: Path) -> list[Quote]:
+def load_quotes(root: Path, language: str = "en") -> list[Quote]:
     """Read content/quotes.yaml: either a plain list of quotes, or
-    {defaults: {...}, quotes: [...]} where defaults fill in missing fields."""
+    {defaults: {...}, quotes: [...]} where defaults fill in missing fields.
+
+    For another language, content/quotes_<lang>.yaml supplies the text (by
+    quote id) and the author and header lines; the English stays in text_en.
+    """
     data = yaml.safe_load((root / "content" / "quotes.yaml").read_text())
     defaults: dict[str, Any] = {}
     if isinstance(data, dict):
         defaults = data.get("defaults", {}) or {}
         data = data.get("quotes", [])
-    return [Quote(**{**defaults, **q}) for q in data]
+    quotes = [Quote(**{**defaults, **q}) for q in data]
+    for q in quotes:
+        q.text_en = q.text
+    if language and language != "en":
+        path = root / "content" / f"quotes_{language}.yaml"
+        tr = yaml.safe_load(path.read_text())
+        missing = [q.id for q in quotes if q.id not in tr["quotes"]]
+        if missing:
+            raise ValueError(f"{path.name} has no text for: {', '.join(missing)}")
+        for q in quotes:
+            q.text = tr["quotes"][q.id]
+            q.author = tr.get("author", q.author)
+            q.header = tr.get("header", q.header)
+            q.hashtags = list(dict.fromkeys(q.hashtags[:2] + tr.get("hashtags", []) + q.hashtags[2:]))
+    return quotes
 
 
-def load_topics(root: Path) -> dict[str, Any]:
-    return yaml.safe_load((root / "content" / "topics.yaml").read_text())
+def load_topics(root: Path, language: str = "en") -> dict[str, Any]:
+    topics = yaml.safe_load((root / "content" / "topics.yaml").read_text())
+    if language and language != "en":
+        tr = yaml.safe_load((root / "content" / f"topics_{language}.yaml").read_text())
+        if tr.get("ctas"):
+            topics["defaults"]["ctas"] = tr["ctas"]
+        for name, t in (tr.get("topics") or {}).items():
+            if name in topics["topics"]:
+                topics["topics"][name].update({k: v for k, v in t.items() if k in ("hooks", "reflections")})
+    return topics
 
 
 def validate_content(quotes: list[Quote], topics: dict[str, Any]) -> list[str]:
@@ -250,9 +277,9 @@ def plan_order(quotes: list[Quote], count: int, min_gap: int, seed: int = 7) -> 
     return order
 
 
-def generate_recipes(root: Path, count: int = 1000, seed: int = 7) -> list[Recipe]:
-    quotes = load_quotes(root)
-    topics = load_topics(root)
+def generate_recipes(root: Path, count: int = 1000, seed: int = 7, language: str = "en") -> list[Recipe]:
+    quotes = load_quotes(root, language)
+    topics = load_topics(root, language)
     problems = validate_content(quotes, topics)
     if problems:
         raise ValueError("Content problems:\n" + "\n".join(problems))
