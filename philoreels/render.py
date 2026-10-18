@@ -38,6 +38,15 @@ def _files(folder: Path, exts: set[str]) -> list[Path]:
     return sorted(p for p in folder.iterdir() if p.suffix.lower() in exts and not p.name.startswith("."))
 
 
+def _duration(path: Path) -> float:
+    try:
+        out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
+                             capture_output=True, text=True, check=True)
+        return float(out.stdout.strip())
+    except (subprocess.CalledProcessError, ValueError, FileNotFoundError):
+        return 0.0
+
+
 def _wrap(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont, max_width: int) -> list[str]:
     lines: list[str] = []
     for paragraph in text.split("\n"):
@@ -102,6 +111,35 @@ def _save_cropped(img: Image.Image, path: Path) -> tuple[int, int]:
     return x0, y0
 
 
+def prepare_background(cfg: Config, src: Path, margin: float = 1.1) -> Path:
+    """Fit a picture into a vertical frame without cutting it off.
+
+    The picture is shown whole, as wide as the frame, over a blurred and
+    darkened copy of itself that fills the rest. Cached in the data folder.
+    """
+    w, h = cfg.get("render.width", 1080), cfg.get("render.height", 1920)
+    W, H = int(w * margin), int(h * margin)
+    cache = cfg.data_dir / "bg-cache"
+    cache.mkdir(parents=True, exist_ok=True)
+    key = hashlib.sha1(f"{src.resolve()}:{src.stat().st_mtime_ns}:{W}x{H}".encode()).hexdigest()[:12]
+    out = cache / f"{src.stem}-{key}.jpg"
+    if out.exists():
+        return out
+    img = Image.open(src).convert("RGB")
+    # Background: the same picture covering the frame, blurred.
+    scale = max(W / img.width, H / img.height)
+    cover = img.resize((int(img.width * scale) + 1, int(img.height * scale) + 1), Image.LANCZOS)
+    left, top = (cover.width - W) // 2, (cover.height - H) // 2
+    canvas = cover.crop((left, top, left + W, top + H)).filter(ImageFilter.GaussianBlur(40))
+    canvas = Image.blend(canvas, Image.new("RGB", (W, H), "black"), 0.35)
+    # Foreground: the whole picture, full width (or full height if it is very tall).
+    fit = min(W / img.width, H * 0.92 / img.height)
+    fg = img.resize((int(img.width * fit), int(img.height * fit)), Image.LANCZOS)
+    canvas.paste(fg, ((W - fg.width) // 2, (H - fg.height) // 2))
+    canvas.save(out, "JPEG", quality=92)
+    return out
+
+
 def build_layers(cfg: Config, recipe: Recipe, workdir: Path) -> list[tuple[Path, float, float, int, int]]:
     """Draw one PNG per segment. Returns (png, start, end, x, y) tuples."""
     w, h = cfg.get("render.width", 1080), cfg.get("render.height", 1920)
@@ -159,13 +197,13 @@ def ffmpeg_command(cfg: Config, recipe: Recipe, layers, out: Path, voice: Path |
                 f"eq=brightness=-0.10:saturation=0.85,drawbox=color=black@0.35:t=fill,trim=duration={dur}[bg]"
             )
         else:
-            args += ["-loop", "1", "-framerate", f"{fps}", "-t", f"{dur}", "-i", str(bg)]
+            framed = prepare_background(cfg, bg)
+            args += ["-loop", "1", "-framerate", f"{fps}", "-t", f"{dur}", "-i", str(framed)]
             frames = int(dur * fps)
+            # Slow push-in on the picture, darkened so the words stay readable.
             filters.append(
-                f"[0:v]scale={int(w * 1.2)}:{int(h * 1.2)}:force_original_aspect_ratio=increase,"
-                f"crop={int(w * 1.2)}:{int(h * 1.2)},"
-                f"zoompan=z='min(1+0.12*on/{frames},1.12)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
-                f":s={w}x{h}:fps={fps},setsar=1,drawbox=color=black@0.40:t=fill,trim=duration={dur}[bg]"
+                f"[0:v]zoompan=z='1+0.08*on/{frames}':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                f":s={w}x{h}:fps={fps},setsar=1,drawbox=color=black@0.45:t=fill,trim=duration={dur}[bg]"
             )
     else:
         args += [
@@ -195,7 +233,10 @@ def ffmpeg_command(cfg: Config, recipe: Recipe, layers, out: Path, voice: Path |
     music = _files(cfg.resolve("assets/music"), AUDIO_EXT)
     if music:
         track = music[_stable_index(recipe.id + "m", len(music))]
-        args += ["-stream_loop", "-1", "-t", f"{dur}", "-i", str(track)]
+        # Start somewhere inside the track so reels sharing a track sound different.
+        length = _duration(track)
+        offset = _stable_index(recipe.id + "o", max(1, int(length - dur - 1))) if length > dur + 2 else 0
+        args += ["-stream_loop", "-1", "-ss", f"{offset}", "-t", f"{dur}", "-i", str(track)]
         vol = cfg.get("render.music_volume", 0.35)
         filters.append(
             f"[{idx}:a]atrim=0:{dur},asetpts=N/SR/TB,volume={vol},afade=t=in:d=1,"

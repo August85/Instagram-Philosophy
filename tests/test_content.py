@@ -11,7 +11,7 @@ def test_quote_bank_is_valid():
     assert validate_content(quotes, load_topics(ROOT)) == []
 
 
-def test_order_spreads_repeats_and_authors():
+def test_order_spreads_repeats_and_chapters():
     quotes = load_quotes(ROOT)
     order = plan_order(quotes, 1000, min_gap=80)
     last, gaps = {}, []
@@ -20,7 +20,7 @@ def test_order_spreads_repeats_and_authors():
             gaps.append(i - last[q.id])
         last[q.id] = i
         if i:
-            assert q.author != order[i - 1].author
+            assert q.group != order[i - 1].group
     assert min(gaps) > 80
     counts = Counter(q.id for q in order)
     assert max(counts.values()) - min(counts.values()) <= 1
@@ -43,3 +43,12 @@ def test_committed_backlog_has_1000_reels():
     recipes = load_recipes(ROOT)
     assert len(recipes) == 1000
     assert len({r.id for r in recipes}) == 1000
+
+
+def test_gita_bank_uses_defaults():
+    quotes = load_quotes(ROOT)
+    assert {q.author for q in quotes} == {"Bhagavad Gita"}
+    q = next(q for q in quotes if q.ref == "2.47")
+    assert q.credit == "Bhagavad Gita 2.47"
+    assert "#bhagavadgita" in q.hashtags
+    assert q.group == "Bhagavad Gita:2"

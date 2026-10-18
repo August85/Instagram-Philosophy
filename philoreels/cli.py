@@ -26,31 +26,33 @@ def cmd_generate(cfg, args):
 
 
 def quotes_markdown(cfg) -> str:
-    """The whole quote bank as one readable table, grouped by author."""
+    """The whole quote bank as one readable table, grouped by author (or chapter)."""
     from collections import Counter
     quotes = load_quotes(cfg.root)
     uses = Counter(r.quote_id for r in load_recipes(cfg.root))
     lines = [
         "# Quote index",
         "",
-        f"All {len(quotes)} quotes the reels are built from, grouped by author. "
+        f"All {len(quotes)} quotes the reels are built from. "
         "Generated from `content/quotes.yaml` by `philoreels quotes --markdown`; edit the YAML, not this file.",
         "",
-        "**Checked** says whether the wording has been compared to the source. "
+        "**Checked** says whether the wording has been compared to a translation. "
         "**Reels** is how many of the reels in `reels/` use the quote.",
         "",
     ]
-    authors = []
+    groups: dict[str, list] = {}
     for q in quotes:
-        if q.author not in authors:
-            authors.append(q.author)
-    for author in authors:
-        group = [q for q in quotes if q.author == author]
-        lines += [f"## {author} ({len(group)})", "", "| ID | Quote | Source | Topic | Checked | Reels |",
+        title = f"{q.author}, chapter {q.ref.split('.')[0]}" if q.ref else q.author
+        groups.setdefault(title, []).append(q)
+    for title, group in groups.items():
+        lines += [f"## {title} ({len(group)})", "", "| ID | Quote | Source | Topic | Checked | Reels |",
                   "| --- | --- | --- | --- | --- | --- |"]
         for q in group:
             text = q.text.replace("|", "\\|")
-            lines.append(f"| {q.id} | {text} | {q.work} | {q.topic} | {'yes' if q.checked else 'no'} | {uses.get(q.id, 0)} |")
+            src = q.ref or q.work
+            if q.speaker:
+                src += f" ({q.speaker})"
+            lines.append(f"| {q.id} | {text} | {src} | {q.topic} | {'yes' if q.checked else 'no'} | {uses.get(q.id, 0)} |")
         lines.append("")
     return "\n".join(lines)
 
@@ -65,7 +67,7 @@ def cmd_quotes(cfg, args):
     shown = [q for q in quotes if not q.checked] if args.unchecked else quotes
     for q in shown:
         mark = "ok " if q.checked else "?? "
-        print(f"{mark}{q.id}  {q.author} ({q.work}): {q.text}")
+        print(f"{mark}{q.id}  {q.source}: {q.text}")
     print(f"\n{len(shown)} shown, {sum(q.checked for q in quotes)}/{len(quotes)} checked.")
 
 
@@ -209,6 +211,22 @@ def cmd_status(cfg, args):
         print(f"  {row['posted_at']}  {row['recipe_id']}  {row.get('permalink') or row['media_id']}")
 
 
+def cmd_fetch_images(cfg, args):
+    from .images import contact_sheet, fetch
+    folder = cfg.resolve("assets/backgrounds")
+    saved = fetch(folder, limit=args.limit)
+    sheet = contact_sheet(folder, cfg.data_dir / "backgrounds_contact_sheet.jpg")
+    print(f"\nSaved {len(saved)} pictures in {folder} (credits in CREDITS.md).")
+    print(f"Review them at a glance: {sheet}. Delete any you don't want.")
+
+
+def cmd_make_music(cfg, args):
+    from .music import make_library
+    folder = cfg.resolve("assets/music")
+    for path in make_library(folder, count=args.count, duration=args.seconds):
+        print(f"Made {path}")
+
+
 def cmd_tick(cfg, args):
     print(f"{datetime.now().isoformat(timespec='seconds')}  {pipeline.tick(cfg)}", flush=True)
 
@@ -296,6 +314,15 @@ def main(argv=None):
     s.set_defaults(fn=cmd_cap)
 
     sub.add_parser("status", help="Show today's plan, backlog and recent posts").set_defaults(fn=cmd_status)
+    s = sub.add_parser("fetch-images", help="Download public-domain Gita/Krishna paintings into assets/backgrounds")
+    s.add_argument("--limit", type=int, default=40)
+    s.set_defaults(fn=cmd_fetch_images)
+
+    s = sub.add_parser("make-music", help="Generate royalty-free flute and tanpura tracks into assets/music")
+    s.add_argument("--count", type=int, default=8)
+    s.add_argument("--seconds", type=float, default=75.0)
+    s.set_defaults(fn=cmd_make_music)
+
     sub.add_parser("tick", help="One scheduled run (what the background job calls)").set_defaults(fn=cmd_tick)
 
     s = sub.add_parser("install-schedule", help="Run `tick` in the background on this Mac (launchd)")

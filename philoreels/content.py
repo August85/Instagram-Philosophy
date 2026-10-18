@@ -38,9 +38,35 @@ class Quote:
     id: str
     text: str
     author: str
-    work: str
     topic: str
+    work: str = ""
+    ref: str = ""  # verse or passage number, e.g. "2.47"
+    speaker: str = ""  # who says it inside the text, e.g. Arjuna
+    header: str = ""  # title for the "lesson" format
+    hashtags: list[str] = field(default_factory=list)
     checked: bool = False
+
+    @property
+    def credit(self) -> str:
+        """Short line shown under the quote: 'Bhagavad Gita 2.47' or 'Seneca'."""
+        return f"{self.author} {self.ref}".strip()
+
+    @property
+    def source(self) -> str:
+        """Longer source line for the caption."""
+        parts = [self.credit]
+        if self.work:
+            parts.append(self.work)
+        if self.speaker:
+            parts.append(f"spoken by {self.speaker}")
+        return ", ".join(parts)
+
+    @property
+    def group(self) -> str:
+        """Reels from the same group are not posted back to back: the same
+        author, or for a single book the same chapter."""
+        chapter = self.ref.split(".")[0] if self.ref else ""
+        return f"{self.author}:{chapter}"
 
 
 @dataclass
@@ -96,8 +122,14 @@ class Recipe:
 
 
 def load_quotes(root: Path) -> list[Quote]:
+    """Read content/quotes.yaml: either a plain list of quotes, or
+    {defaults: {...}, quotes: [...]} where defaults fill in missing fields."""
     data = yaml.safe_load((root / "content" / "quotes.yaml").read_text())
-    return [Quote(**q) for q in data]
+    defaults: dict[str, Any] = {}
+    if isinstance(data, dict):
+        defaults = data.get("defaults", {}) or {}
+        data = data.get("quotes", [])
+    return [Quote(**{**defaults, **q}) for q in data]
 
 
 def load_topics(root: Path) -> dict[str, Any]:
@@ -139,12 +171,12 @@ def build_recipe(rid: str, quote: Quote, fmt: str, theme: str, variant: int, top
         segs.append(Segment("hook", hook, t, t + 2.6))
         t += 2.8
     if fmt == "lesson":
-        segs.append(Segment("header", f"A lesson from {quote.author}", t, t + 2.4))
+        segs.append(Segment("header", quote.header or f"A lesson from {quote.author}", t, t + 2.4))
         t += 2.6
     q_start = t
     q_len = reading_time(quote.text)
     segs.append(Segment("quote", quote_text, t, t + q_len + 1.2))
-    segs.append(Segment("author", f"— {quote.author}", t + 0.8, t + q_len + 1.2))
+    segs.append(Segment("author", f"— {quote.credit}", t + 0.8, t + q_len + 1.2))
     t += q_len + 1.4
     if fmt == "quote_reflection":
         segs.append(Segment("reflection", reflection, t, t + 3.6))
@@ -159,14 +191,15 @@ def build_recipe(rid: str, quote: Quote, fmt: str, theme: str, variant: int, top
     if segs[-1].role == "author":
         segs[-2].end = duration
 
-    tags = list(defaults["hashtags"])
-    rng = random.Random(rid)
-    rng.shuffle(tags)
-    hashtags = " ".join(topic.get("hashtags", []) + tags[:3])
+    # The first two bank hashtags always go on; two more rotate.
+    tags = list(quote.hashtags or defaults["hashtags"])
+    fixed, rest = tags[:2], tags[2:]
+    random.Random(rid).shuffle(rest)
+    hashtags = " ".join(dict.fromkeys(fixed + topic.get("hashtags", []) + rest[:2]))
     caption_parts = []
     if fmt in ("hook_quote", "hook_quote_cta"):
         caption_parts.append(hook)
-    caption_parts.append(f"{quote_text}\n— {quote.author}, {quote.work}")
+    caption_parts.append(f"{quote_text}\n— {quote.source}")
     caption_parts.append(reflection)
     caption_parts.append(cta)
     caption_parts.append(hashtags)
@@ -189,7 +222,8 @@ def plan_order(quotes: list[Quote], count: int, min_gap: int, seed: int = 7) -> 
     """Order quotes for `count` posts.
 
     Each quote is used about equally often, the same quote never comes back
-    within `min_gap` posts, and the same author never appears twice in a row.
+    within `min_gap` posts, and two posts in a row never share a group (same
+    author, or same chapter when every quote is from one book).
     """
     rng = random.Random(seed)
     uses = {q.id: 0 for q in quotes}
@@ -197,15 +231,11 @@ def plan_order(quotes: list[Quote], count: int, min_gap: int, seed: int = 7) -> 
     target = -(-count // len(quotes))  # ceil
     order: list[Quote] = []
     for pos in range(count):
-        prev_author = order[-1].author if order else None
+        prev_group = order[-1].group if order else None
         gap = min_gap
         while True:
-            cands = [
-                q for q in quotes
-                if uses[q.id] < target
-                and pos - last_pos.get(q.id, -10**9) > gap
-                and q.author != prev_author
-            ]
+            spaced = [q for q in quotes if uses[q.id] < target and pos - last_pos.get(q.id, -10**9) > gap]
+            cands = [q for q in spaced if q.group != prev_group] or spaced
             if cands or gap == 0:
                 break
             gap //= 2

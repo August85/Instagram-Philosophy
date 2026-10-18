@@ -42,3 +42,18 @@ def test_renders_with_image_background_and_music(cfg, tmp_path, monkeypatch):
     recipe = load_recipes(ROOT)[1]
     out = render.render(cfg, recipe)
     assert {s["codec_type"] for s in probe(out)["streams"]} == {"video", "audio"}
+
+
+def test_prepare_background_shows_whole_picture(cfg, tmp_path):
+    from PIL import Image
+    src = tmp_path / "wide.jpg"
+    Image.new("RGB", (1600, 900), "red").save(src)
+    out = render.prepare_background(cfg, src)
+    img = Image.open(out)
+    w, h = cfg.get("render.width"), cfg.get("render.height")
+    assert img.size == (int(w * 1.1), int(h * 1.1))
+    # The centre is the sharp red picture; the top edge is the darker blurred fill.
+    cx, cy = img.width // 2, img.height // 2
+    assert img.getpixel((cx, cy))[0] > 200
+    assert img.getpixel((cx, 2))[0] < 200
+    assert render.prepare_background(cfg, src) == out  # cached

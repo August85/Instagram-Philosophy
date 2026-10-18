@@ -3,7 +3,7 @@ name = "philoreels"
 version = "0.1.0"
 description = "Generate, render and auto-post philosophy reels to Instagram"
 requires-python = ">=3.10"
-dependencies = ["PyYAML>=6", "Pillow>=10", "requests>=2.31"]
+dependencies = ["PyYAML>=6", "Pillow>=10", "requests>=2.31", "numpy>=1.26"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]

@@ -1,6 +1,6 @@
 # Daily Philosophy reels
 
-Automatic philosophy reels for [@dailyphilosophyforyou](https://www.instagram.com/dailyphilosophyforyou/).
+Automatic Bhagavad Gita reels for [@dailyphilosophyforyou](https://www.instagram.com/dailyphilosophyforyou/).
 Everything runs on your own Mac: it renders the videos, keeps them in a local
 folder, and posts them through Instagram's official API on a schedule that
 starts at **2 reels a day** and steps up to **10 a day** by week 7.
@@ -10,12 +10,13 @@ GitHub holds the backlog of **1000 reel recipes** (`reels/batch-01.yaml` to
 The MP4 files are made on your Mac from those recipes and never go into git.
 
 ```
-content/quotes.yaml     112 public-domain quotes with sources
+content/quotes.yaml     121 Bhagavad Gita verses in plain modern English
+content/archive/        the earlier mixed-philosophy quote bank (not used)
 content/topics.yaml     hooks, reflection questions and hashtags per topic
 reels/batch-*.yaml      1000 reels: on-screen text, timing, colour theme, caption
 config.yaml             schedule, ramp, posting window, render settings
 philoreels/             the code (render, post, schedule)
-assets/                 your own background clips, music and fonts (not committed)
+assets/                 background pictures, music and fonts on your Mac (not committed)
 ~/PhiloReels/           on your Mac: rendered videos, token, posting log
 ```
 
@@ -42,6 +43,8 @@ git clone https://github.com/August85/Instagram-Philosophy.git ~/code/Instagram-
 cd ~/code/Instagram-Philosophy
 python3 -m venv .venv
 .venv/bin/pip install -e .
+.venv/bin/philoreels fetch-images        # downloads ~40 public-domain Krishna/Gita paintings
+.venv/bin/philoreels make-music          # makes 8 flute-and-tanpura tracks
 .venv/bin/philoreels preview --open      # renders reel 0001 and opens it
 ```
 
@@ -105,8 +108,14 @@ Check reach every Monday. If views per reel fall for two weeks after a step up, 
 
 ## Making the reels better
 
-- **Background footage:** drop clips or images into `assets/backgrounds/`. Without them reels use a moving colour gradient.
-- **Music:** drop royalty-free tracks into `assets/music/`. Reels posted through the API cannot use Instagram's music library.
+- **Pictures:** `philoreels fetch-images` downloads public-domain and CC0 paintings of Krishna, Arjuna and the Gita
+  from The Met and Wikimedia Commons into `assets/backgrounds/`, with their sources in `CREDITS.md` there. Delete any you don't like; you can also add your own pictures or
+  clips. A contact sheet of all pictures is saved to `~/PhiloReels/backgrounds_contact_sheet.jpg`. Each picture is shown whole over a blurred copy of itself with a slow zoom. With an empty folder reels
+  use a moving colour gradient.
+- **Music:** `philoreels make-music` writes 8 calm flute-and-tanpura tracks to `assets/music/`. They are made on
+  your Mac, so there is no copyright claim on them. You can add or swap in royalty-free tracks (for example
+  from Pixabay Music). Reels posted through the API cannot use Instagram's music library, so music is part of
+  the video. Volume is `render.music_volume` in `config.yaml`.
 - **Voiceover:** set `render.voiceover: true` in `config.yaml` to have the Mac read each quote aloud (`say`, voice `Daniel`).
 - **Quotes:** edit `content/quotes.yaml`, set `checked: true` once a quote's wording is verified, then run
   `philoreels generate` and `philoreels quotes --markdown`. Reels already posted are tracked by id in
@@ -115,7 +124,7 @@ Check reach every Monday. If views per reel fall for two weeks after a step up, 
 
 ## Notes
 
-- The quote wording follows public-domain translations; lines marked "paraphrase" in the bank are common
-  renderings rather than exact translations. Verify each quote before it goes out.
+- The verses are plain modern-English renderings, not a published translation, so they carry no copyright.
+  Each is marked `checked: false` until you have compared it with a translation you trust.
 - Instagram allows up to 100 API posts per 24 hours; this pipeline never posts more than 25 a day.
 - Run the tests with `.venv/bin/pip install -e ".[dev]" && .venv/bin/pytest -q`.

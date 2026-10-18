@@ -1,3 +1,3 @@
-Put royalty-free music (.mp3/.m4a/.wav) here, such as tracks from Pixabay Music or the YouTube Audio Library.
-Reels posted through the API cannot use Instagram's music library, so music has to be part of the video.
-Without music, reels are silent. Files here are not committed.
+Background music (.mp3/.m4a/.wav). Each reel picks one.
+Run `philoreels make-music` to create 8 flute-and-tanpura tracks on your Mac, free of copyright claims.
+You can add royalty-free tracks too (for example from Pixabay Music). Files here are not committed.

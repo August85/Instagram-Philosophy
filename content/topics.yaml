@@ -37,9 +37,9 @@ topics:
     reflections: ["What is this difficulty teaching you?", "Who will you be after this?"]
     hashtags: ["#resilience", "#strength"]
   mortality:
-    hooks: ["You don't have as much time as you think.", "Memento mori.", "One day you won't wake up. Today you did."]
+    hooks: ["You don't have as much time as you think.", "What if death is not the end?", "One day you won't wake up. Today you did."]
     reflections: ["If this was your last year, what would change?", "What are you saving for later?"]
-    hashtags: ["#mementomori", "#life"]
+    hashtags: ["#life", "#soul"]
   self:
     hooks: ["The hardest battle is with yourself.", "Who are you when no one is watching?", "Read this if you feel lost."]
     reflections: ["When did you last listen to yourself?", "What would the best version of you do now?"]
@@ -55,7 +55,7 @@ topics:
   perspective:
     hooks: ["Your problems look smaller from up here.", "Zoom out.", "Feeling small? Look up."]
     reflections: ["Will this matter in five years?", "What does the bigger picture show you?"]
-    hashtags: ["#perspective", "#stoic"]
+    hashtags: ["#perspective", "#divine"]
   mind:
     hooks: ["Your thoughts are shaping your life.", "It's not the event. It's your story about it.", "Overthinking? Read this."]
     reflections: ["Which thought is hurting you most today?", "What story are you telling yourself?"]
@@ -95,7 +95,7 @@ topics:
   control:
     hooks: ["Stop trying to control everything.", "The secret to peace of mind.", "Let go of what isn't yours."]
     reflections: ["What is in your control today?", "What are you trying to control that you can't?"]
-    hashtags: ["#dichotomyofcontrol", "#stoic"]
+    hashtags: ["#selfcontrol", "#innerpeace"]
   patience:
     hooks: ["Slow down.", "Water always wins.", "Good things take time."]
     reflections: ["Where are you rushing?", "What deserves more patience from you?"]

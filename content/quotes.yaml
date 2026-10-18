@@ -1,244 +1,156 @@
-# Quote bank. Every reel is built from one of these.
+# Active quote bank: the Bhagavad Gita.
 #
-# Wording follows public-domain English translations (Long, Gummere, Legge,
-# Muller, Arnold) or the author's own English. Lines marked "paraphrase" are
-# common modern renderings of a real passage, not a word-for-word translation.
+# The wording is a plain modern English rendering of each verse, written for
+# this account (not copied from a copyrighted translation). Verse numbers
+# follow the common 700-verse numbering; a few editions number chapter 13
+# one verse differently.
 #
-# checked: false means nobody has compared the wording to the source yet.
-# Run `philoreels quotes --unchecked` to list them, verify, then set true.
+# checked: false means nobody has compared the rendering to a translation
+# yet. Run `philoreels quotes --unchecked`, compare, then set checked: true.
 #
-# topic must be one of the keys in content/topics.yaml.
+# The previous mixed bank (Stoics, Laozi, Buddha, etc.) is kept in
+# content/archive/quotes-general.yaml. To use it again, copy its entries here.
 
-- {id: ma01, author: Marcus Aurelius, work: "Meditations 10.16", topic: action, checked: false,
-   text: "Waste no more time arguing about what a good man should be. Be one."}
-- {id: ma02, author: Marcus Aurelius, work: "Meditations 7.67", topic: happiness, checked: false,
-   text: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking."}
-- {id: ma03, author: Marcus Aurelius, work: "Meditations 6.6", topic: anger, checked: false,
-   text: "The best way of avenging yourself is not to become like the wrongdoer."}
-- {id: ma04, author: Marcus Aurelius, work: "Meditations 9.35", topic: change, checked: false,
-   text: "Loss is nothing else but change, and change is Nature's delight."}
-- {id: ma05, author: Marcus Aurelius, work: "Meditations 12.17", topic: integrity, checked: false,
-   text: "If it is not right, do not do it; if it is not true, do not say it."}
-- {id: ma06, author: Marcus Aurelius, work: "Meditations 5.20", topic: adversity, checked: false,
-   text: "The impediment to action advances action. What stands in the way becomes the way."}
-- {id: ma07, author: Marcus Aurelius, work: "Meditations 4.17", topic: mortality, checked: false,
-   text: "Do not act as if you were going to live ten thousand years. While you live, while it is in your power, be good."}
-- {id: ma08, author: Marcus Aurelius, work: "Meditations 11.18", topic: anger, checked: false,
-   text: "How much more grievous are the consequences of anger than the causes of it."}
-- {id: ma09, author: Marcus Aurelius, work: "Meditations 7.59", topic: self, checked: false,
-   text: "Look within. Within is the fountain of good, and it will ever bubble up, if you will ever dig."}
-- {id: ma10, author: Marcus Aurelius, work: "Meditations 6.39", topic: kindness, checked: false,
-   text: "Love the people with whom fate brings you together, and do so with all your heart."}
-- {id: ma11, author: Marcus Aurelius, work: "Meditations 3.7", topic: integrity, checked: false,
-   text: "Never value anything as profitable that compels you to break your promise or lose your self-respect."}
-- {id: ma12, author: Marcus Aurelius, work: "Meditations 7.29", topic: present, checked: false,
-   text: "Confine yourself to the present."}
-- {id: ma13, author: Marcus Aurelius, work: "Meditations 7.47", topic: perspective, checked: false,
-   text: "Look round at the courses of the stars, as if you were going along with them."}
-- {id: ma14, author: Marcus Aurelius, work: "Meditations 5.16", topic: mind, checked: false,
-   text: "Such as are your habitual thoughts, such also will be the character of your mind; for the soul is dyed by the thoughts."}
-- {id: ma15, author: Marcus Aurelius, work: "Meditations 4.7", topic: mind, checked: false,
-   text: "Take away your opinion, and then there is taken away the complaint, 'I have been harmed.'"}
-- {id: ma16, author: Marcus Aurelius, work: "Meditations 4.43", topic: time, checked: false,
-   text: "Time is a sort of river of passing events, and strong is its current."}
-- {id: ma17, author: Marcus Aurelius, work: "Meditations 2.1", topic: people, checked: false,
-   text: "Begin the morning by saying to yourself: I shall meet with the busy-body, the ungrateful, the arrogant. But none of them can injure me."}
-- {id: ma18, author: Marcus Aurelius, work: "Meditations 8.47", topic: mind, checked: false,
-   text: "If you are pained by any external thing, it is not this thing that disturbs you, but your own judgement about it."}
+defaults:
+  author: Bhagavad Gita
+  header: "A lesson from the Bhagavad Gita"
+  checked: false
+  hashtags: ["#bhagavadgita", "#gita", "#krishna", "#spirituality", "#dharma", "#karma", "#wisdom", "#hinduism", "#sanatandharma"]
 
-- {id: se01, author: Seneca, work: "Letters to Lucilius 13", topic: anxiety, checked: false,
-   text: "We are more often frightened than hurt; and we suffer more from imagination than from reality."}
-- {id: se02, author: Seneca, work: "Letters to Lucilius 1", topic: time, checked: false,
-   text: "While we are postponing, life speeds by."}
-- {id: se03, author: Seneca, work: "On the Shortness of Life", topic: time, checked: false,
-   text: "It is not that we have a short time to live, but that we waste a lot of it."}
-- {id: se04, author: Seneca, work: "Letters to Lucilius (paraphrase)", topic: adversity, checked: false,
-   text: "Difficulties strengthen the mind, as labour does the body."}
-- {id: se05, author: Seneca, work: "Letters to Lucilius 76", topic: learning, checked: false,
-   text: "As long as you live, keep learning how to live."}
-- {id: se06, author: Seneca, work: "Letters to Lucilius 76", topic: learning, checked: false,
-   text: "No man was ever wise by chance."}
-- {id: se07, author: Seneca, work: "On the Happy Life", topic: kindness, checked: false,
-   text: "Wherever there is a human being, there is an opportunity for a kindness."}
-- {id: se08, author: Seneca, work: "Letters to Lucilius 101", topic: present, checked: false,
-   text: "Begin at once to live, and count each separate day as a separate life."}
-- {id: se09, author: Seneca, work: "On Anger", topic: anger, checked: false,
-   text: "The greatest remedy for anger is delay."}
-- {id: se10, author: Seneca, work: "Letters to Lucilius 7", topic: people, checked: false,
-   text: "Associate with those who will make a better man of you."}
-- {id: se11, author: Seneca, work: "Letters to Lucilius 78", topic: courage, checked: false,
-   text: "Sometimes even to live is an act of courage."}
-- {id: se12, author: Seneca, work: "Letters to Lucilius 2", topic: wealth, checked: false,
-   text: "It is not the man who has too little, but the man who craves more, that is poor."}
-- {id: se13, author: Seneca, work: "Letters to Lucilius 71", topic: purpose, checked: false,
-   text: "If a man does not know to which port he is sailing, no wind is favourable."}
-- {id: se14, author: Seneca, work: "Letters to Lucilius 2", topic: solitude, checked: false,
-   text: "The primary indication of a well-ordered mind is a man's ability to remain in one place and linger in his own company."}
-- {id: se15, author: Seneca, work: "Letters to Lucilius 1", topic: time, checked: false,
-   text: "Hold every hour in your grasp. Lay hold of today's task, and you will not need to depend so much upon tomorrow's."}
-- {id: se16, author: Seneca, work: "On Providence", topic: adversity, checked: false,
-   text: "Fire tests gold, suffering tests brave men."}
-- {id: se17, author: Seneca, work: "Letters to Lucilius 9", topic: happiness, checked: false,
-   text: "He who is not satisfied with what he has would not be satisfied with what he would like to have."}
-- {id: se18, author: Seneca, work: "Letters to Lucilius 5", topic: anxiety, checked: false,
-   text: "Cease to hope, and you will cease to fear."}
-- {id: se19, author: Seneca, work: "On Tranquillity of Mind", topic: change, checked: false,
-   text: "We must not be too attached to the things we have; they are lent, not given."}
-- {id: se20, author: Seneca, work: "Letters to Lucilius 28", topic: self, checked: false,
-   text: "You need a change of soul rather than a change of climate."}
+quotes:
+  # Chapter 2
+  - {id: g2-03, ref: "2.3", topic: courage, text: "Do not yield to weakness. It does not suit you. Shake off this small faintness of heart and stand up."}
+  - {id: g2-07, ref: "2.7", topic: adversity, speaker: Arjuna, text: "My heart is overcome by weakness and I am confused about my duty. Tell me what is truly best for me."}
+  - {id: g2-11, ref: "2.11", topic: mortality, text: "The wise grieve neither for the living nor for the dead."}
+  - {id: g2-12, ref: "2.12", topic: mortality, text: "There was never a time when I did not exist, nor you, nor these kings. Nor will any of us ever cease to be."}
+  - {id: g2-13, ref: "2.13", topic: change, text: "As the soul passes through childhood, youth and old age in this body, so it passes into another body. The wise are not shaken by this."}
+  - {id: g2-14, ref: "2.14", topic: patience, text: "Pleasure and pain come and go like winter and summer. They do not last. Learn to bear them patiently."}
+  - {id: g2-15, ref: "2.15", topic: patience, text: "The one who stays steady in pleasure and in pain, undisturbed by either, is ready for freedom."}
+  - {id: g2-20, ref: "2.20", topic: mortality, text: "The soul is never born and never dies. It is not killed when the body is killed."}
+  - {id: g2-22, ref: "2.22", topic: change, text: "As a person throws off worn-out clothes and puts on new ones, the soul leaves worn-out bodies and enters new ones."}
+  - {id: g2-23, ref: "2.23", topic: self, text: "Weapons cannot cut the soul. Fire cannot burn it. Water cannot wet it. Wind cannot dry it."}
+  - {id: g2-27, ref: "2.27", topic: mortality, text: "Death is certain for one who is born, and birth is certain for one who dies. Do not grieve over what cannot be avoided."}
+  - {id: g2-31, ref: "2.31", topic: purpose, text: "Think of your own duty, and do not waver."}
+  - {id: g2-38, ref: "2.38", topic: patience, text: "Treat pleasure and pain, gain and loss, victory and defeat alike. Then rise to the battle."}
+  - {id: g2-40, ref: "2.40", topic: action, text: "On this path no effort is ever lost and no harm is done. Even a little of it protects you from great fear."}
+  - {id: g2-41, ref: "2.41", topic: purpose, text: "The resolute mind is focused and one-pointed. The thoughts of the irresolute branch out without end."}
+  - {id: g2-47, ref: "2.47", topic: action, text: "You have a right to your actions, but never to their fruits. Do not act for the reward, and do not give up action either."}
+  - {id: g2-48, ref: "2.48", topic: mind, text: "Do your work with a steady mind, free from attachment, the same in success and failure. This evenness of mind is yoga."}
+  - {id: g2-50, ref: "2.50", topic: action, text: "Yoga is skill in action."}
+  - {id: g2-56, ref: "2.56", topic: mind, text: "One whose mind is not shaken by sorrow, who does not crave pleasure, and who is free from fear and anger, is called wise."}
+  - {id: g2-58, ref: "2.58", topic: control, text: "As a tortoise draws in its limbs, the wise draw their senses back from the objects of the senses."}
+  - {id: g2-60, ref: "2.60", topic: control, text: "The restless senses can carry away the mind of even a wise person who is striving."}
+  - {id: g2-62, ref: "2.62", topic: anger, text: "Thinking about the objects of the senses creates attachment. Attachment creates desire, and from desire comes anger."}
+  - {id: g2-63, ref: "2.63", topic: anger, text: "From anger comes confusion. From confusion, memory fails. When memory fails, reason is lost, and when reason is lost, one is ruined."}
+  - {id: g2-64, ref: "2.64", topic: control, text: "One who moves through the world with the senses under control, free from craving and dislike, finds peace."}
+  - {id: g2-66, ref: "2.66", topic: happiness, text: "Without peace, how can there be happiness?"}
+  - {id: g2-67, ref: "2.67", topic: control, text: "When the mind follows the wandering senses, it carries wisdom away, as the wind carries a boat across the water."}
+  - {id: g2-69, ref: "2.69", topic: perspective, text: "What is night for all beings is the time of waking for the disciplined. What others call day is night for the sage."}
+  - {id: g2-70, ref: "2.70", topic: wealth, text: "The ocean stays still while rivers pour into it. The one who stays still while desires pour in finds peace, not the one who chases them."}
+  - {id: g2-71, ref: "2.71", topic: simplicity, text: "One who lets go of all desires and lives free from longing, without 'I' and 'mine', finds peace."}
 
-- {id: ep01, author: Epictetus, work: "Enchiridion 5", topic: mind, checked: false,
-   text: "Men are disturbed not by things, but by the views which they take of things."}
-- {id: ep02, author: Epictetus, work: "Enchiridion 1", topic: control, checked: false,
-   text: "Some things are within our power, while others are not."}
-- {id: ep03, author: Epictetus, work: "Fragments", topic: self, checked: false,
-   text: "No man is free who is not master of himself."}
-- {id: ep04, author: Epictetus, work: "Discourses 3.23", topic: purpose, checked: false,
-   text: "First say to yourself what you would be; and then do what you have to do."}
-- {id: ep05, author: Epictetus, work: "Fragments (paraphrase)", topic: wealth, checked: false,
-   text: "Wealth consists not in having great possessions, but in having few wants."}
-- {id: ep06, author: Epictetus, work: "Enchiridion 13", topic: learning, checked: false,
-   text: "If you want to improve, be content to be thought foolish and stupid."}
-- {id: ep07, author: Epictetus, work: "Enchiridion 8", topic: control, checked: false,
-   text: "Do not seek for things to happen as you wish, but wish them to happen as they do, and you will go on well."}
-- {id: ep08, author: Epictetus, work: "Discourses 2.1", topic: learning, checked: false,
-   text: "Only the educated are free."}
-- {id: ep09, author: Epictetus, work: "Fragments", topic: happiness, checked: false,
-   text: "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has."}
-- {id: ep10, author: Epictetus, work: "Discourses 1.24", topic: adversity, checked: false,
-   text: "It is difficulties that show what men are."}
-- {id: ep11, author: Epictetus, work: "Discourses 4.1", topic: control, checked: false,
-   text: "Freedom is not procured by a full enjoyment of what is desired, but by controlling the desire."}
-- {id: ze01, author: Zeno of Citium, work: "via Diogenes Laertius", topic: people, checked: false,
-   text: "We have two ears and one mouth, so that we may listen more and talk less."}
+  # Chapter 3
+  - {id: g3-05, ref: "3.5", topic: action, text: "No one can remain without action, even for a moment."}
+  - {id: g3-08, ref: "3.8", topic: action, text: "Do your duty. Action is better than inaction."}
+  - {id: g3-09, ref: "3.9", topic: purpose, text: "Work done as an offering does not bind you."}
+  - {id: g3-19, ref: "3.19", topic: action, text: "Do the work that must be done, without attachment. By working without attachment, one reaches the highest."}
+  - {id: g3-21, ref: "3.21", topic: integrity, text: "Whatever a great person does, others follow. Whatever standard they set, the world pursues."}
+  - {id: g3-25, ref: "3.25", topic: kindness, text: "As the unwise act out of attachment, let the wise act without attachment, for the good of the world."}
+  - {id: g3-27, ref: "3.27", topic: self, text: "All actions are done by the forces of nature, but one confused by ego thinks, 'I am the doer.'"}
+  - {id: g3-30, ref: "3.30", topic: anxiety, text: "Offer all your actions to me. Free from desire and from 'mine', fight without anxiety."}
+  - {id: g3-35, ref: "3.35", topic: purpose, text: "Better your own duty done imperfectly than another's duty done perfectly."}
+  - {id: g3-37, ref: "3.37", topic: anger, text: "It is desire, it is anger, born of restless passion and never satisfied. Know it as the enemy."}
+  - {id: g3-42, ref: "3.42", topic: self, text: "The senses are higher than the body, the mind higher than the senses, the intellect higher than the mind. Higher still is the Self."}
+  - {id: g3-43, ref: "3.43", topic: control, text: "Know the Self as higher than the intellect. Steady the mind with the Self, and conquer the enemy called desire."}
 
-- {id: lz01, author: Laozi, work: "Tao Te Ching 64", topic: action, checked: false,
-   text: "A journey of a thousand miles begins with a single step."}
-- {id: lz02, author: Laozi, work: "Tao Te Ching 33", topic: self, checked: false,
-   text: "He who knows others is wise; he who knows himself is enlightened."}
-- {id: lz03, author: Laozi, work: "Tao Te Ching 33", topic: self, checked: false,
-   text: "He who overcomes others is strong; he who overcomes himself is mighty."}
-- {id: lz04, author: Laozi, work: "Tao Te Ching 43", topic: patience, checked: false,
-   text: "The softest thing in the world dashes against and overcomes the hardest."}
-- {id: lz05, author: Laozi, work: "Tao Te Ching 46", topic: wealth, checked: false,
-   text: "He who knows that enough is enough will always have enough."}
-- {id: lz06, author: Laozi, work: "Tao Te Ching 56", topic: silence, checked: false,
-   text: "He who knows does not speak; he who speaks does not know."}
-- {id: lz07, author: Laozi, work: "Tao Te Ching 46", topic: wealth, checked: false,
-   text: "There is no greater calamity than not knowing what is enough."}
-- {id: lz08, author: Laozi, work: "Tao Te Ching 63", topic: action, checked: false,
-   text: "Do difficult things while they are easy, and great things while they are small."}
+  # Chapter 4
+  - {id: g4-07, ref: "4.7-8", topic: purpose, text: "Whenever goodness declines and wrong rises, I come. To protect the good and end evil, I appear in every age."}
+  - {id: g4-10, ref: "4.10", topic: anxiety, text: "Free from attachment, fear and anger, many have been purified by the fire of knowledge."}
+  - {id: g4-11, ref: "4.11", topic: love, text: "In whatever way people come to me, I receive them. Every path leads to me."}
+  - {id: g4-18, ref: "4.18", topic: learning, text: "One who sees inaction in action, and action in inaction, is wise among people."}
+  - {id: g4-20, ref: "4.20", topic: action, text: "Letting go of attachment to results, always content and depending on nothing, such a person acts, yet is untouched by action."}
+  - {id: g4-22, ref: "4.22", topic: happiness, text: "Content with whatever comes, beyond the pairs of opposites, free from envy and the same in success and failure, one is never bound."}
+  - {id: g4-33, ref: "4.33", topic: learning, text: "The offering of knowledge is greater than any offering of wealth."}
+  - {id: g4-34, ref: "4.34", topic: learning, text: "Learn the truth by going humbly to the wise, asking them questions and serving them."}
+  - {id: g4-36, ref: "4.36", topic: learning, text: "Even if you were the worst of wrongdoers, you would cross over every wrong on the raft of knowledge."}
+  - {id: g4-38, ref: "4.38", topic: learning, text: "There is nothing in this world as purifying as knowledge."}
+  - {id: g4-39, ref: "4.39", topic: learning, text: "One who has faith and masters the senses gains knowledge, and with knowledge comes supreme peace."}
+  - {id: g4-40, ref: "4.40", topic: courage, text: "The one who doubts finds happiness neither in this world nor the next."}
+  - {id: g4-42, ref: "4.42", topic: courage, text: "Cut the doubt in your heart with the sword of knowledge. Stand up and act."}
 
-- {id: cf01, author: Confucius, work: "Analects 2.17", topic: learning, checked: false,
-   text: "When you know a thing, to hold that you know it; and when you do not know a thing, to allow that you do not know it: this is knowledge."}
-- {id: cf02, author: Confucius, work: "Analects 15.24", topic: kindness, checked: false,
-   text: "What you do not want done to yourself, do not do to others."}
-- {id: cf03, author: Confucius, work: "Analects 14.27", topic: integrity, checked: false,
-   text: "The superior man is modest in his speech, but exceeds in his actions."}
-- {id: cf04, author: Confucius, work: "Analects 2.24", topic: courage, checked: false,
-   text: "To see what is right and not to do it is want of courage."}
-- {id: cf05, author: Confucius, work: "Analects 2.15", topic: learning, checked: false,
-   text: "Learning without thought is labour lost; thought without learning is perilous."}
-- {id: cf06, author: Confucius, work: "Analects 4.17", topic: people, checked: false,
-   text: "When we see men of worth, we should think of equalling them."}
+  # Chapter 5
+  - {id: g5-10, ref: "5.10", topic: integrity, text: "One who acts without attachment, offering every action to the divine, is untouched by wrong, as a lotus leaf is untouched by water."}
+  - {id: g5-12, ref: "5.12", topic: present, text: "Giving up the fruit of action, the disciplined person finds lasting peace."}
+  - {id: g5-18, ref: "5.18", topic: kindness, text: "The wise see with an equal eye a learned scholar, a cow, an elephant, a dog and an outcast."}
+  - {id: g5-20, ref: "5.20", topic: patience, text: "Do not rejoice too much at what pleases you, nor be troubled by what does not."}
+  - {id: g5-22, ref: "5.22", topic: wealth, text: "Pleasures born of the senses are sources of pain. They begin and they end. The wise do not delight in them."}
+  - {id: g5-23, ref: "5.23", topic: control, text: "One who can withstand the force of desire and anger, here in this life, is disciplined and happy."}
+  - {id: g5-24, ref: "5.24", topic: happiness, text: "One whose happiness is within, whose joy is within and whose light is within, becomes free."}
 
-- {id: bu01, author: The Buddha, work: "Dhammapada 1", topic: mind, checked: false,
-   text: "All that we are is the result of what we have thought."}
-- {id: bu02, author: The Buddha, work: "Dhammapada 5", topic: anger, checked: false,
-   text: "Hatred does not cease by hatred at any time; hatred ceases by love."}
-- {id: bu03, author: The Buddha, work: "Dhammapada 103", topic: self, checked: false,
-   text: "If one man conquer in battle a thousand times a thousand men, and another conquer himself, he is the greatest of conquerors."}
-- {id: bu04, author: The Buddha, work: "Dhammapada 204", topic: happiness, checked: false,
-   text: "Health is the greatest of gifts, contentedness the greatest of riches."}
-- {id: bu05, author: The Buddha, work: "Dhammapada 81", topic: patience, checked: false,
-   text: "As a solid rock is not shaken by the wind, wise people falter not amidst blame and praise."}
-- {id: bu06, author: The Buddha, work: "Dhammapada 276", topic: action, checked: false,
-   text: "You yourself must strive. The Buddhas only point the way."}
-- {id: bu07, author: The Buddha, work: "Dhammapada 223", topic: kindness, checked: false,
-   text: "Let a man overcome anger by love, let him overcome evil by good."}
+  # Chapter 6
+  - {id: g6-01, ref: "6.1", topic: action, text: "One who does the work that should be done, without depending on its fruit, is the true renunciate."}
+  - {id: g6-05, ref: "6.5", topic: self, text: "Lift yourself up by your own self. Do not let yourself fall. You are your own friend, and you are your own enemy."}
+  - {id: g6-06, ref: "6.6", topic: mind, text: "For one who has conquered the mind, the mind is the best friend. For one who has not, it is the worst enemy."}
+  - {id: g6-07, ref: "6.7", topic: patience, text: "One who has conquered the self stays calm in heat and cold, pleasure and pain, honour and dishonour."}
+  - {id: g6-09, ref: "6.9", topic: people, text: "One who looks with an equal mind on friends and enemies, strangers and family, the good and the bad, rises above the rest."}
+  - {id: g6-16, ref: "6.16", topic: simplicity, text: "Yoga is not for one who eats too much or too little, nor for one who sleeps too much or too little."}
+  - {id: g6-17, ref: "6.17", topic: simplicity, text: "For one who is balanced in food and rest, in work and in sleep, yoga ends all sorrow."}
+  - {id: g6-19, ref: "6.19", topic: mind, text: "As a lamp in a windless place does not flicker, so is the disciplined mind."}
+  - {id: g6-23, ref: "6.23", topic: happiness, text: "Yoga is freedom from the grip of sorrow."}
+  - {id: g6-26, ref: "6.26", topic: mind, text: "Wherever the restless mind wanders, gently bring it back and rest it in the Self."}
+  - {id: g6-30, ref: "6.30", topic: love, text: "One who sees me everywhere and sees everything in me is never lost to me, and I am never lost to them."}
+  - {id: g6-32, ref: "6.32", topic: kindness, text: "The highest yogi feels the joy and sorrow of others as their own."}
+  - {id: g6-34, ref: "6.34", topic: mind, speaker: Arjuna, text: "The mind is restless, turbulent, strong and stubborn. Taming it seems as hard as taming the wind."}
+  - {id: g6-35, ref: "6.35", topic: mind, text: "The mind is restless and hard to control, but it can be trained by practice and by letting go."}
+  - {id: g6-40, ref: "6.40", topic: integrity, text: "One who does good never comes to a bad end."}
 
-- {id: bg01, author: Bhagavad Gita, work: "Chapter 2, verse 47 (paraphrase)", topic: action, checked: false,
-   text: "You have a right to your actions, but never to the fruits of your actions."}
-- {id: bg02, author: Bhagavad Gita, work: "Chapter 3, verse 35", topic: purpose, checked: false,
-   text: "Better is one's own duty, though imperfectly performed, than the duty of another well performed."}
-- {id: bg03, author: Bhagavad Gita, work: "Chapter 6, verse 35 (paraphrase)", topic: mind, checked: false,
-   text: "The mind is restless and hard to restrain, but it is subdued by practice."}
-- {id: bg04, author: Bhagavad Gita, work: "Chapter 2, verse 20 (paraphrase)", topic: mortality, checked: false,
-   text: "For the soul there is neither birth nor death. It is not slain when the body is slain."}
+  # Chapters 7 to 11
+  - {id: g7-03, ref: "7.3", topic: purpose, text: "Among thousands of people, hardly one strives for perfection."}
+  - {id: g7-08, ref: "7.8", topic: perspective, text: "I am the taste in water, the light of the sun and the moon."}
+  - {id: g7-11, ref: "7.11", topic: control, text: "I am strength that is free from desire and attachment."}
+  - {id: g8-06, ref: "8.6", topic: mind, text: "Whatever a person keeps in mind at the end of life, that they become."}
+  - {id: g8-07, ref: "8.7", topic: courage, text: "Remember me at all times, and fight."}
+  - {id: g9-22, ref: "9.22", topic: love, text: "To those who worship me with single-minded devotion, I bring what they lack and protect what they have."}
+  - {id: g9-26, ref: "9.26", topic: love, text: "If you offer me with love a leaf, a flower, a fruit or a little water, I accept that offering of love."}
+  - {id: g9-27, ref: "9.27", topic: purpose, text: "Whatever you do, whatever you eat, whatever you give, whatever you strive for, do it as an offering to me."}
+  - {id: g9-29, ref: "9.29", topic: love, text: "I am the same to all beings. None is hateful to me and none is favoured. But those who worship me with love are in me, and I am in them."}
+  - {id: g9-31, ref: "9.31", topic: love, text: "Know this for certain: my devotee never perishes."}
+  - {id: g10-08, ref: "10.8", topic: perspective, text: "I am the source of everything. Everything comes from me."}
+  - {id: g10-20, ref: "10.20", topic: self, text: "I am the Self seated in the heart of every being. I am the beginning, the middle and the end of all beings."}
+  - {id: g10-41, ref: "10.41", topic: perspective, text: "Whatever is glorious, beautiful or mighty, know that it comes from a spark of my splendour."}
+  - {id: g11-12, ref: "11.12", topic: perspective, text: "If a thousand suns were to rise at once in the sky, their light might resemble the splendour of that great being."}
+  - {id: g11-32, ref: "11.32", topic: time, text: "I am Time, the mighty destroyer of worlds."}
+  - {id: g11-33, ref: "11.33", topic: courage, text: "Therefore, arise and win glory."}
 
-- {id: so01, author: Socrates, work: "Plato, Apology 38a", topic: self, checked: false,
-   text: "The unexamined life is not worth living."}
-- {id: pl01, author: Plato, work: "Laws I (paraphrase)", topic: self, checked: false,
-   text: "The first and best victory is to conquer self."}
-- {id: ar01, author: Aristotle, work: "via Diogenes Laertius", topic: learning, checked: false,
-   text: "The roots of education are bitter, but the fruit is sweet."}
-- {id: ar02, author: Aristotle, work: "Nicomachean Ethics (paraphrase)", topic: happiness, checked: false,
-   text: "Happiness depends upon ourselves."}
-- {id: he01, author: Heraclitus, work: "Fragments (paraphrase)", topic: change, checked: false,
-   text: "No man ever steps in the same river twice, for it is not the same river and he is not the same man."}
-- {id: he02, author: Heraclitus, work: "Fragments", topic: integrity, checked: false,
-   text: "Character is destiny."}
-- {id: dg01, author: Diogenes, work: "to Alexander the Great, via Diogenes Laertius", topic: wealth, checked: false,
-   text: "Stand a little out of my sunlight."}
-- {id: eu01, author: Epicurus, work: "Fragments", topic: happiness, checked: false,
-   text: "Do not spoil what you have by desiring what you have not."}
-- {id: eu02, author: Epicurus, work: "Fragments", topic: wealth, checked: false,
-   text: "Not what we have but what we enjoy constitutes our abundance."}
-- {id: cc01, author: Cicero, work: "Pro Plancio", topic: kindness, checked: false,
-   text: "Gratitude is not only the greatest of virtues, but the parent of all the others."}
-- {id: cc02, author: Cicero, work: "On Duties (paraphrase)", topic: integrity, checked: false,
-   text: "The shifts of fortune test the reliability of friends."}
-- {id: pu01, author: Plutarch, work: "On Listening (paraphrase)", topic: learning, checked: false,
-   text: "The mind is not a vessel to be filled, but a fire to be kindled."}
+  # Chapters 12 to 17
+  - {id: g12-08, ref: "12.8", topic: love, text: "Fix your mind on me alone and rest your understanding in me. Then you will live in me."}
+  - {id: g12-12, ref: "12.12", topic: present, text: "Knowledge is better than mere practice, meditation better than knowledge, and letting go of results better than meditation. Peace follows it at once."}
+  - {id: g12-13, ref: "12.13", topic: kindness, text: "One who hates no being, who is friendly and compassionate, free from 'I' and 'mine', steady in pain and pleasure, and forgiving, is dear to me."}
+  - {id: g12-15, ref: "12.15", topic: anxiety, text: "One who does not disturb the world, and is not disturbed by the world, free from excitement, envy, fear and anxiety, is dear to me."}
+  - {id: g12-18, ref: "12.18", topic: patience, text: "One who is the same to friend and foe, in honour and dishonour, in heat and cold, in pleasure and pain, is dear to me."}
+  - {id: g12-19, ref: "12.19", topic: silence, text: "One who takes praise and blame alike, who is quiet and content with whatever comes, and steady in mind, is dear to me."}
+  - {id: g13-08, ref: "13.8", topic: integrity, text: "Humility, honesty, non-violence, patience, uprightness, purity, steadiness and self-control: this is true knowledge."}
+  - {id: g13-28, ref: "13.28", topic: kindness, text: "One who sees the same Lord living equally in every being does not harm the self by harming others."}
+  - {id: g14-17, ref: "14.17", topic: learning, text: "From goodness comes knowledge. From passion comes greed. From darkness comes ignorance."}
+  - {id: g14-24, ref: "14.24", topic: wealth, text: "One who sees a lump of earth, a stone and a piece of gold as equal, and stays steady in praise and blame, has risen above the world."}
+  - {id: g15-07, ref: "15.7", topic: self, text: "An eternal part of me becomes the living soul in every being."}
+  - {id: g16-01, ref: "16.1-3", topic: integrity, text: "Fearlessness, a pure heart, generosity, self-control, truthfulness, freedom from anger, compassion, gentleness and forgiveness: these are divine qualities."}
+  - {id: g16-21, ref: "16.21", topic: anger, text: "There are three gates to self-destruction: desire, anger and greed. Let go of all three."}
+  - {id: g17-03, ref: "17.3", topic: purpose, text: "A person is made of their faith. As their faith is, so are they."}
+  - {id: g17-15, ref: "17.15", topic: silence, text: "Words that cause no pain, that are true, kind and helpful: this is the discipline of speech."}
+  - {id: g17-16, ref: "17.16", topic: silence, text: "A calm mind, gentleness, silence, self-control and a pure heart: this is the discipline of the mind."}
+  - {id: g17-20, ref: "17.20", topic: kindness, text: "A gift given because it is right to give, to someone who cannot repay it, at the right time and place, is a gift of goodness."}
 
-- {id: nz01, author: Friedrich Nietzsche, work: "Twilight of the Idols", topic: purpose, checked: false,
-   text: "He who has a why to live can bear almost any how."}
-- {id: nz02, author: Friedrich Nietzsche, work: "Twilight of the Idols", topic: adversity, checked: false,
-   text: "What does not kill me makes me stronger."}
-- {id: nz03, author: Friedrich Nietzsche, work: "The Gay Science 270", topic: self, checked: false,
-   text: "Become who you are."}
-- {id: nz04, author: Friedrich Nietzsche, work: "Twilight of the Idols", topic: happiness, checked: false,
-   text: "Without music, life would be a mistake."}
-- {id: sc01, author: Arthur Schopenhauer, work: "The World as Will and Representation (paraphrase)", topic: self, checked: false,
-   text: "Talent hits a target no one else can hit; genius hits a target no one else can see."}
-- {id: sc02, author: Arthur Schopenhauer, work: "Counsels and Maxims", topic: solitude, checked: false,
-   text: "A man can be himself only so long as he is alone."}
-- {id: sc03, author: Arthur Schopenhauer, work: "Counsels and Maxims (paraphrase)", topic: self, checked: false,
-   text: "We forfeit three-fourths of ourselves in order to be like other people."}
-- {id: pa01, author: Blaise Pascal, work: "Pensees 139 (paraphrase)", topic: solitude, checked: false,
-   text: "All of humanity's problems stem from man's inability to sit quietly in a room alone."}
-- {id: pa02, author: Blaise Pascal, work: "Pensees 277", topic: love, checked: false,
-   text: "The heart has its reasons which reason does not know."}
-- {id: mo01, author: Michel de Montaigne, work: "Essays (attributed)", topic: anxiety, checked: false,
-   text: "My life has been full of terrible misfortunes, most of which never happened."}
-- {id: mo02, author: Michel de Montaigne, work: "Essays I.39", topic: solitude, checked: false,
-   text: "The greatest thing in the world is to know how to belong to oneself."}
-- {id: sp01, author: Baruch Spinoza, work: "Ethics V", topic: integrity, checked: false,
-   text: "All things excellent are as difficult as they are rare."}
-- {id: kg01, author: Soren Kierkegaard, work: "Journals, 1843", topic: time, checked: false,
-   text: "Life can only be understood backwards; but it must be lived forwards."}
-
-- {id: em01, author: Ralph Waldo Emerson, work: "Self-Reliance", topic: self, checked: false,
-   text: "Nothing can bring you peace but yourself."}
-- {id: em02, author: Ralph Waldo Emerson, work: "Self-Reliance", topic: self, checked: false,
-   text: "Trust thyself: every heart vibrates to that iron string."}
-- {id: em03, author: Ralph Waldo Emerson, work: "Education", topic: patience, checked: false,
-   text: "Adopt the pace of nature: her secret is patience."}
-- {id: em04, author: Ralph Waldo Emerson, work: "Self-Reliance", topic: present, checked: false,
-   text: "With the past I have nothing to do; nor with the future. I live now."}
-- {id: em05, author: Ralph Waldo Emerson, work: "Self-Reliance", topic: courage, checked: false,
-   text: "Whoso would be a man must be a nonconformist."}
-- {id: th01, author: Henry David Thoreau, work: "Walden", topic: simplicity, checked: false,
-   text: "Our life is frittered away by detail. Simplify, simplify."}
-- {id: th02, author: Henry David Thoreau, work: "Walden", topic: purpose, checked: false,
-   text: "The mass of men lead lives of quiet desperation."}
-- {id: th03, author: Henry David Thoreau, work: "Walden", topic: purpose, checked: false,
-   text: "I went to the woods because I wished to live deliberately."}
-- {id: th04, author: Henry David Thoreau, work: "Walden", topic: integrity, checked: false,
-   text: "Rather than love, than money, than fame, give me truth."}
-- {id: th05, author: Henry David Thoreau, work: "Walden", topic: simplicity, checked: false,
-   text: "A man is rich in proportion to the number of things which he can afford to let alone."}
-- {id: wj01, author: William James, work: "attributed", topic: anxiety, checked: false,
-   text: "The greatest weapon against stress is our ability to choose one thought over another."}
-- {id: wj02, author: William James, work: "attributed", topic: action, checked: false,
-   text: "Act as if what you do makes a difference. It does."}
+  # Chapter 18
+  - {id: g18-20, ref: "18.20", topic: perspective, text: "The knowledge that sees one undivided reality in all beings, however divided they seem, is true knowledge."}
+  - {id: g18-26, ref: "18.26", topic: action, text: "The worker who is free from attachment and ego, full of resolve and energy, and unchanged by success or failure, is good."}
+  - {id: g18-33, ref: "18.33", topic: control, text: "The steadiness that holds the mind, breath and senses through disciplined practice is the steadiness of goodness."}
+  - {id: g18-37, ref: "18.37", topic: adversity, text: "What feels like poison at first but turns to nectar in the end is the happiness of goodness, born of a clear mind."}
+  - {id: g18-38, ref: "18.38", topic: wealth, text: "What feels like nectar at first but turns to poison in the end is the happiness of passion."}
+  - {id: g18-48, ref: "18.48", topic: action, text: "Do not give up the work you were born for, even if it has flaws. Every undertaking is clouded by flaws, as fire is by smoke."}
+  - {id: g18-58, ref: "18.58", topic: adversity, text: "Fix your mind on me, and by my grace you will cross every obstacle."}
+  - {id: g18-61, ref: "18.61", topic: self, text: "The Lord lives in the heart of every being."}
+  - {id: g18-63, ref: "18.63", topic: learning, text: "Reflect on all of this deeply, and then do as you choose."}
+  - {id: g18-66, ref: "18.66", topic: anxiety, text: "Let go of every other duty and take refuge in me alone. I will free you from all wrong. Do not grieve."}
+  - {id: g18-73, ref: "18.73", topic: courage, speaker: Arjuna, text: "My confusion is gone. I stand firm, my doubts are cleared. I will do as you say."}
+  - {id: g18-78, ref: "18.78", topic: purpose, text: "Wherever there is Krishna, master of yoga, and Arjuna, the archer, there will be fortune, victory, prosperity and justice."}

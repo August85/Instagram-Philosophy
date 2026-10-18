@@ -1,3 +1,3 @@
-Put your own background clips (.mp4/.mov) or images (.jpg/.png) here. Each reel picks one.
-Use footage you have the rights to, such as Pexels or Pixabay clips or public-domain paintings.
-If this folder is empty, reels use a slowly moving colour gradient. Files here are not committed.
+Background pictures (.jpg/.png) or clips (.mp4/.mov). Each reel picks one.
+Run `philoreels fetch-images` to download public-domain Krishna/Gita paintings; CREDITS.md lists their sources.
+Delete any you don't like. If this folder is empty, reels use a moving colour gradient. Files here are not committed.
