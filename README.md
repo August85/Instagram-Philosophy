@@ -40,7 +40,7 @@ After 3 failures in a row it pauses itself and shows a Mac notification.
 ### 1. Install on the Mac mini
 
 ```bash
-brew install ffmpeg python
+brew install ffmpeg python libraqm   # libraqm shapes the Hindi (Devanagari) text
 git clone https://github.com/August85/Instagram-Philosophy.git ~/code/Instagram-Philosophy
 cd ~/code/Instagram-Philosophy
 python3 -m venv .venv

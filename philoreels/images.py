@@ -15,6 +15,7 @@ Delete any you don't like; reels pick from whatever is left.
 from __future__ import annotations
 
 import hashlib
+import html
 import io
 import os
 import re
@@ -59,6 +60,7 @@ class Picture:
     license: str
     page_url: str
     image_url: str
+    query: str = ""
 
     @property
     def filename(self) -> str:
@@ -72,12 +74,22 @@ def is_public_domain(license_name: str) -> bool:
 
 
 def _strip_html(text: str) -> str:
-    return re.sub(r"<[^>]+>", "", text or "").strip()
+    # Openverse passes Commons titles through as raw HTML ("<div class='fn'>...") with entities.
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text or ""))).strip()
+
+
+def _dhash(img: Image.Image) -> int:
+    """64-bit difference hash: near-identical pictures (the same file from two sources) share it."""
+    small = img.convert("L").resize((9, 8))
+    px = small.tobytes()
+    return sum(1 << i for i, (a, b) in enumerate((px[r * 9 + c], px[r * 9 + c + 1])
+                                                 for r in range(8) for c in range(8)) if a > b)
 
 
 class Fetcher:
     def __init__(self, session: requests.Session | None = None):
         self.http = session or requests.Session()
+        self.seen_hashes: set[int] = set()
         # requests.Session already carries a "python-requests" User-Agent, which
         # Wikimedia rejects with 403, so always overwrite it.
         self.http.headers["User-Agent"] = USER_AGENT
@@ -146,7 +158,7 @@ class Fetcher:
                     title=_strip_html(meta.get("ObjectName", {}).get("value", "")) or title.removeprefix("File:").rsplit(".", 1)[0],
                     artist=_strip_html(meta.get("Artist", {}).get("value", "")) or "Unknown",
                     license=lic, page_url=info.get("descriptionurl", ""),
-                    image_url=info.get("thumburl") or info["url"],
+                    image_url=info.get("thumburl") or info["url"], query=q,
                 ))
         return out
 
@@ -170,10 +182,10 @@ class Fetcher:
                 seen.add(key)
                 lic = (item.get("license") or "").lower()
                 out.append(Picture(
-                    source="openverse", key=key, title=item.get("title") or q,
-                    artist=item.get("creator") or "Unknown",
+                    source="openverse", key=key, title=_strip_html(item.get("title") or "") or q,
+                    artist=_strip_html(item.get("creator") or "") or "Unknown",
                     license="CC0" if lic == "cc0" else "Public domain",
-                    page_url=item.get("foreign_landing_url") or "", image_url=item["url"],
+                    page_url=item.get("foreign_landing_url") or "", image_url=item["url"], query=q,
                 ))
         return out
 
@@ -198,6 +210,7 @@ class Fetcher:
                     source="pixabay", key=str(hit["id"]), title=hit.get("tags") or q,
                     artist=hit.get("user") or "Unknown", license="Pixabay Content License",
                     page_url=hit.get("pageURL", ""), image_url=hit.get("largeImageURL") or hit["webformatURL"],
+                    query=q,
                 ))
         return out
 
@@ -215,6 +228,11 @@ class Fetcher:
             return None
         if max(img.size) < MIN_SIDE:
             return None
+        # Openverse indexes Commons, so the same picture often arrives from both.
+        h = _dhash(img)
+        if any(bin(h ^ seen).count("1") <= 4 for seen in self.seen_hashes):
+            return None
+        self.seen_hashes.add(h)
         img.thumbnail((2000, 2000))
         img.save(path, "JPEG", quality=90)
         return path
@@ -226,7 +244,8 @@ def write_credits(folder: Path, pics: list[tuple[Picture, Path]]) -> Path:
              "but this list records the sources.", "",
              "| File | Title | Artist | Licence | Source |", "| --- | --- | --- | --- | --- |"]
     for pic, path in pics:
-        lines.append(f"| {path.name} | {pic.title} | {pic.artist} | {pic.license} | {pic.page_url} |")
+        cells = [path.name, pic.title, pic.artist, pic.license, pic.page_url]
+        lines.append("| " + " | ".join(c.replace("|", "/") for c in cells) + " |")
     out = folder / "CREDITS.md"
     out.write_text("\n".join(lines) + "\n")
     return out
@@ -241,6 +260,11 @@ def fetch(folder: Path, limit: int = 40, fetcher: Fetcher | None = None, log=pri
     folder.mkdir(parents=True, exist_ok=True)
     f = fetcher or Fetcher()
     queries = list(queries or DEFAULT_QUERIES)
+    for old in folder.glob("*.jpg"):
+        try:
+            f.seen_hashes.add(_dhash(Image.open(old)))
+        except OSError:
+            pass
     getters = {
         "openverse": lambda: f.openverse(queries),
         "commons": lambda: f.commons(queries),
@@ -255,11 +279,11 @@ def fetch(folder: Path, limit: int = 40, fetcher: Fetcher | None = None, log=pri
             candidates += got
         except (requests.RequestException, ValueError) as e:
             log(f"{name}: skipped ({e})")
-    # Take turns between sources and queries so one source doesn't fill the folder.
-    by_source: dict[str, list[Picture]] = {}
+    # Take turns between queries and sources so the first query or source doesn't fill the folder.
+    by_feed: dict[tuple[str, str], list[Picture]] = {}
     for pic in candidates:
-        by_source.setdefault(pic.source, []).append(pic)
-    mixed = [p for group in zip_longest(*by_source.values()) for p in group if p]
+        by_feed.setdefault((pic.query, pic.source), []).append(pic)
+    mixed = [p for group in zip_longest(*by_feed.values()) for p in group if p]
 
     from . import faces
     count_faces = face_counter or faces.count_faces

@@ -22,10 +22,21 @@ class FakeResponse:
         return self._data
 
 
+def _jpeg_for(url: str) -> bytes:
+    """A different random picture per URL, so the duplicate check keeps them apart."""
+    import io
+    import zlib
+    rng = np.random.default_rng(zlib.crc32(url.encode()))
+    img = Image.fromarray(rng.integers(0, 255, (10, 14, 3), dtype=np.uint8)).resize((1400, 1000))
+    buf = io.BytesIO()
+    img.save(buf, "JPEG")
+    return buf.getvalue()
+
+
 class FakeSession:
     headers: dict = {}
 
-    def __init__(self, jpeg: bytes):
+    def __init__(self, jpeg: bytes | None = None):
         self.headers = {}
         self.jpeg = jpeg
 
@@ -57,15 +68,13 @@ class FakeSession:
                                  "classification": "Paintings", "objectURL": "https://met/7"})
         if url.endswith("/objects/8"):
             return FakeResponse({"isPublicDomain": False, "primaryImage": "https://x/no.jpg"})
-        return FakeResponse(content=self.jpeg)
+        return FakeResponse(content=self.jpeg or _jpeg_for(url))
 
 
 def test_fetch_keeps_only_public_domain(tmp_path, monkeypatch):
     import io
     monkeypatch.setattr(images.time, "sleep", lambda _: None)
-    buf = io.BytesIO()
-    Image.new("RGB", (1400, 1000), "orange").save(buf, "JPEG")
-    f = images.Fetcher(FakeSession(buf.getvalue()))
+    f = images.Fetcher(FakeSession())
     saved = images.fetch(tmp_path, limit=10, fetcher=f, log=lambda *_: None, sources=["commons", "met"],
                          reject_faces=False)
     assert len(saved) == 2
@@ -76,9 +85,7 @@ def test_fetch_keeps_only_public_domain(tmp_path, monkeypatch):
 def test_fetch_drops_pictures_with_faces(tmp_path, monkeypatch):
     import io
     monkeypatch.setenv("PIXABAY_API_KEY", "test-key")
-    buf = io.BytesIO()
-    Image.new("RGB", (1400, 1000), "green").save(buf, "JPEG")
-    f = images.Fetcher(FakeSession(buf.getvalue()))
+    f = images.Fetcher(FakeSession())
     by_url = {}
     real_download = f.download
 
@@ -122,3 +129,51 @@ def test_no_face_detector_means_review_by_eye(tmp_path, monkeypatch):
     monkeypatch.setattr(faces, "_opencv", lambda paths: None)
     assert faces.count_faces([tmp_path / "a.jpg"]) is None
     assert faces.count_faces([]) == {}
+
+
+class OpenverseSession(FakeSession):
+    """Openverse as it really answers: Commons titles as HTML, one result per query."""
+
+    def get(self, url, params=None, timeout=None):
+        if "api.openverse.org" in url:
+            q = params["q"]
+            return FakeResponse({"results": [
+                {"id": f"id-{q}", "title": "<div class='fn'> Paddy field &amp; hut | Kerala</div>", "creator": "<b>D</b>",
+                 "license": "cc0", "url": f"https://x/{q}.jpg", "foreign_landing_url": "https://c/1",
+                 "width": 2000, "height": 1300},
+                {"id": f"id2-{q}", "title": f"Second {q}", "creator": "E", "license": "pdm",
+                 "url": f"https://x/{q}-2.jpg", "foreign_landing_url": "https://c/2", "width": 2000, "height": 1300},
+            ]})
+        return super().get(url, params, timeout)
+
+
+def test_openverse_titles_are_plain_text(tmp_path):
+    f = images.Fetcher(OpenverseSession())
+    pics = f.openverse(["paddy"])
+    assert pics[0].title == "Paddy field & hut | Kerala" and pics[0].artist == "D"
+    assert pics[0].filename.startswith("openverse-paddy-field-hut-kerala-")
+    images.write_credits(tmp_path, [(pics[0], tmp_path / pics[0].filename)])
+    row = (tmp_path / "CREDITS.md").read_text().splitlines()[-1]
+    assert row.count("|") == 6 and "<div" not in row
+
+
+def test_fetch_takes_turns_between_queries(tmp_path):
+    f = images.Fetcher(OpenverseSession())
+    saved = images.fetch(tmp_path, limit=3, fetcher=f, log=lambda *_: None, sources=["openverse"],
+                         queries=["a", "b", "c"], reject_faces=False)
+    # One picture from each query, not both from the first two.
+    assert len(saved) == 3
+    assert len({p.name.split("-")[-1] for p in saved}) == 3
+    assert not any(p.name.startswith("openverse-second") for p in saved)
+
+
+def test_fetch_skips_the_same_picture_from_two_sources(tmp_path):
+    session = FakeSession(_jpeg_for("same"))
+    f = images.Fetcher(session)
+    saved = images.fetch(tmp_path, limit=10, fetcher=f, log=lambda *_: None, sources=["openverse", "commons"],
+                         queries=["village"], reject_faces=False)
+    assert len(saved) == 1
+    # A later run doesn't add it again under another name either.
+    f2 = images.Fetcher(FakeSession(_jpeg_for("same")))
+    assert images.fetch(tmp_path, limit=10, fetcher=f2, log=lambda *_: None, sources=["commons"],
+                        queries=["village"], reject_faces=False) == []

@@ -17,7 +17,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, features
 
 from .config import Config
 from . import voice as voice_mod
@@ -165,6 +165,9 @@ def build_layers(cfg: Config, recipe: Recipe, workdir: Path) -> list[tuple[Path,
     theme = THEMES.get(recipe.theme, THEMES["ink"])
     latin_sans = cfg.font("sans")
     if cfg.get("content.language", "en") == "hi":
+        if not features.check("raqm"):
+            # Without libraqm Pillow draws Devanagari letter by letter: matras land in the wrong place.
+            raise RuntimeError("Hindi text needs libraqm for correct shaping: run `brew install libraqm`")
         # Devanagari has no italic; the quote uses the regular face and the rest the bold one.
         serif_i, sans = cfg.font("hindi"), cfg.font("hindi_bold")
     else:

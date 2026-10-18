@@ -56,7 +56,8 @@ images:
   sources: [openverse, commons, pixabay]   # pixabay needs PIXABAY_API_KEY in .env; "met" adds museum paintings
   reject_faces: true
   queries:
-    - "Indian village"
+    # Not "Indian village": that mostly finds Native American villages.
+    - "village in India"
     - "rural India landscape"
     - "village India hut"
     - "mud house India village"
@@ -72,7 +73,7 @@ images:
     - "village temple India"
     - "banyan tree village India"
     - "sunrise village India"
-    - "Indian village illustration"
+    - "village India painting"
     - "Warli painting village"
 
 render:
